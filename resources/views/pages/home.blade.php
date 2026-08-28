@@ -9,7 +9,6 @@
         <div class="carousel-item active">
             <div class="bg-dark text-white text-center py-5" style="min-height: 420px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200') center/cover;">
                 <div class="container d-flex h-100 align-items-center justify-content-center flex-column py-5">
-                    <span class="badge bg-danger px-3 py-2 text-uppercase mb-3">BST MỚI 2026</span>
                     <h1 class="display-4 fw-bold">LOCAL BRAND FASHION</h1>
                     <p class="lead" style="max-width: 600px;">Khám phá bộ sưu tập áo sơ mi kháng khuẩn, polo thể thao và quần âu cao cấp định hình phong cách hiện đại.</p>
                     <a href="#featuredSection" class="btn btn-danger btn-lg px-4 mt-2 fw-bold shadow">
