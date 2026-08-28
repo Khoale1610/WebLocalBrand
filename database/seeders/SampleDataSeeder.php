@@ -119,7 +119,7 @@ class SampleDataSeeder extends Seeder
                 'slug' => 'ao-so-mi-nam-ngan-tay-ke-nano',
                 'price' => 450000,
                 'is_featured' => true,
-                'image' => 'https://lados.vn/wp-content/uploads/2024/11/3-den-ld8160-jpg.webp',
+                'image' => 'https://buggy.yodycdn.com/images/product/306f4b94a9079b10f8cdd8121d64fc7a.webp',
                 'stock' => 80,
                 'description' => 'Sử dụng công nghệ sợi Nano chống nhăn vượt trội, giữ dáng áo thẳng suốt cả ngày làm việc năng động.',
                 'sizes' => ['S', 'M', 'L', 'XL'],
@@ -208,7 +208,7 @@ class SampleDataSeeder extends Seeder
 
         foreach ($productsData as $pData) {
             $cat = $categories[$pData['category_slug']];
-            $product = Product::firstOrCreate(
+            $product = Product::updateOrCreate(
                 ['slug' => $pData['slug']],
                 [
                     'category_id' => $cat->id,
@@ -229,7 +229,7 @@ class SampleDataSeeder extends Seeder
                     $colorModel = $colors[$colorName];
                     $sku = $pData['sku_prefix'] . '-' . $sizeName . '-' . strtoupper(Str::slug($colorName));
 
-                    ProductVariant::firstOrCreate(
+                    ProductVariant::updateOrCreate(
                         [
                             'product_id' => $product->id,
                             'size_id' => $sizeModel->id,

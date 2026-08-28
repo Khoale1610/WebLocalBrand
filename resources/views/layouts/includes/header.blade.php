@@ -82,18 +82,18 @@
 
                 <!-- Thanh Tìm Kiếm & Chức Năng Người Dùng -->
                 <div class="d-flex align-items-center gap-3">
-                    <form class="d-flex" action="#" method="GET">
+                    <form class="d-flex" action="{{ route('products.search') }}" method="GET">
                         <div class="input-group">
-                            <input class="form-control form-control-sm" type="search" placeholder="Tìm sản phẩm..." name="keyword">
+                            <input class="form-control form-control-sm" type="search" placeholder="Tìm sản phẩm..." name="query" value="{{ request('query') }}">
                             <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </form>
 
                     <!-- Icon Giỏ Hàng & Tài Khoản -->
-                    <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5 ms-2">
+                    <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5 ms-2" title="Giỏ hàng">
                         <i class="fas fa-shopping-bag"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6" style="font-size: 0.65rem !important;">
-                            2
+                        <span id="cartCountBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6" style="font-size: 0.65rem !important;">
+                            {{ array_sum(array_column(session('cart', []), 'quantity')) }}
                         </span>
                     </a>
 
