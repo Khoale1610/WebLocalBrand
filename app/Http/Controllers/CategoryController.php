@@ -10,16 +10,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    /**
+     * Hiển thị trang danh mục sản phẩm kèm theo bộ lọc và sắp xếp
+     */
     public function show(Request $request, $slug)
     {
-        // Lấy danh mục hiện tại theo slug, nếu không thấy sẽ báo lỗi 404
+        // 1. Tìm danh mục theo slug, nếu không thấy sẽ trả về lỗi 404
         $category = Category::where('slug', $slug)->firstOrFail();
 
-        // Khởi tạo query lấy sản phẩm thuộc danh mục kèm theo quan hệ biến thể, size, color
+        // 2. Khởi tạo truy vấn lấy sản phẩm thuộc danh mục và nạp trước các quan hệ (Eager Loading)
         $query = Product::where('category_id', $category->id)
                         ->with(['variants.size', 'variants.color']);
 
-        // 1. Lọc theo Khoảng giá
+        // 3. Xử lý Lọc theo Khoảng Giá
         if ($request->filled('price')) {
             $priceRange = $request->input('price');
             if ($priceRange == 'under_300k') {
@@ -33,23 +36,23 @@ class CategoryController extends Controller
             }
         }
 
-        // 2. Lọc theo Size (thông qua bảng biến thể product_variants)
+        // 4. Xử lý Lọc theo Kích thước (Size) thông qua bảng biến thể
         if ($request->filled('size')) {
             $sizeId = $request->input('size');
-            $query->whereHas('variants', function($q) use ($sizeId) {
+            $query->whereHas('variants', function ($q) use ($sizeId) {
                 $q->where('size_id', $sizeId);
             });
         }
 
-        // 3. Lọc theo Màu sắc (thông qua bảng biến thể product_variants)
+        // 5. Xử lý Lọc theo Màu sắc (Color) thông qua bảng biến thể
         if ($request->filled('color')) {
             $colorId = $request->input('color');
-            $query->whereHas('variants', function($q) use ($colorId) {
+            $query->whereHas('variants', function ($q) use ($colorId) {
                 $q->where('color_id', $colorId);
             });
         }
 
-        // 4. Sắp xếp sản phẩm
+        // 6. Xử lý Sắp xếp sản phẩm
         $sort = $request->input('sort', 'latest');
         if ($sort == 'latest') {
             $query->latest();
@@ -58,16 +61,18 @@ class CategoryController extends Controller
         } elseif ($sort == 'price_desc') {
             $query->orderBy('price', 'desc');
         } elseif ($sort == 'best_selling') {
+            // Giả sử có cột bán chạy sold_count (nếu không có có thể bỏ qua hoặc chỉnh theo DB của bạn)
             $query->orderBy('sold_count', 'desc');
         }
 
-        // Phân trang kết quả (12 sản phẩm/trang) và giữ lại các tham số lọc trên URL
+        // 7. Phân trang 12 sản phẩm mỗi trang và duy trì các tham số lọc trên URL
         $products = $query->paginate(12)->withQueryString();
 
-        // Lấy danh sách size và màu sắc để hiển thị các tùy chọn lọc ngoài view
+        // 8. Lấy toàn bộ danh sách Size và Màu sắc để truyền ra View làm bộ lọc
         $sizes = Size::all();
         $colors = Color::all();
 
-        return view('client.categories.show', compact('category', 'products', 'sizes', 'colors'));
+        // 9. Trả về đúng view client/products/index.blade.php
+        return view('client.products.index', compact('category', 'products', 'sizes', 'colors'));
     }
 }
