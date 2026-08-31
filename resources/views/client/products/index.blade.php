@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- Lưu ý: Đổi 'layouts.app' thành tên file layout chính của bạn nếu khác --}}
+@extends('layouts.app') 
 
 @section('content')
 <div class="container mt-4">
@@ -117,7 +117,6 @@
 </div>
 
 <style>
-    /* Thêm chút CSS cho mượt mà */
     .product-card:hover img {
         transform: scale(1.05);
         transition: 0.3s ease-in-out;
