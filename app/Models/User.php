@@ -59,4 +59,22 @@ class User extends Authenticatable
     {
         return $this->role === 'admin';
     }
+
+    /**
+     * Ghi chú: Liên kết 1-Nhiều với bảng wishlists 
+     * (Một người dùng có thể có nhiều mục wishlist)
+     */
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class);
+    }
+
+    /**
+     * Ghi chú: Lấy trực tiếp danh sách các Sản phẩm (Product) mà người dùng đã yêu thích 
+     * thông qua bảng trung gian 'wishlists'
+     */
+    public function favoriteProducts()
+    {
+        return $this->belongsToMany(Product::class, 'wishlists', 'user_id', 'product_id')->withTimestamps();
+    }
 }
