@@ -33,37 +33,38 @@
                                     <div class="col-md-3">
                                         <h6 class="text-danger">Áo Nam</h6>
                                         <ul>
-                                            <li><a href="#">Áo Sơ Mi</a></li>
-                                            <li><a href="#">Áo Polo</a></li>
-                                            <li><a href="#">Áo T-Shirt (Thun)</a></li>
-                                            <li><a href="#">Áo Khoác</a></li>
-                                            <li><a href="#">Áo Vest / Blazer</a></li>
+                                            <!-- Ghi chú: Đã thay dấu # bằng route gọi đến category ID -->
+                                            <li><a href="{{ route('category.show', 1) }}">Áo Sơ Mi</a></li>
+                                            <li><a href="{{ route('category.show', 2) }}">Áo Polo</a></li>
+                                            <li><a href="{{ route('category.show', 3) }}">Áo T-Shirt (Thun)</a></li>
+                                            <li><a href="{{ route('category.show', 4) }}">Áo Khoác</a></li>
+                                            <li><a href="{{ route('category.show', 5) }}">Áo Vest / Blazer</a></li>
                                         </ul>
                                     </div>
                                     <!-- Cột 2: Quần Nam -->
                                     <div class="col-md-3">
                                         <h6 class="text-danger">Quần Nam</h6>
                                         <ul>
-                                            <li><a href="#">Quần Tây / Âu</a></li>
-                                            <li><a href="#">Quần Khaki</a></li>
-                                            <li><a href="#">Quần Jeans</a></li>
-                                            <li><a href="#">Quần Short</a></li>
+                                            <li><a href="{{ route('category.show', 6) }}">Quần Tây / Âu</a></li>
+                                            <li><a href="{{ route('category.show', 7) }}">Quần Khaki</a></li>
+                                            <li><a href="{{ route('category.show', 8) }}">Quần Jeans</a></li>
+                                            <li><a href="{{ route('category.show', 9) }}">Quần Short</a></li>
                                         </ul>
                                     </div>
                                     <!-- Cột 3: Phụ Kiện -->
                                     <div class="col-md-3">
                                         <h6 class="text-danger">Phụ Kiện</h6>
                                         <ul>
-                                            <li><a href="#">Thắt Lưng</a></li>
-                                            <li><a href="#">Cà Vạt / Ví Da</a></li>
-                                            <li><a href="#">Tất / Sịp Nam</a></li>
+                                            <li><a href="{{ route('category.show', 10) }}">Thắt Lưng</a></li>
+                                            <li><a href="{{ route('category.show', 11) }}">Cà Vạt / Ví Da</a></li>
+                                            <li><a href="{{ route('category.show', 12) }}">Tất / Sịp Nam</a></li>
                                         </ul>
                                     </div>
                                     <!-- Cột 4: Banner Khuyến Mãi -->
                                     <div class="col-md-3">
                                         <div class="bg-light p-3 text-center border">
                                             <h6 class="text-dark">Bộ Sưu Tập Mới</h6>
-                                            <p class="small text-muted">Khám phá phong cách công sở hiện đại 2026</p>
+                                            <p class="small text-muted">Khám phá phong cách công sở hiện đại</p>
                                             <a href="#" class="btn btn-sm btn-dark">Xem Ngay</a>
                                         </div>
                                     </div>
@@ -89,7 +90,7 @@
                         </div>
                     </form>
 
-                    <!-- Icon Giỏ Hàng & Tài Khoản -->
+                    <!-- Icon Giỏ Hàng -->
                     <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5 ms-2" title="Giỏ hàng">
                         <i class="fas fa-shopping-bag"></i>
                         <span id="cartCountBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6" style="font-size: 0.65rem !important;">
@@ -97,9 +98,32 @@
                         </span>
                     </a>
 
-                    <a href="#" class="text-dark fs-5 ms-2" title="Tài khoản">
-                        <i class="far fa-user"></i>
-                    </a>
+                    <!-- Icon Tài Khoản (Dropdown) -->
+                    <div class="dropdown ms-2">
+                        <a href="#" class="text-dark fs-5" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Tài khoản">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                            @guest
+                                <li><a class="dropdown-item fw-bold text-dark" href="{{ route('login') }}">Đăng Nhập</a></li>
+                                <li><a class="dropdown-item" href="{{ route('register') }}">Đăng Ký</a></li>
+                            @else
+                                <li><span class="dropdown-item-text text-muted small">Xin chào, {{ Auth::user()->name }}</span></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ route('account.index') }}"><i class="fas fa-user-circle me-2"></i> Quản lý tài khoản</a></li>
+                                <li><a class="dropdown-item" href="{{ route('account.orders') }}"><i class="fas fa-box me-2"></i> Lịch sử đơn hàng</a></li>
+                                <li><a class="dropdown-item" href="{{ route('account.wishlist.index') }}"><i class="fas fa-heart me-2 text-danger"></i> Sản phẩm yêu thích</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i> Đăng xuất</button>
+                                    </form>
+                                </li>
+                            @endguest
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </nav>
