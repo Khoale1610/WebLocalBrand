@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
-// Ghi chú: Thêm các Controller mới để xử lý tài khoản và sản phẩm yêu thích (Wishlist)
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\WishlistController;
 
@@ -21,7 +20,7 @@ Route::get('/search', [HomeController::class, 'search'])->name('products.search'
 // 2. Chi tiết sản phẩm
 Route::get('/san-pham/{id}', [ProductController::class, 'show'])->name('products.show');
 
-// Ghi chú: Route cho Trang Danh mục & Bộ lọc đa năng (Sử dụng {id} theo đúng cấu trúc database hiện tại)
+// Route cho Trang Danh mục & Bộ lọc đa năng Sử dụng {id} 
 Route::get('/danh-muc/{id}', [ProductController::class, 'category'])->name('category.show');
 
 // 3. Quản lý Giỏ hàng (Cart)
