@@ -51,4 +51,22 @@ class Product extends Model
     {
         return number_format($this->price, 0, ',', '.') . ' ₫';
     }
+
+    /**
+     * Ghi chú: Liên kết 1-Nhiều với bảng wishlists
+     * (Một sản phẩm có thể nằm trong danh sách yêu thích của nhiều khách hàng khác nhau)
+     */
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class);
+    }
+
+    /**
+     * Ghi chú: Lấy trực tiếp danh sách các Khách hàng (User) đã thêm sản phẩm này vào yêu thích
+     * thông qua bảng trung gian 'wishlists'
+     */
+    public function favoritedByUsers()
+    {
+        return $this->belongsToMany(User::class, 'wishlists', 'product_id', 'user_id')->withTimestamps();
+    }
 }

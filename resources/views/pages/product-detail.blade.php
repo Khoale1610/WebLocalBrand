@@ -66,6 +66,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+    @if(session('info'))
+        <div class="alert alert-info alert-dismissible fade show shadow-sm" role="alert">
+            <i class="fas fa-info-circle me-2"></i>{{ session('info') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 
     <div class="row g-4 g-lg-5">
         <!-- Cột Ảnh sản phẩm (col-md-6) -->
@@ -187,7 +193,7 @@
                     </div>
 
                     <!-- 4. Nút Hành Động Mua Hàng -->
-                    <div class="row g-2 mb-4">
+                    <div class="row g-2 mb-3">
                         <div class="col-6">
                             <button type="button" id="btnAddToCart" class="btn btn-outline-dark btn-lg w-100 fw-bold py-3" onclick="addToCartAjax()">
                                 <i class="fas fa-shopping-bag me-2"></i>THÊM VÀO GIỎ
@@ -199,6 +205,15 @@
                             </button>
                         </div>
                     </div>
+                </form>
+
+                <!-- Ghi chú: Nút Thêm vào sản phẩm yêu thích (Wishlist) đặt ngay dưới nút mua -->
+                <form action="{{ route('account.wishlist.add') }}" method="POST" class="mb-4">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <button type="submit" class="btn btn-outline-danger w-100 py-2">
+                        <i class="fas fa-heart me-2"></i> Thêm vào sản phẩm yêu thích
+                    </button>
                 </form>
 
                 <!-- Quyền lợi khách hàng -->
