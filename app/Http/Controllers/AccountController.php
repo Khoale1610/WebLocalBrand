@@ -22,7 +22,6 @@ class AccountController extends Controller
      */
     public function login(Request $request)
     {
-        // Kiểm tra dữ liệu đầu vào
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required'
@@ -32,20 +31,18 @@ class AccountController extends Controller
             'password.required' => 'Vui lòng nhập mật khẩu.'
         ]);
 
-        // Thực hiện đăng nhập, hỗ trợ ghi nhớ tài khoản (remember me)
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
             
-            // Nếu người dùng là admin thì chuyển hướng vào dashboard, ngược lại về trang tài khoản
+            // Nếu là admin, chuyển hướng vào dashboard quản trị
             if (Auth::user()->isAdmin()) {
-                // Tạm thời redirect về trang chủ nếu chưa có route admin
-                return redirect()->intended(route('home'))->with('success', 'Đăng nhập quản trị viên thành công!');
+                // Tạm thời redirect về trang chủ hoặc route admin.dashboard (nếu đã tạo)
+                return redirect()->intended('/')->with('success', 'Đăng nhập quản trị viên thành công!');
             }
             
             return redirect()->intended(route('account.index'))->with('success', 'Đăng nhập thành công!');
         }
 
-        // Trả về lỗi nếu sai thông tin
         return back()->withErrors([
             'email' => 'Email hoặc mật khẩu không chính xác.',
         ])->onlyInput('email');
@@ -60,24 +57,30 @@ class AccountController extends Controller
     }
 
     /**
-     * Xử lý đăng ký tài khoản mới
+     * Xử lý đăng ký tài khoản mới (Với chuẩn hóa dữ liệu siêu nghiêm ngặt)
      */
     public function register(Request $request)
     {
-        // Xác thực dữ liệu
+        // Xác thực dữ liệu đầu vào chặt chẽ
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|min:2|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed', // Cần trường password_confirmation ở form
-            'phone' => 'nullable|string|max:20',
-            'address' => 'nullable|string|max:255',
+            'password' => 'required|string|min:6|confirmed',
+            // Kiểm tra SĐT: Bắt buộc, đúng 10 số, đầu số VN (03, 05, 07, 08, 09)
+            'phone' => ['required', 'regex:/^(03|05|07|08|09)[0-9]{8}$/'],
+            'address' => 'nullable|string|min:5|max:255',
         ], [
             'name.required' => 'Vui lòng nhập họ tên.',
+            'name.min' => 'Họ tên phải có ít nhất 2 ký tự.',
             'email.required' => 'Vui lòng nhập email.',
-            'email.unique' => 'Email này đã được sử dụng.',
+            'email.email' => 'Email không đúng định dạng hợp lệ.',
+            'email.unique' => 'Email này đã được đăng ký trên hệ thống.',
             'password.required' => 'Vui lòng nhập mật khẩu.',
             'password.min' => 'Mật khẩu phải có ít nhất 6 ký tự.',
-            'password.confirmed' => 'Xác nhận mật khẩu không khớp.'
+            'password.confirmed' => 'Xác nhận mật khẩu không khớp.',
+            'phone.required' => 'Vui lòng nhập số điện thoại.',
+            'phone.regex' => 'Số điện thoại không hợp lệ (Đúng 10 chữ số).',
+            'address.min' => 'Địa chỉ quá ngắn, vui lòng nhập rõ ràng hơn.',
         ]);
 
         // Tạo tài khoản
@@ -87,10 +90,10 @@ class AccountController extends Controller
             'password' => Hash::make($request->password),
             'phone' => $request->phone,
             'address' => $request->address,
-            'role' => 'user', // Mặc định tài khoản đăng ký mới là khách hàng thông thường
+            'role' => 'user', 
         ]);
 
-        // Tự động đăng nhập sau khi đăng ký thành công
+        // Tự động đăng nhập
         Auth::login($user);
 
         return redirect()->route('account.index')->with('success', 'Đăng ký tài khoản thành công!');
@@ -122,7 +125,6 @@ class AccountController extends Controller
      */
     public function orders()
     {
-        // Lấy danh sách đơn hàng của user đang đăng nhập, kèm chi tiết sản phẩm
         $orders = Auth::user()->orders()->with('orderItems.product')->orderBy('created_at', 'desc')->paginate(10);
         return view('client.account.orders', compact('orders'));
     }
