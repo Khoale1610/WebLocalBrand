@@ -8,7 +8,7 @@
                 <div class="card-body p-5">
                     <h2 class="text-center mb-4 font-weight-bold">Đăng Ký Tài Khoản</h2>
 
-                    <!-- Hiển thị thông báo lỗi (nếu trùng email, pass quá ngắn...) -->
+                    <!-- Hiển thị thông báo lỗi chi tiết -->
                     @if($errors->any())
                         <div class="alert alert-danger">
                             <ul class="mb-0">
@@ -34,8 +34,9 @@
 
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" placeholder="Vd: 0901234567">
+                                <!-- Đã thêm dấu sao đỏ và thuộc tính required -->
+                                <label for="phone" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required placeholder="Vd: 0901234567">
                             </div>
                             <div class="col-md-6 mt-3 mt-md-0">
                                 <label for="address" class="form-label">Địa chỉ nhận hàng</label>
