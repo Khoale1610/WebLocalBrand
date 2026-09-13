@@ -83,12 +83,18 @@
 
                 <!-- Thanh Tìm Kiếm & Chức Năng Người Dùng -->
                 <div class="d-flex align-items-center gap-3">
-                    <form class="d-flex" action="{{ route('products.search') }}" method="GET">
-                        <div class="input-group">
-                            <input class="form-control form-control-sm" type="search" placeholder="Tìm sản phẩm..." name="query" value="{{ request('query') }}">
-                            <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+                    <div class="position-relative" id="headerSearchWrapper">
+                        <form class="d-flex" action="{{ route('products.search') }}" method="GET" id="headerSearchForm" autocomplete="off">
+                            <div class="input-group">
+                                <input class="form-control form-control-sm" type="search" placeholder="Tìm sản phẩm..." name="query" id="headerSearchInput" value="{{ request('query') }}">
+                                <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                        <!-- Khung dropdown hiển thị kết quả gợi ý tức thì -->
+                        <div id="liveSearchResults" class="dropdown-menu shadow-lg p-0 border-0 rounded-3 d-none position-absolute start-0 w-100" style="min-width: 280px; z-index: 1050; max-height: 350px; overflow-y: auto;">
                         </div>
-                    </form>
+                    </div>
+
 
                     <!-- Icon Giỏ Hàng -->
                     <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5 ms-2" title="Giỏ hàng">
@@ -129,3 +135,70 @@
         </nav>
     </div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('headerSearchInput');
+    const resultsBox = document.getElementById('liveSearchResults');
+    const searchWrapper = document.getElementById('headerSearchWrapper');
+    let debounceTimer;
+
+    if (!searchInput || !resultsBox) return;
+
+    searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        const query = this.value.trim();
+
+        if (query.length < 2) {
+            resultsBox.classList.add('d-none');
+            resultsBox.innerHTML = '';
+            return;
+        }
+
+        debounceTimer = setTimeout(() => {
+            fetch(`{{ route('products.search.suggest') }}?query=${encodeURIComponent(query)}`)
+                .then(res => res.json())
+                .then(products => {
+                    if (!products || products.length === 0) {
+                        resultsBox.innerHTML = `
+                            <div class="p-3 text-center text-muted small">
+                                Không tìm thấy sản phẩm phù hợp.
+                            </div>
+                        `;
+                    } else {
+                        let html = '<div class="list-group list-group-flush">';
+                        products.forEach(p => {
+                            html += `
+                                <a href="${p.url}" class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2 px-3">
+                                    <img src="${p.image}" alt="${p.name}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px;" class="border">
+                                    <div class="flex-grow-1 text-truncate">
+                                        <div class="small fw-semibold text-dark text-truncate">${p.name}</div>
+                                        <div class="small text-danger fw-bold">${p.price_formatted}</div>
+                                    </div>
+                                </a>
+                            `;
+                        });
+                        html += `
+                            <a href="{{ route('products.search') }}?query=${encodeURIComponent(query)}" class="list-group-item list-group-item-action text-center small text-primary fw-bold py-2 bg-light">
+                                Xem tất cả kết quả cho "${query}" &rarr;
+                            </a>
+                        </div>`;
+                        resultsBox.innerHTML = html;
+                    }
+                    resultsBox.classList.remove('d-none');
+                })
+                .catch(err => {
+                    console.error('Live search error:', err);
+                });
+        }, 250);
+    });
+
+    // Đóng dropdown khi click ra ngoài
+    document.addEventListener('click', function(e) {
+        if (!searchWrapper.contains(e.target)) {
+            resultsBox.classList.add('d-none');
+        }
+    });
+});
+</script>
+

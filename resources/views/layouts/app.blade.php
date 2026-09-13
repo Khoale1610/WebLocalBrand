@@ -42,8 +42,12 @@
     <!-- 3. Footer -->
     @include('layouts.includes.footer')
 
+    <!-- 4. Trợ lý AI Chatbot Floating Widget -->
+    @include('layouts.includes.chatbot')
+
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @stack('scripts')
+
 </body>
 </html>
