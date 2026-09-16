@@ -248,7 +248,7 @@
                     </div>
 
                     <!-- Nút Tiến hành thanh toán -->
-                    <a href="#" class="btn btn-danger btn-lg w-100 fw-bold py-3 shadow mb-3" onclick="alert('Chức năng Đặt hàng (Checkout) sẽ được kích hoạt ở bước tiếp theo!'); return false;">
+                    <a href="{{ route('checkout.index') }}" class="btn btn-danger btn-lg w-100 fw-bold py-3 shadow mb-3">
                         TIẾN HÀNH ĐẶT HÀNG <i class="fas fa-arrow-right ms-2"></i>
                     </a>
 

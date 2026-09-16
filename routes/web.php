@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ChatbotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,7 @@ use App\Http\Controllers\WishlistController;
 // 1. Trang chủ & Tìm kiếm
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/search', [HomeController::class, 'search'])->name('products.search');
+Route::get('/search/suggest', [HomeController::class, 'searchSuggest'])->name('products.search.suggest');
 
 // 2. Chi tiết sản phẩm
 Route::get('/san-pham/{id}', [ProductController::class, 'show'])->name('products.show');
@@ -31,6 +34,21 @@ Route::prefix('cart')->name('cart.')->group(function () {
     Route::delete('/remove/{key}', [CartController::class, 'remove'])->name('remove');
     Route::post('/clear', [CartController::class, 'clear'])->name('clear');
 });
+
+// 3.5. Quy trình Thanh toán (Checkout & Gateways)
+Route::prefix('checkout')->name('checkout.')->group(function () {
+    Route::get('/', [CheckoutController::class, 'index'])->name('index');
+    Route::post('/process', [CheckoutController::class, 'process'])->name('process');
+    Route::get('/vietqr/{order_code}', [CheckoutController::class, 'vietqr'])->name('vietqr');
+    Route::post('/vietqr/{order_code}/confirm', [CheckoutController::class, 'vietqrConfirm'])->name('vietqr.confirm');
+    Route::get('/vnpay-sandbox/{order_code}', [CheckoutController::class, 'vnpaySandbox'])->name('vnpay.sandbox');
+    Route::get('/vnpay-return', [CheckoutController::class, 'vnpayReturn'])->name('vnpay.return');
+    Route::get('/success/{order_code}', [CheckoutController::class, 'success'])->name('success');
+});
+
+// 3.6. Trợ lý AI Chatbot
+Route::post('/chatbot/message', [ChatbotController::class, 'reply'])->name('chatbot.reply');
+
 
 // 4. Tài khoản Khách hàng (Đăng nhập, Đăng ký, Quản lý)
 Route::middleware('guest')->group(function () {
