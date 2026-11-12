@@ -263,6 +263,12 @@
                     </div>
 
                     <hr class="my-3">
+                    @if(!empty($discountAmount) && $discountAmount > 0)
+                        <div class="d-flex justify-content-between mb-2 text-danger">
+                            <span>Voucher ({{ $voucherSession['code'] ?? 'Giảm giá' }}):</span>
+                            <span class="fw-bold">-{{ number_format($discountAmount, 0, ',', '.') }} ₫</span>
+                        </div>
+                    @endif
 
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <span class="fw-bold fs-6">Tổng thanh toán:</span>

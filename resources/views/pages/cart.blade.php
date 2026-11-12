@@ -152,11 +152,11 @@
                                                            class="form-control qty-input" 
                                                            value="{{ $item['quantity'] }}" 
                                                            min="1" 
-                                                           max="{{ $item['stock'] > 0 ? $item['stock'] : 99 }}"
+                                                           max="{{ (isset($item['stock']) && $item['stock'] > 0) ? $item['stock'] : 99 }}"
                                                            onchange="onQtyInputChange('{{ $key }}')">
                                                     <button class="btn btn-outline-secondary qty-btn" type="button" onclick="changeQty('{{ $key }}', 1)">+</button>
                                                 </div>
-                                                <small class="text-muted d-block mt-1">Kho: {{ $item['stock'] }}</small>
+                                                <small class="text-muted d-block mt-1">Kho: {{ isset($item['stock']) ? $item['stock'] : 'Còn hàng' }}</small>
                                             </td>
 
                                             <!-- Cột Thành tiền -->
@@ -228,7 +228,7 @@
 
                     <div class="d-flex justify-content-between mb-3">
                         <span class="text-muted">Giảm giá voucher:</span>
-                        <span class="fw-semibold text-danger">0 ₫</span>
+                        <span class="fw-semibold text-danger">-{{ number_format($discountAmount ?? 0, 0, ',', '.') }} ₫</span>
                     </div>
 
                     <hr class="my-3">
@@ -242,9 +242,29 @@
                     </div>
 
                     <!-- Form nhập mã giảm giá -->
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Mã giảm giá (Coupon)" id="couponCodeInput">
-                        <button class="btn btn-outline-dark" type="button" onclick="alert('Tính năng áp dụng mã giảm giá sẽ được kích hoạt tại bước thanh toán!')">Áp dụng</button>
+                    @if(!empty($voucherSession))
+                        <div class="alert alert-success d-flex justify-content-between align-items-center py-2 px-3 mb-3">
+                            <div>
+                                <i class="fas fa-ticket-alt me-1"></i>
+                                <strong>{{ $voucherSession['code'] }}</strong>: -{{ number_format($discountAmount ?? 0, 0, ',', '.') }} ₫
+                            </div>
+                            <form action="{{ route('cart.voucher.remove') }}" method="POST" class="d-inline mb-0">
+                                @csrf
+                                <button type="submit" class="btn btn-sm btn-outline-danger py-0 px-2">Gỡ</button>
+                            </form>
+                        </div>
+                    @else
+                        <form action="{{ route('cart.voucher.apply') }}" method="POST" class="mb-3">
+                            @csrf
+                            <div class="input-group">
+                                <input type="text" name="code" class="form-control text-uppercase" placeholder="Mã giảm giá (VD: OWENNEW)" required>
+                                <button class="btn btn-dark" type="submit">Áp dụng</button>
+                            </div>
+                        </form>
+                    @endif
+
+
+
                     </div>
 
                     <!-- Nút Tiến hành thanh toán -->
