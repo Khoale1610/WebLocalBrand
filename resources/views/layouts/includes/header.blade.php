@@ -115,6 +115,9 @@
                                 <li><a class="dropdown-item" href="{{ route('register') }}">Đăng Ký</a></li>
                             @else
                                 <li><span class="dropdown-item-text text-muted small">Xin chào, {{ Auth::user()->name }}</span></li>
+                                @if(Auth::user()->isAdmin())
+                                    <li><a class="dropdown-item text-primary fw-bold" href="{{ route('admin.dashboard') }}"><i class="fas fa-gauge-high me-2"></i> Trang Quản trị (Admin)</a></li>
+                                @endif
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{{ route('account.index') }}"><i class="fas fa-user-circle me-2"></i> Quản lý tài khoản</a></li>
                                 <li><a class="dropdown-item" href="{{ route('account.orders') }}"><i class="fas fa-box me-2"></i> Lịch sử đơn hàng</a></li>
