@@ -33,6 +33,8 @@ Route::prefix('cart')->name('cart.')->group(function () {
     Route::post('/update', [CartController::class, 'update'])->name('update');
     Route::delete('/remove/{key}', [CartController::class, 'remove'])->name('remove');
     Route::post('/clear', [CartController::class, 'clear'])->name('clear');
+    Route::post('/voucher/apply', [CartController::class, 'applyVoucher'])->name('voucher.apply');
+    Route::post('/voucher/remove', [CartController::class, 'removeVoucher'])->name('voucher.remove');
 });
 
 // 3.5. Quy trình Thanh toán (Checkout & Gateways)
@@ -71,4 +73,44 @@ Route::middleware('auth')->group(function () {
         Route::post('/yeu-thich/add', [WishlistController::class, 'add'])->name('wishlist.add');
         Route::delete('/yeu-thich/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
     });
+});
+
+
+// 5. Khu vực Quản trị viên (Admin Panel)
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index']);
+
+    // Quản lý Danh mục (Category)
+    Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)->except(['create', 'show', 'edit']);
+
+    // Quản lý Thuộc tính (Size & Color)
+    Route::get('attributes', [\App\Http\Controllers\Admin\AttributeController::class, 'index'])->name('attributes.index');
+    Route::post('attributes/sizes', [\App\Http\Controllers\Admin\AttributeController::class, 'storeSize'])->name('attributes.sizes.store');
+    Route::put('attributes/sizes/{size}', [\App\Http\Controllers\Admin\AttributeController::class, 'updateSize'])->name('attributes.sizes.update');
+    Route::delete('attributes/sizes/{size}', [\App\Http\Controllers\Admin\AttributeController::class, 'destroySize'])->name('attributes.sizes.destroy');
+
+    Route::post('attributes/colors', [\App\Http\Controllers\Admin\AttributeController::class, 'storeColor'])->name('attributes.colors.store');
+    Route::put('attributes/colors/{color}', [\App\Http\Controllers\Admin\AttributeController::class, 'updateColor'])->name('attributes.colors.update');
+    Route::delete('attributes/colors/{color}', [\App\Http\Controllers\Admin\AttributeController::class, 'destroyColor'])->name('attributes.colors.destroy');
+
+    // Quản lý Sản phẩm (Product & ProductVariant)
+    Route::resource('products', \App\Http\Controllers\Admin\ProductController::class);
+    Route::post('products/{product}/variants', [\App\Http\Controllers\Admin\ProductController::class, 'storeVariant'])->name('products.variants.store');
+    Route::delete('variants/{variant}', [\App\Http\Controllers\Admin\ProductController::class, 'destroyVariant'])->name('variants.destroy');
+
+    // Quản lý Đơn hàng (Orders)
+    Route::get('orders', [\App\Http\Controllers\Admin\OrderController::class, 'index'])->name('orders.index');
+    Route::get('orders/{order}', [\App\Http\Controllers\Admin\OrderController::class, 'show'])->name('orders.show');
+    Route::put('orders/{order}/status', [\App\Http\Controllers\Admin\OrderController::class, 'updateStatus'])->name('orders.status.update');
+    Route::get('orders/{order}/invoice', [\App\Http\Controllers\Admin\OrderController::class, 'invoice'])->name('orders.invoice');
+
+    // Quản lý Voucher (Mã giảm giá)
+    Route::resource('vouchers', \App\Http\Controllers\Admin\VoucherController::class)->except(['create', 'show', 'edit']);
+    Route::patch('vouchers/{voucher}/toggle', [\App\Http\Controllers\Admin\VoucherController::class, 'toggle'])->name('vouchers.toggle');
+
+    // Quản lý Khách hàng & Thành viên (Users / CRM)
+    Route::get('users', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('users.index');
+    Route::get('users/{user}', [\App\Http\Controllers\Admin\UserController::class, 'show'])->name('users.show');
+    Route::patch('users/{user}/role', [\App\Http\Controllers\Admin\UserController::class, 'updateRole'])->name('users.role.update');
 });

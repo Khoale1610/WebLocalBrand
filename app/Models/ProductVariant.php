@@ -66,4 +66,19 @@ class ProductVariant extends Model
     {
         return number_format($this->effective_price, 0, ',', '.') . ' ₫';
     }
+
+    /**
+     * Đường dẫn ảnh hợp lệ (nếu biến thể có ảnh riêng thì dùng, không thì lấy ảnh sản phẩm cha)
+     */
+    public function getImageUrlAttribute()
+    {
+        $img = $this->image ?? $this->product->image ?? null;
+        if (!$img) {
+            return 'https://via.placeholder.com/400x500?text=No+Image';
+        }
+        if (str_starts_with($img, 'http://') || str_starts_with($img, 'https://')) {
+            return $img;
+        }
+        return asset($img);
+    }
 }

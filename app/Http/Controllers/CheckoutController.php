@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\ProductVariant;
+use App\Models\Voucher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -32,12 +33,14 @@ class CheckoutController extends Controller
         }
 
         $shippingFee = ($subtotal >= CartController::FREE_SHIPPING_THRESHOLD || $subtotal == 0) ? 0 : CartController::DEFAULT_SHIPPING_FEE;
-        $total = $subtotal + $shippingFee;
+        $voucherSession = session()->get('voucher', null);
+        $discountAmount = $voucherSession['discount'] ?? 0;
+        $total = max(0, $subtotal + $shippingFee - $discountAmount);
 
         // Thông tin người dùng hiện tại nếu đã đăng nhập
         $user = auth()->user();
 
-        return view('pages.checkout', compact('cart', 'subtotal', 'shippingFee', 'total', 'user'));
+        return view('pages.checkout', compact('cart', 'subtotal', 'shippingFee', 'total', 'user', 'voucherSession', 'discountAmount'));
     }
 
     /**
@@ -91,7 +94,15 @@ class CheckoutController extends Controller
             $subtotal += $item['price'] * $item['quantity'];
         }
         $shippingFee = ($subtotal >= CartController::FREE_SHIPPING_THRESHOLD || $subtotal == 0) ? 0 : CartController::DEFAULT_SHIPPING_FEE;
-        $totalAmount = $subtotal + $shippingFee;
+        $voucherSession = session()->get('voucher', null);
+        $discountAmount = 0;
+        if ($voucherSession) {
+            $voucherModel = Voucher::find($voucherSession['id']);
+            if ($voucherModel && $voucherModel->checkValidity($subtotal)['valid']) {
+                $discountAmount = $voucherModel->calculateDiscount($subtotal);
+            }
+        }
+        $totalAmount = max(0, $subtotal + $shippingFee - $discountAmount);
 
         // 3. Tạo mã đơn hàng duy nhất
         $orderCode = 'ORD-' . date('Ymd') . '-' . strtoupper(Str::random(5));
@@ -113,7 +124,7 @@ class CheckoutController extends Controller
                 'customer_notes'    => $request->customer_notes,
                 'total_amount'      => $totalAmount,
                 'shipping_fee'      => $shippingFee,
-                'discount_amount'   => 0,
+                'discount_amount'   => $discountAmount,
                 'payment_method'    => $request->payment_method,
                 'payment_status'    => Order::PAYMENT_UNPAID,
                 'order_status'      => Order::STATUS_PENDING,
@@ -150,6 +161,10 @@ class CheckoutController extends Controller
                 }
             }
 
+            if ($voucherSession && !empty($voucherSession['id'])) {
+                Voucher::where('id', $voucherSession['id'])->increment('used_count');
+            }
+
             DB::commit();
         } catch (\Throwable $e) {
             DB::rollBack();
@@ -159,6 +174,7 @@ class CheckoutController extends Controller
 
         // Xóa giỏ hàng khỏi session sau khi lưu thành công
         session()->forget('cart');
+        session()->forget('voucher');
 
         // 5. Điều hướng theo phương thức thanh toán & Gửi email xác nhận
         if ($order->payment_method === 'vietqr') {

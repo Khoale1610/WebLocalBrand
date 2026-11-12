@@ -51,6 +51,21 @@ class Order extends Model
     /**
      * Danh sách sản phẩm trong đơn hàng
      */
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+
+    public function getStatusAttribute()
+    {
+        return $this->order_status_label;
+    }
+
+    public function getTotalPriceAttribute()
+    {
+        return $this->total_amount;
+    }
+
     public function items()
     {
         return $this->hasMany(OrderItem::class);
