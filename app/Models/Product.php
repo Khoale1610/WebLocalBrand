@@ -53,8 +53,21 @@ class Product extends Model
     }
 
     /**
+     * Đường dẫn ảnh hợp lệ (hỗ trợ cả URL ngoài và file tải lên cục bộ)
+     */
+    public function getImageUrlAttribute()
+    {
+        if (!$this->image) {
+            return 'https://via.placeholder.com/400x500?text=No+Image';
+        }
+        if (str_starts_with($this->image, 'http://') || str_starts_with($this->image, 'https://')) {
+            return $this->image;
+        }
+        return asset($this->image);
+    }
+
+    /**
      * Ghi chú: Liên kết 1-Nhiều với bảng wishlists
-     * (Một sản phẩm có thể nằm trong danh sách yêu thích của nhiều khách hàng khác nhau)
      */
     public function wishlists()
     {
@@ -63,7 +76,6 @@ class Product extends Model
 
     /**
      * Ghi chú: Lấy trực tiếp danh sách các Khách hàng (User) đã thêm sản phẩm này vào yêu thích
-     * thông qua bảng trung gian 'wishlists'
      */
     public function favoritedByUsers()
     {
