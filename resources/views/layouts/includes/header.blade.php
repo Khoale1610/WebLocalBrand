@@ -65,7 +65,7 @@
                                         <div class="bg-light p-3 text-center border">
                                             <h6 class="text-dark">Bộ Sưu Tập Mới</h6>
                                             <p class="small text-muted">Khám phá phong cách công sở hiện đại</p>
-                                            <a href="#" class="btn btn-sm btn-dark">Xem Ngay</a>
+                                            <a href="{{ route('collections.index') }}" class="btn btn-sm btn-dark">Xem Ngay</a>
                                         </div>
                                     </div>
                                 </div>
@@ -74,10 +74,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#">Bộ Sưu Tập</a>
+                        <a class="nav-link fw-semibold {{ request()->routeIs('collections.index') || request()->routeIs('collections.show') ? 'active text-danger' : '' }}" href="{{ route('collections.index') }}">Bộ Sưu Tập</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-danger" href="#">Sale Up To 50%</a>
+                        <a class="nav-link fw-semibold text-danger {{ request()->routeIs('collections.sale') ? 'active fw-bold' : '' }}" href="{{ route('collections.sale') }}">Sale Up To 50% <span class="badge bg-danger rounded-pill px-1 small">HOT</span></a>
                     </li>
                 </ul>
 
