@@ -131,6 +131,10 @@ class CartController extends Controller
 
         session()->put('cart', $cart);
 
+        if ($request->input('action') === 'buy_now') {
+            return redirect()->route('checkout.index');
+        }
+
         if ($request->ajax() || $request->wantsJson()) {
             $totalQty = array_sum(array_column($cart, 'quantity'));
             return response()->json([

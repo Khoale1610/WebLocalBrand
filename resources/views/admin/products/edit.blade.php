@@ -91,9 +91,10 @@
                                         <tr>
                                             <th>Size</th>
                                             <th>Màu sắc</th>
-                                            <th style="min-width: 170px;">Mã SKU</th>
-                                            <th style="min-width: 130px;">Giá riêng (₫)</th>
-                                            <th style="min-width: 100px;">Tồn kho</th>
+                                            <th style="min-width: 170px;">Ảnh biến thể</th>
+                                            <th style="min-width: 150px;">Mã SKU</th>
+                                            <th style="min-width: 120px;">Giá riêng (₫)</th>
+                                            <th style="min-width: 90px;">Tồn kho</th>
                                             <th class="text-end" style="width: 60px;">Xóa</th>
                                         </tr>
                                     </thead>
@@ -109,6 +110,12 @@
                                                     <div class="d-flex align-items-center gap-2">
                                                         <span class="rounded-circle border" style="width: 16px; height: 16px; background-color: {{ $var->color->hex_code ?? '#000' }};"></span>
                                                         <span class="fw-medium">{{ $var->color->name ?? 'N/A' }}</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="{{ $var->image_url ?? $product->image_url }}" alt="thumb" class="rounded border shadow-xs" style="width: 32px; height: 38px; object-fit: cover;" id="var_preview_{{ $var->id }}">
+                                                        <input type="text" name="existing_variants[{{ $var->id }}][image]" class="form-control form-control-sm" value="{{ $var->image }}" placeholder="URL ảnh..." oninput="document.getElementById('var_preview_{{ $var->id }}').src = this.value || '{{ $product->image_url }}'">
                                                     </div>
                                                 </td>
                                                 <td>
@@ -261,15 +268,21 @@
                         <div class="form-text small">Mã quản lý kho duy nhất cho từng biến thể.</div>
                     </div>
 
-                    <div class="row g-3">
+                    <div class="row g-3 mb-3">
                         <div class="col-6">
                             <label class="form-label fw-semibold">Giá riêng (₫)</label>
-                            <input type="number" name="price" class="form-control" placeholder="Để trống nếu bằng giá gốc ({{ number_format($product->price, 0, ',', '.') }}₫)">
+                            <input type="number" name="price" class="form-control" placeholder="Dùng giá gốc ({{ number_format($product->price, 0, ',', '.') }}₫)">
                         </div>
                         <div class="col-6">
                             <label class="form-label fw-semibold">Tồn kho <span class="text-danger">*</span></label>
                             <input type="number" name="stock" class="form-control" value="20" min="0" required>
                         </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label fw-semibold">URL hình ảnh riêng cho biến thể (Tùy chọn)</label>
+                        <input type="url" name="image" class="form-control" placeholder="https://... hoặc để trống để dùng ảnh sản phẩm">
+                        <div class="form-text small">Nếu để trống, biến thể sẽ tự động dùng ảnh mặc định của sản phẩm.</div>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 pt-0">

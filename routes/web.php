@@ -8,6 +8,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ChatbotController;
+use App\Http\Controllers\CollectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,11 @@ Route::get('/san-pham/{id}', [ProductController::class, 'show'])->name('products
 
 // Route cho Trang Danh mục & Bộ lọc đa năng Sử dụng {id} 
 Route::get('/danh-muc/{id}', [ProductController::class, 'category'])->name('category.show');
+
+// 2.5. Bộ Sưu Tập (Collections) & Khuyến Mãi (Sale)
+Route::get('/bo-suu-tap', [CollectionController::class, 'index'])->name('collections.index');
+Route::get('/bo-suu-tap/{slug}', [CollectionController::class, 'show'])->name('collections.show');
+Route::get('/sale-up-to-50', [CollectionController::class, 'sale'])->name('collections.sale');
 
 // 3. Quản lý Giỏ hàng (Cart)
 Route::prefix('cart')->name('cart.')->group(function () {
