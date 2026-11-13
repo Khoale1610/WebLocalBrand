@@ -210,6 +210,7 @@ class ProductController extends Controller
             'existing_variants.*.sku'   => 'required|string|max:100',
             'existing_variants.*.price' => 'nullable|numeric|min:0',
             'existing_variants.*.stock' => 'required|integer|min:0',
+            'existing_variants.*.image' => 'nullable|string',
         ]);
 
         DB::beginTransaction();
@@ -261,6 +262,7 @@ class ProductController extends Controller
                             'sku'   => trim($varData['sku']),
                             'price' => !empty($varData['price']) ? $varData['price'] : null,
                             'stock' => $variantStock,
+                            'image' => !empty($varData['image']) ? trim($varData['image']) : $variant->image,
                         ]);
                     }
                 }
@@ -293,6 +295,7 @@ class ProductController extends Controller
             'sku'      => 'required|string|max:100|unique:product_variants,sku',
             'price'    => 'nullable|numeric|min:0',
             'stock'    => 'required|integer|min:0',
+            'image'    => 'nullable|string',
         ], [
             'sku.unique' => 'Mã SKU này đã tồn tại, vui lòng chọn mã khác.',
         ]);
@@ -314,6 +317,7 @@ class ProductController extends Controller
             'sku'        => trim($request->sku),
             'price'      => $request->price ?: null,
             'stock'      => (int) $request->stock,
+            'image'      => $request->filled('image') ? trim($request->image) : $product->image,
         ]);
 
         // Tính lại tổng tồn kho sản phẩm

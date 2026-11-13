@@ -19,6 +19,11 @@ class ProductVariant extends Model
         'image',
     ];
 
+    protected $appends = [
+        'effective_price',
+        'image_url',
+    ];
+
     /**
      * Sản phẩm gốc
      */

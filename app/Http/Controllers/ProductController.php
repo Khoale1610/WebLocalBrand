@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function category(Request $request, $id)
     {
-        $category = Category::findOrFail($id);
+        $category = is_numeric($id) ? Category::findOrFail($id) : Category::where('slug', $id)->firstOrFail();
 
         // Khởi tạo query lấy sản phẩm thuộc danh mục đang xem
         $query = Product::where('category_id', $category->id);
