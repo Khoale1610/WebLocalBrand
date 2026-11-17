@@ -46,6 +46,18 @@ class SampleDataSeeder extends Seeder
             ]
         );
 
+        User::updateOrCreate(
+            ['email' => 'khachhang@gmail.com'],
+            [
+                'name' => 'Nguyễn Văn An',
+                'password' => Hash::make('12345678'),
+                'phone' => '0987654321',
+                'address' => '123 Cầu Giấy, Phường Quan Hoa, Cầu Giấy, Hà Nội',
+                'role' => 'customer',
+                'email_verified_at' => now(),
+            ]
+        );
+
         // 2. Tạo Kích cỡ (Sizes)
         $sizesData = [
             ['name' => 'S', 'sort_order' => 1],

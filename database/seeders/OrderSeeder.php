@@ -135,6 +135,10 @@ class OrderSeeder extends Seeder
         ];
 
         foreach ($sampleOrders as $orderData) {
+            if (Order::where('order_code', $orderData['order_code'])->exists()) {
+                continue;
+            }
+
             $itemsData = $orderData['items'];
             unset($orderData['items']);
 
