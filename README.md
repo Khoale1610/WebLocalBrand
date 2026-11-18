@@ -21,7 +21,7 @@
 3. Chạy file cài đặt tự động:
    - Trên **Windows**: click đúp vào file `setup.bat` hoặc chạy trong terminal:
      ```bat
-     setup.bat
+     ./setup.bat
      ```
    - Trên **macOS / Linux**:
      ```bash
