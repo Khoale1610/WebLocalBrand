@@ -450,16 +450,30 @@
     @if(session('success'))
         <div class="alert alert-dark alert-dismissible fade show rounded-none border-dark mb-4" style="font-size: 13.5px;" role="alert">
             {{ session('success') }}
-            <a href="{{ route('cart.index') }}" class="fw-semibold text-dark text-decoration-underline ms-2">Xem giỏ hàng</a>
+            @if(Str::contains(session('success'), 'yêu thích'))
+                <a href="{{ route('account.wishlist.index') }}" class="fw-semibold text-dark text-decoration-underline ms-2">Xem danh sách yêu thích</a>
+            @else
+                <a href="{{ route('cart.index') }}" class="fw-semibold text-dark text-decoration-underline ms-2">Xem giỏ hàng</a>
+            @endif
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
     @if(session('info'))
         <div class="alert alert-secondary alert-dismissible fade show rounded-none mb-4" style="font-size: 13.5px;" role="alert">
             {{ session('info') }}
+            @if(Str::contains(session('info'), 'yêu thích'))
+                <a href="{{ route('account.wishlist.index') }}" class="fw-semibold text-dark text-decoration-underline ms-2">Xem danh sách yêu thích</a>
+            @endif
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+
+    <!-- Thông báo động khi bấm THÊM VÀO GIỎ bằng AJAX -->
+    <div id="pdCartAlertBox" class="alert alert-dark alert-dismissible fade show rounded-none border-dark mb-4 d-none" style="font-size: 13.5px;" role="alert">
+        <span id="pdCartAlertMessage"></span>
+        <a href="{{ route('cart.index') }}" class="fw-semibold text-dark text-decoration-underline ms-2">Xem giỏ hàng &rarr;</a>
+        <button type="button" class="btn-close" onclick="document.getElementById('pdCartAlertBox').classList.add('d-none')" aria-label="Close"></button>
+    </div>
 
     @php
         $sizes = $product->variants->pluck('size')->filter()->unique('id')->sortBy('sort_order')->values();
@@ -514,6 +528,7 @@
                                  data-img-url="{{ $thumb['url'] }}"
                                  data-color-id="{{ $thumb['color_id'] ?? '' }}"
                                  title="{{ $thumb['color_name'] }}"
+                                 onerror="this.onerror=null; this.src='{{ $product->image_url }}';"
                                  onclick="onThumbnailClick('{{ $thumb['url'] }}', '{{ $thumb['color_id'] }}', this)">
                         @endforeach
                     </div>
@@ -617,12 +632,18 @@
                         </div>
                     </div>
 
+                    <!-- Thông báo ngay trên nút khi bấm THÊM VÀO GIỎ -->
+                    <div id="pdInlineCartNotice" class="d-none p-2 px-3 mb-2 rounded-none" style="background-color: #FAFAFA; border: 1px solid #111111; font-size: 13px; color: #111111;">
+                        <span id="pdInlineCartNoticeText">Đã thêm sản phẩm vào giỏ hàng!</span>
+                        <a href="{{ route('cart.index') }}" class="fw-semibold text-decoration-underline ms-2" style="color: #C83E3B;">Xem giỏ hàng</a>
+                    </div>
+
                     <!-- 4. Cụm Nút Hành Động (CTA): Chiều cao 44px, cỡ chữ 13px font-semibold tracking-wider -->
                     <div class="d-flex gap-2 mb-2">
                         <button type="button" id="btnAddToCart" class="btn-pd-cart h-[44px] text-[13px] font-semibold tracking-wider rounded-none flex-grow-1" onclick="addToCartAjax()">
                             THÊM VÀO GIỎ
                         </button>
-                        <button type="submit" form="wishlistForm" class="btn-pd-wishlist h-[44px] rounded-none" title="Thêm vào sản phẩm yêu thích" aria-label="Thêm vào yêu thích">
+                        <button type="submit" form="wishlistForm" class="btn-pd-wishlist h-[44px] rounded-none" title="Lưu vào danh sách yêu thích (Wishlist)" aria-label="Lưu vào danh sách yêu thích">
                             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             </svg>
@@ -1048,6 +1069,21 @@
             if (data.success) {
                 const badge = document.getElementById('cartCountBadge');
                 if (badge) badge.textContent = data.cart_count;
+
+                // Hiển thị thông báo ở cả đầu trang và ngay trên nút bấm
+                const topAlertBox = document.getElementById('pdCartAlertBox');
+                const topAlertMsg = document.getElementById('pdCartAlertMessage');
+                if (topAlertBox && topAlertMsg) {
+                    topAlertMsg.textContent = data.message || 'Đã thêm sản phẩm vào giỏ hàng thành công!';
+                    topAlertBox.classList.remove('d-none');
+                }
+
+                const inlineNotice = document.getElementById('pdInlineCartNotice');
+                const inlineNoticeText = document.getElementById('pdInlineCartNoticeText');
+                if (inlineNotice && inlineNoticeText) {
+                    inlineNoticeText.textContent = data.message || 'Đã thêm sản phẩm vào giỏ hàng thành công!';
+                    inlineNotice.classList.remove('d-none');
+                }
 
                 btnAdd.style.backgroundColor = '#111111';
                 btnAdd.style.color = '#FFFFFF';

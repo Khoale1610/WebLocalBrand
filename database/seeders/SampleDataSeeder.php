@@ -125,10 +125,10 @@ class SampleDataSeeder extends Seeder
             2 => [
                 'Trắng'     => 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&auto=format&fit=crop',
                 'Đen'       => 'https://cdn.hstatic.net/products/200000039280/6305907d-f2f3-46d8-b78c-e98a8dcb78e1_8144e7c236ae42f58498613171cf8162_b6b1c6aef6614b488e719b9b8b3ea85e.png',
-                'Xanh Navy' => 'https://images.unsplash.com/photo-1625910513413-5fc421e0fd4f?w=800&auto=format&fit=crop',
-                'Xám Ghi'   => 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&auto=format&fit=crop',
+                'Xanh Navy' => 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&auto=format&fit=crop',
+                'Xám Ghi'   => 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop',
                 'Be Sữa'    => 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop',
-                'Nâu Bò'    => 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop',
+                'Nâu Bò'    => 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&auto=format&fit=crop',
             ],
             // 3. Áo T-Shirt (Thun)
             3 => [
