@@ -15,7 +15,7 @@ if not exist ".env" (
 
 REM 2. Cai dat vendor neu chua co
 if not exist "vendor\autoload.php" (
-    echo [2/6] Dang cai dat cac goi thu vien PHP (composer install)...
+    echo [2/6] Dang cai dat cac goi thu vien PHP - composer install...
     call composer install --no-interaction --prefer-dist
     if errorlevel 1 (
         echo [LOI] Khong the chay composer install. Vui long kiem tra lai Composer/PHP.
@@ -37,14 +37,19 @@ if errorlevel 1 (
 
 REM 4. Tu dong tao Database MySQL neu chua ton tai
 echo [4/6] Kiem tra va tao Database MySQL theo file .env...
-php -r "$lines = @file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); $env = []; foreach ($lines ?: [] as $line) { if (strpos(trim($line), '#') === 0 || strpos($line, '=') === false) continue; [$k, $v] = explode('=', $line, 2); $env[trim($k)] = trim($v, \" \t\n\r\0\x0B\\\"'\"); } $host = $env['DB_HOST'] ?? '127.0.0.1'; $port = $env['DB_PORT'] ?? '3306'; $db = $env['DB_DATABASE'] ?? 'laravel'; $user = $env['DB_USERNAME'] ?? 'root'; $pass = $env['DB_PASSWORD'] ?? ''; try { $pdo = new PDO(\"mysql:host=$host;port=$port;charset=utf8mb4\", $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); $pdo->exec(\"CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci\"); echo \"Da san sang database: $db\n\"; } catch (Throwable $e) { fwrite(STDERR, \"[LOI MYSQL] \" . $e->getMessage() . \"\nHay dam bao MySQL (XAMPP/Laragon) dang chay!\n\"); exit(1); }"
-if errorlevel 1 (
+powershell -NoProfile -Command "$c = Get-Content 'setup.bat' -Raw; $p = $c.Substring($c.IndexOf('__PHP_START__') + 13); Set-Content '_create_db.php' $p.Trim() -Encoding UTF8"
+
+php _create_db.php
+set DB_ERR=%errorlevel%
+del _create_db.php >nul 2>&1
+
+if %DB_ERR% neq 0 (
     pause
     exit /b 1
 )
 
 REM 5. Chay Migrate va Seed toan bo san pham, bien the, voucher, don hang
-echo [5/6] Dang tao bang va nap du lieu san pham (migrate --seed)...
+echo [5/6] Dang tao bang va nap du lieu san pham - migrate --seed...
 php artisan migrate --seed --force
 if errorlevel 1 (
     echo [LOI] Migrate hoac Seed that bai!
@@ -67,3 +72,27 @@ echo   Tai khoan Admin: admin@gmail.com / 12345678
 echo   Tai khoan Khach: khachhang@gmail.com / 12345678
 echo ========================================================
 pause
+goto :eof
+__PHP_START__
+<?php
+$lines = @file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$env = [];
+foreach ($lines ?: [] as $line) {
+    $line = trim($line);
+    if ($line === '' || $line[0] === '#' || strpos($line, '=') === false) continue;
+    list($k, $v) = explode('=', $line, 2);
+    $env[trim($k)] = trim($v, " \t\n\r\0\x0B'\"");
+}
+$host = $env['DB_HOST'] ?? '127.0.0.1';
+$port = $env['DB_PORT'] ?? '3306';
+$db   = $env['DB_DATABASE'] ?? 'laravel';
+$user = $env['DB_USERNAME'] ?? 'root';
+$pass = $env['DB_PASSWORD'] ?? '';
+try {
+    $pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    echo "Da san sang database: $db\n";
+} catch (Throwable $e) {
+    fwrite(STDERR, "[LOI MYSQL] " . $e->getMessage() . "\nHay dam bao MySQL dang chay!\n");
+    exit(1);
+}
