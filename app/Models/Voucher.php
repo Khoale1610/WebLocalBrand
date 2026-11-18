@@ -57,7 +57,7 @@ class Voucher extends Model
         if ($orderSubtotal < $this->min_order_amount) {
             return [
                 'valid' => false, 
-                'message' => 'Đơn hàng tối thiểu để áp dụng mã này là ' . number_format($this->min_order_amount, 0, ',', '.') . ' ₫.'
+                'message' => 'Đơn hàng tối thiểu để áp dụng mã này là ' . number_format($this->min_order_amount, 0, ',', '.') . 'đ.'
             ];
         }
 
@@ -89,12 +89,12 @@ class Voucher extends Model
         if ($this->type === 'percent') {
             $str = $this->value . '%';
             if ($this->max_discount) {
-                $str .= ' (Tối đa ' . number_format($this->max_discount, 0, ',', '.') . ' ₫)';
+                $str .= ' (Tối đa ' . number_format($this->max_discount, 0, ',', '.') . 'đ)';
             }
             return $str;
         }
 
-        return number_format($this->value, 0, ',', '.') . ' ₫';
+        return number_format($this->value, 0, ',', '.') . 'đ';
     }
 
     /**

@@ -171,6 +171,8 @@ class ProductController extends Controller
 
             DB::commit();
 
+            $this->syncProductsToSeederSnapshot();
+
             return redirect()->route('admin.products.index')
                 ->with('success', "Thêm sản phẩm '{$product->name}' thành công với {$product->variants()->count()} biến thể!");
 
@@ -215,6 +217,8 @@ class ProductController extends Controller
 
         DB::beginTransaction();
         try {
+            $oldProductImage = $product->image;
+
             // 1. Cập nhật ảnh đại diện nếu có
             if ($request->hasFile('image_file')) {
                 // Xóa ảnh cũ nếu là file cục bộ
@@ -228,6 +232,8 @@ class ProductController extends Controller
             } elseif ($request->filled('image_url')) {
                 $product->image = trim($request->image_url);
             }
+
+            $mainImageChanged = ($product->image !== $oldProductImage);
 
             // 2. Cập nhật slug nếu tên thay đổi
             if ($request->name !== $product->name) {
@@ -249,7 +255,7 @@ class ProductController extends Controller
             $product->is_featured = $request->boolean('is_featured');
             $product->save();
 
-            // 4. Cập nhật các biến thể hiện có (SKU, Giá riêng, Tồn kho)
+            // 4. Cập nhật các biến thể hiện có (SKU, Giá riêng, Tồn kho, Ảnh)
             $totalStock = 0;
             if ($request->has('existing_variants') && is_array($request->existing_variants)) {
                 foreach ($request->existing_variants as $varId => $varData) {
@@ -258,11 +264,18 @@ class ProductController extends Controller
                         $variantStock = (int) ($varData['stock'] ?? 0);
                         $totalStock += $variantStock;
 
+                        $submittedVarImg = !empty($varData['image']) ? trim($varData['image']) : null;
+                        if ($mainImageChanged && ($submittedVarImg === $oldProductImage || empty($submittedVarImg))) {
+                            $newVarImg = $product->image;
+                        } else {
+                            $newVarImg = $submittedVarImg ?: $product->image;
+                        }
+
                         $variant->update([
                             'sku'   => trim($varData['sku']),
                             'price' => !empty($varData['price']) ? $varData['price'] : null,
                             'stock' => $variantStock,
-                            'image' => !empty($varData['image']) ? trim($varData['image']) : $variant->image,
+                            'image' => $newVarImg,
                         ]);
                     }
                 }
@@ -274,6 +287,8 @@ class ProductController extends Controller
             $product->update(['stock' => $totalStock]);
 
             DB::commit();
+
+            $this->syncProductsToSeederSnapshot();
 
             return redirect()->route('admin.products.edit', $product->id)
                 ->with('success', "Cập nhật sản phẩm '{$product->name}' thành công!");
@@ -323,6 +338,8 @@ class ProductController extends Controller
         // Tính lại tổng tồn kho sản phẩm
         $product->update(['stock' => $product->variants()->sum('stock')]);
 
+        $this->syncProductsToSeederSnapshot();
+
         return redirect()->route('admin.products.edit', $product->id)
             ->with('success', 'Đã thêm biến thể mới thành công!');
     }
@@ -345,6 +362,8 @@ class ProductController extends Controller
 
         // Đồng bộ lại tổng tồn kho
         $product->update(['stock' => $product->variants()->sum('stock')]);
+
+        $this->syncProductsToSeederSnapshot();
 
         return redirect()->route('admin.products.edit', $productId)
             ->with('success', 'Đã xóa biến thể khỏi sản phẩm thành công!');
@@ -370,7 +389,48 @@ class ProductController extends Controller
         $name = $product->name;
         $product->delete();
 
+        $this->syncProductsToSeederSnapshot();
+
         return redirect()->route('admin.products.index')
             ->with('success', "Đã xóa sản phẩm '{$name}' thành công!");
+    }
+
+    /**
+     * Tự động lưu snapshot dữ liệu sản phẩm & hình ảnh đã chỉnh sửa trong Admin
+     * vào database/seeders/admin_products_sync.json để khi push Git và clone về
+     * chạy db:seed vẫn giữ nguyên 100% ảnh và thông tin đã sửa.
+     */
+    protected function syncProductsToSeederSnapshot(): void
+    {
+        try {
+            $products = Product::with(['variants.size', 'variants.color'])->orderBy('id')->get();
+            $payload = $products->map(function (Product $p) {
+                return [
+                    'slug'        => $p->slug,
+                    'category_id' => $p->category_id,
+                    'name'        => $p->name,
+                    'price'       => (float) $p->price,
+                    'is_featured' => (bool) $p->is_featured,
+                    'image'       => $p->image,
+                    'stock'       => (int) $p->stock,
+                    'description' => $p->description,
+                    'variants'    => $p->variants->map(function (ProductVariant $v) {
+                        return [
+                            'size_name'  => $v->size ? $v->size->name : null,
+                            'color_name' => $v->color ? $v->color->name : null,
+                            'sku'        => $v->sku,
+                            'price'      => $v->price !== null ? (float) $v->price : null,
+                            'stock'      => (int) $v->stock,
+                            'image'      => $v->image,
+                        ];
+                    })->values()->all(),
+                ];
+            })->values()->all();
+
+            $snapshotPath = database_path('seeders/admin_products_sync.json');
+            File::put($snapshotPath, json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        } catch (\Throwable $e) {
+            // Không làm gián đoạn luồng chính nếu không ghi được file
+        }
     }
 }
