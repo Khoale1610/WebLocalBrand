@@ -346,6 +346,185 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+
+        /* OWEN STUDIO — Minimalist Square Account Pages Design System */
+        .account-page {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .acc-sidebar-box {
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            border-radius: 0px !important;
+        }
+        .acc-user-header {
+            padding: 20px;
+            border-bottom: 1px solid #E5E7EB;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .acc-avatar {
+            width: 42px;
+            height: 42px;
+            background-color: #111111;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0px !important;
+            flex-shrink: 0;
+        }
+        .acc-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .acc-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 20px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: #4B5563;
+            text-decoration: none;
+            border-bottom: 1px solid #F3F4F6;
+            border-left: 3px solid transparent;
+            transition: all 0.15s ease;
+        }
+        .acc-nav-link:last-child {
+            border-bottom: none;
+        }
+        .acc-nav-link:hover {
+            background-color: #FAFAFA;
+            color: #111111;
+        }
+        .acc-nav-link.active {
+            background-color: #111111;
+            color: #FFFFFF;
+            border-left-color: #C83E3B;
+            font-weight: 600;
+        }
+        .acc-content-box {
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            border-radius: 0px !important;
+            padding: 28px;
+        }
+        .acc-section-header {
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #E5E7EB;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .acc-kicker {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #C83E3B;
+            margin-bottom: 4px;
+        }
+        .acc-title {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #111111;
+            margin: 0;
+        }
+        .acc-info-row {
+            display: flex;
+            flex-direction: column;
+            padding: 14px 0;
+            border-bottom: 1px solid #F3F4F6;
+            font-size: 14px;
+        }
+        @media (min-width: 768px) {
+            .acc-info-row {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        .acc-info-row:last-child {
+            border-bottom: none;
+        }
+        .acc-info-label {
+            width: 180px;
+            flex-shrink: 0;
+            color: #6B7280;
+            font-weight: 500;
+            font-size: 13.5px;
+        }
+        .acc-info-value {
+            color: #111111;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .acc-input {
+            height: 42px;
+            border: 1px solid #E5E7EB !important;
+            border-radius: 0px !important;
+            font-size: 14px;
+            color: #111111;
+            box-shadow: none !important;
+            padding: 0 14px;
+        }
+        .acc-input:focus {
+            border-color: #111111 !important;
+            box-shadow: none !important;
+        }
+        .btn-acc-primary {
+            height: 44px;
+            background-color: #111111;
+            color: #FFFFFF;
+            border: 1px solid #111111;
+            border-radius: 0px !important;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-acc-primary:hover {
+            background-color: #C83E3B;
+            border-color: #C83E3B;
+            color: #FFFFFF;
+        }
+        .btn-acc-outline {
+            height: 38px;
+            background-color: #FFFFFF;
+            color: #111111;
+            border: 1px solid #E5E7EB;
+            border-radius: 0px !important;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+        .btn-acc-outline:hover {
+            border-color: #C83E3B;
+            color: #C83E3B;
+            background-color: #FFF5F5;
+        }
     </style>
     @stack('styles')
 </head>
