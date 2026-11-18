@@ -77,7 +77,7 @@
                         <a class="nav-link fw-semibold {{ request()->routeIs('collections.index') || request()->routeIs('collections.show') ? 'active text-danger' : '' }}" href="{{ route('collections.index') }}">Bộ Sưu Tập</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-danger {{ request()->routeIs('collections.sale') ? 'active fw-bold' : '' }}" href="{{ route('collections.sale') }}">Sale Up To 50% <span class="badge bg-danger rounded-pill px-1 small">HOT</span></a>
+                        <a class="nav-link fw-semibold {{ request()->routeIs('collections.sale') ? 'active fw-bold' : '' }}" style="color: #C83E3B !important;" href="{{ route('collections.sale') }}">Sale Up To 50% <span class="badge rounded-0 px-1 small" style="background-color: #C83E3B; font-size: 10px;">HOT</span></a>
                     </li>
                 </ul>
 
@@ -86,12 +86,12 @@
                     <div class="position-relative" id="headerSearchWrapper">
                         <form class="d-flex" action="{{ route('products.search') }}" method="GET" id="headerSearchForm" autocomplete="off">
                             <div class="input-group">
-                                <input class="form-control form-control-sm" type="search" placeholder="Tìm sản phẩm..." name="query" id="headerSearchInput" value="{{ request('query') }}">
-                                <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+                                <input class="form-control form-control-sm rounded-0 border-secondary-subtle shadow-none" type="search" placeholder="Tìm sản phẩm..." name="query" id="headerSearchInput" value="{{ request('query') }}" style="height: 36px; font-size: 13px;">
+                                <button class="btn btn-outline-dark btn-sm rounded-0 px-3" type="submit" style="height: 36px;"><i class="fas fa-search"></i></button>
                             </div>
                         </form>
                         <!-- Khung dropdown hiển thị kết quả gợi ý tức thì -->
-                        <div id="liveSearchResults" class="dropdown-menu shadow-lg p-0 border-0 rounded-3 d-none position-absolute start-0 w-100" style="min-width: 280px; z-index: 1050; max-height: 350px; overflow-y: auto;">
+                        <div id="liveSearchResults" class="dropdown-menu p-0 border rounded-0 d-none position-absolute start-0 w-100" style="min-width: 280px; z-index: 1050; max-height: 350px; overflow-y: auto; border-color: #E5E7EB !important; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
                         </div>
                     </div>
 
@@ -99,34 +99,42 @@
                     <!-- Icon Giỏ Hàng -->
                     <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5 ms-2" title="Giỏ hàng">
                         <i class="fas fa-shopping-bag"></i>
-                        <span id="cartCountBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6" style="font-size: 0.65rem !important;">
+                        <span id="cartCountBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-0" style="background-color: #C83E3B; font-size: 10px !important; padding: 3px 5px;">
                             {{ array_sum(array_column(session('cart', []), 'quantity')) }}
                         </span>
                     </a>
 
-                    <!-- Icon Tài Khoản (Dropdown) -->
+                    <!-- Icon Tài Khoản (Dropdown Vuông góc 0px) -->
                     <div class="dropdown ms-2">
                         <a href="#" class="text-dark fs-5" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Tài khoản">
                             <i class="far fa-user"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end rounded-0 border py-2 mt-2" aria-labelledby="userDropdown" style="min-width: 230px; border-color: #E5E7EB !important; box-shadow: 0 10px 25px rgba(0,0,0,0.08); font-size: 13.5px;">
                             @guest
-                                <li><a class="dropdown-item fw-bold text-dark" href="{{ route('login') }}">Đăng Nhập</a></li>
-                                <li><a class="dropdown-item" href="{{ route('register') }}">Đăng Ký</a></li>
+                                <li><a class="dropdown-item fw-semibold text-dark py-2" href="{{ route('login') }}">Đăng nhập</a></li>
+                                <li><a class="dropdown-item py-2 text-muted" href="{{ route('register') }}">Đăng ký tài khoản</a></li>
                             @else
-                                <li><span class="dropdown-item-text text-muted small">Xin chào, {{ Auth::user()->name }}</span></li>
+                                <li class="px-3 py-2 border-bottom" style="border-color: #F3F4F6 !important;">
+                                    <div class="text-muted" style="font-size: 11.5px;">Xin chào,</div>
+                                    <div class="fw-semibold text-dark text-truncate">{{ Auth::user()->name }}</div>
+                                </li>
                                 @if(Auth::user()->isAdmin())
-                                    <li><a class="dropdown-item text-primary fw-bold" href="{{ route('admin.dashboard') }}"><i class="fas fa-gauge-high me-2"></i> Trang Quản trị (Admin)</a></li>
+                                    <li>
+                                        <a class="dropdown-item fw-semibold py-2 d-flex align-items-center gap-2" style="color: #C83E3B;" href="{{ route('admin.dashboard') }}">
+                                            <span>Trang Quản trị (Admin)</span>
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider my-1"></li>
                                 @endif
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="{{ route('account.index') }}"><i class="fas fa-user-circle me-2"></i> Quản lý tài khoản</a></li>
-                                <li><a class="dropdown-item" href="{{ route('account.orders') }}"><i class="fas fa-box me-2"></i> Lịch sử đơn hàng</a></li>
-                                <li><a class="dropdown-item" href="{{ route('account.wishlist.index') }}"><i class="fas fa-heart me-2 text-danger"></i> Sản phẩm yêu thích</a></li>
-                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item py-2 text-dark" href="{{ route('account.index') }}">Quản lý tài khoản</a></li>
+                                <li><a class="dropdown-item py-2 text-dark" href="{{ route('account.orders') }}">Lịch sử đơn hàng</a></li>
+                                <li><a class="dropdown-item py-2 text-dark" href="{{ route('account.wishlist.index') }}">Sản phẩm yêu thích</a></li>
+                                <li><a class="dropdown-item py-2 text-dark" href="{{ route('account.addresses') }}">Sổ địa chỉ</a></li>
+                                <li><hr class="dropdown-divider my-1"></li>
                                 <li>
                                     <form action="{{ route('logout') }}" method="POST" class="d-inline">
                                         @csrf
-                                        <button type="submit" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i> Đăng xuất</button>
+                                        <button type="submit" class="dropdown-item py-2" style="color: #C83E3B; font-weight: 500;">Đăng xuất</button>
                                     </form>
                                 </li>
                             @endguest
