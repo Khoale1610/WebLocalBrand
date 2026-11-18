@@ -69,7 +69,7 @@ class ProductVariant extends Model
      */
     public function getFormattedPriceAttribute()
     {
-        return number_format($this->effective_price, 0, ',', '.') . ' ₫';
+        return number_format($this->effective_price, 0, ',', '.') . ' đ';
     }
 
     /**

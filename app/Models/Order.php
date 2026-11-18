@@ -76,7 +76,7 @@ class Order extends Model
      */
     public function getFormattedTotalAmountAttribute()
     {
-        return number_format($this->total_amount, 0, ',', '.') . ' ₫';
+        return number_format($this->total_amount, 0, ',', '.') . ' đ';
     }
 
     /**

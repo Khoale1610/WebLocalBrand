@@ -151,8 +151,8 @@
                                 {{ $item->variant_info ?? '—' }}
                             </td>
                             <td class="text-center fw-bold">{{ $item->quantity }}</td>
-                            <td class="text-end">{{ number_format($item->price, 0, ',', '.') }} ₫</td>
-                            <td class="text-end fw-semibold">{{ number_format($item->total_price, 0, ',', '.') }} ₫</td>
+                            <td class="text-end">{{ number_format($item->price, 0, ',', '.') }}đ</td>
+                            <td class="text-end fw-semibold">{{ number_format($item->total_price, 0, ',', '.') }}đ</td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -164,22 +164,22 @@
             <div class="col-6">
                 <div class="d-flex justify-content-between py-1 text-muted small">
                     <span>Tạm tính tiền hàng:</span>
-                    <span>{{ number_format($order->items->sum('total_price'), 0, ',', '.') }} ₫</span>
+                    <span>{{ number_format($order->items->sum('total_price'), 0, ',', '.') }}đ</span>
                 </div>
                 <div class="d-flex justify-content-between py-1 text-muted small">
                     <span>Phí vận chuyển:</span>
-                    <span>{{ $order->shipping_fee > 0 ? number_format($order->shipping_fee, 0, ',', '.') . ' ₫' : 'Miễn phí' }}</span>
+                    <span>{{ $order->shipping_fee > 0 ? number_format($order->shipping_fee, 0, ',', '.') . 'đ' : 'Miễn phí' }}</span>
                 </div>
                 @if($order->discount_amount > 0)
                     <div class="d-flex justify-content-between py-1 text-danger small">
                         <span>Giảm giá:</span>
-                        <span>-{{ number_format($order->discount_amount, 0, ',', '.') }} ₫</span>
+                        <span>-{{ number_format($order->discount_amount, 0, ',', '.') }}đ</span>
                     </div>
                 @endif
                 <hr class="my-2">
                 <div class="d-flex justify-content-between py-1">
                     <span class="fw-bold fs-6">TỔNG TIỀN PHẢI THU:</span>
-                    <span class="fw-bold fs-5 text-danger">{{ number_format($order->total_amount, 0, ',', '.') }} ₫</span>
+                    <span class="fw-bold fs-5 text-danger">{{ number_format($order->total_amount, 0, ',', '.') }}đ</span>
                 </div>
             </div>
         </div>

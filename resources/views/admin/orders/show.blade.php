@@ -89,7 +89,7 @@
                                         @endif
                                     </td>
                                     <td class="text-end fw-semibold text-dark">
-                                        {{ number_format($item->price, 0, ',', '.') }} ₫
+                                        {{ number_format($item->price, 0, ',', '.') }}đ
                                     </td>
                                     <td class="text-center">
                                         <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-bold">
@@ -97,7 +97,7 @@
                                         </span>
                                     </td>
                                     <td class="text-end fw-bold text-dark fs-6">
-                                        {{ number_format($item->total_price, 0, ',', '.') }} ₫
+                                        {{ number_format($item->total_price, 0, ',', '.') }}đ
                                     </td>
                                 </tr>
                             @endforeach
@@ -111,12 +111,12 @@
                         <div class="col-12 col-md-6 col-lg-5">
                             <div class="d-flex justify-content-between py-1 text-muted small">
                                 <span>Tạm tính tiền hàng:</span>
-                                <span class="fw-semibold text-dark">{{ number_format($order->items->sum('total_price'), 0, ',', '.') }} ₫</span>
+                                <span class="fw-semibold text-dark">{{ number_format($order->items->sum('total_price'), 0, ',', '.') }}đ</span>
                             </div>
                             <div class="d-flex justify-content-between py-1 text-muted small">
                                 <span>Phí vận chuyển:</span>
                                 @if($order->shipping_fee > 0)
-                                    <span class="fw-semibold text-dark">{{ number_format($order->shipping_fee, 0, ',', '.') }} ₫</span>
+                                    <span class="fw-semibold text-dark">{{ number_format($order->shipping_fee, 0, ',', '.') }}đ</span>
                                 @else
                                     <span class="text-success fw-bold"><i class="fa-solid fa-truck-fast me-1"></i>Miễn phí</span>
                                 @endif
@@ -124,13 +124,13 @@
                             @if($order->discount_amount > 0)
                                 <div class="d-flex justify-content-between py-1 text-danger small">
                                     <span>Voucher giảm giá:</span>
-                                    <span class="fw-bold">-{{ number_format($order->discount_amount, 0, ',', '.') }} ₫</span>
+                                    <span class="fw-bold">-{{ number_format($order->discount_amount, 0, ',', '.') }}đ</span>
                                 </div>
                             @endif
                             <hr class="my-2">
                             <div class="d-flex justify-content-between py-2 align-items-center">
                                 <span class="fw-bold text-dark">Tổng tiền thanh toán:</span>
-                                <span class="fw-bold text-danger fs-5">{{ number_format($order->total_amount, 0, ',', '.') }} ₫</span>
+                                <span class="fw-bold text-danger fs-5">{{ number_format($order->total_amount, 0, ',', '.') }}đ</span>
                             </div>
                         </div>
                     </div>

@@ -112,7 +112,7 @@ class HomeController extends Controller
                                return [
                                    'id'              => $p->id,
                                    'name'            => $p->name,
-                                   'price_formatted' => number_format($p->price, 0, ',', '.') . ' ₫',
+                                   'price_formatted' => number_format($p->price, 0, ',', '.') . 'đ',
                                    'image'           => $p->image ?: 'https://via.placeholder.com/60x60',
                                    'url'             => route('products.show', $p->id),
                                ];

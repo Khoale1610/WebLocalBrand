@@ -235,13 +235,13 @@
                                 @endif
                             </div>
                             <a href="{{ route('products.show', $product->id) }}">
-                                <img src="{{ Str::startsWith($product->image, ['http://', 'https://']) ? $product->image : asset('storage/' . $product->image) }}"
+                                <img src="{{ $product->image_url }}"
                                      class="lb-product-img"
                                      alt="{{ $product->name }}"
                                      onerror="this.onerror=null; this.src='https://via.placeholder.com/400x520?text=OWEN+STUDIO';">
                             </a>
                             <a href="{{ route('products.show', $product->id) }}" class="lb-quick-view">
-                                SĂN DEAL NGAY &rarr;
+                                MUA NGAY
                             </a>
                         </div>
 
@@ -251,8 +251,8 @@
                                 {{ $product->name }}
                             </a>
                             <div class="d-flex align-items-center">
-                                <span class="lb-product-price text-danger">{{ number_format($product->price, 0, ',', '.') }}₫</span>
-                                <span class="lb-product-price-old">{{ number_format($originalPrice, 0, ',', '.') }}₫</span>
+                                <span class="lb-product-price" style="color: #C83E3B;">{{ number_format($product->price, 0, ',', '.') }}đ</span>
+                                <span class="lb-product-price-old">{{ number_format($originalPrice, 0, ',', '.') }}đ</span>
                             </div>
                         </div>
                     </div>

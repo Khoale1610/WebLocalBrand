@@ -70,7 +70,7 @@
                 <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3 mb-2">
                         <span class="text-muted small">Tổng chi tiêu:</span>
-                        <span class="fw-bold fs-5 text-danger">{{ number_format($totalSpent, 0, ',', '.') }} ₫</span>
+                        <span class="fw-bold fs-5 text-danger">{{ number_format($totalSpent, 0, ',', '.') }}đ</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
                         <span class="text-muted small">Số đơn hoàn thành:</span>
@@ -140,7 +140,7 @@
                                         {{ $order->items->sum('quantity') }} sản phẩm
                                     </td>
                                     <td class="fw-bold text-dark">
-                                        {{ number_format($order->total_amount, 0, ',', '.') }} ₫
+                                        {{ number_format($order->total_amount, 0, ',', '.') }}đ
                                     </td>
                                     <td>
                                         {!! $order->payment_status_badge !!}

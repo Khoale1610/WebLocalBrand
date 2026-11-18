@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Owen - Thời Trang Nam High-End')</title>
     
-    <!-- Google Fonts: Plus Jakarta Sans & Oswald (Chuẩn Local Brand Hiện Đại) -->
+    <!-- Google Fonts: Plus Jakarta Sans & Inter (Hỗ trợ đầy đủ tiếng Việt chuẩn) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,10 +19,10 @@
     <style>
         /* Hệ thống Typography nâng cấp toàn trang */
         :root {
-            --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            --font-heading: 'Oswald', 'Plus Jakarta Sans', sans-serif;
+            --font-primary: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
             --brand-black: #111111;
-            --brand-red: #d32f2f;
+            --brand-red: #C83E3B;
         }
         html {
             font-size: 16.5px; /* Tăng kích thước chữ gốc toàn trang để rõ nét và dễ đọc hơn */
@@ -106,11 +106,11 @@
             font-weight: 500;
             color: #333 !important;
             background-color: #fff !important;
-            border: 1px solid #dee2e6 !important;
-            border-radius: 8px !important;
+            border: 1px solid #E5E7EB !important;
+            border-radius: 0px !important;
             text-decoration: none !important;
             transition: all 0.2s ease-in-out;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: none;
         }
         .pagination .page-link:hover {
             color: #fff !important;
@@ -167,7 +167,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.18em;
-            color: #d32f2f;
+            color: #C83E3B;
             margin-bottom: 4px;
             display: block;
         }
@@ -277,7 +277,7 @@
             color: #fff;
         }
         .lb-badge-red {
-            background-color: #d32f2f;
+            background-color: #C83E3B;
             color: #fff;
         }
         .lb-quick-view {

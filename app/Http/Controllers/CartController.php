@@ -148,6 +148,56 @@ class CartController extends Controller
     }
 
     /**
+     * Tính toán lại tổng giỏ hàng dùng chung cho AJAX update / remove
+     */
+    protected function buildCartSummaryPayload(array $cart, ?string $updatedKey = null, string $message = '')
+    {
+        $subtotal = 0;
+        foreach ($cart as $item) {
+            $subtotal += $item['price'] * $item['quantity'];
+        }
+
+        $shippingFee = ($subtotal >= self::FREE_SHIPPING_THRESHOLD || $subtotal == 0) ? 0 : self::DEFAULT_SHIPPING_FEE;
+        $amountNeeded = max(0, self::FREE_SHIPPING_THRESHOLD - $subtotal);
+        $freeshipPercent = self::FREE_SHIPPING_THRESHOLD > 0 ? min(100, round(($subtotal / self::FREE_SHIPPING_THRESHOLD) * 100)) : 100;
+
+        $discountAmount = 0;
+        $voucherSession = session()->get('voucher', null);
+        if ($voucherSession) {
+            $voucherModel = Voucher::find($voucherSession['id']);
+            if ($voucherModel && $voucherModel->checkValidity($subtotal)['valid']) {
+                $discountAmount = $voucherModel->calculateDiscount($subtotal);
+                $voucherSession['discount'] = $discountAmount;
+                session()->put('voucher', $voucherSession);
+            } else {
+                session()->forget('voucher');
+            }
+        }
+
+        $total = max(0, $subtotal + $shippingFee - $discountAmount);
+        $cartCount = array_sum(array_column($cart, 'quantity'));
+        $itemTotal = ($updatedKey && isset($cart[$updatedKey]))
+            ? number_format($cart[$updatedKey]['price'] * $cart[$updatedKey]['quantity'], 0, ',', '.') . 'đ'
+            : '0đ';
+
+        return [
+            'success'          => true,
+            'message'          => $message,
+            'cart_count'       => $cartCount,
+            'cart_is_empty'    => empty($cart),
+            'item_total'       => $itemTotal,
+            'subtotal'         => number_format($subtotal, 0, ',', '.') . 'đ',
+            'shipping_fee'     => $shippingFee == 0 ? 'Miễn phí' : number_format($shippingFee, 0, ',', '.') . 'đ',
+            'discount'         => number_format($discountAmount, 0, ',', '.') . 'đ',
+            'total'            => number_format($total, 0, ',', '.') . '<span class="cart-currency text-[18px]">đ</span>',
+            'total_raw'        => number_format($total, 0, ',', '.') . 'đ',
+            'is_freeship'      => $amountNeeded == 0,
+            'amount_needed'    => $amountNeeded,
+            'freeship_percent' => $freeshipPercent,
+        ];
+    }
+
+    /**
      * Cập nhật số lượng sản phẩm trong giỏ
      */
     public function update(Request $request)
@@ -158,7 +208,7 @@ class CartController extends Controller
         ]);
 
         $key = $request->key;
-        $qty = $request->quantity;
+        $qty = (int) $request->quantity;
         $cart = session()->get('cart', []);
 
         if (isset($cart[$key])) {
@@ -166,7 +216,11 @@ class CartController extends Controller
             session()->put('cart', $cart);
         }
 
-        return redirect()->route('cart.index')->with('success', 'Đã cập nhật giỏ hàng!');
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json($this->buildCartSummaryPayload($cart, $key, 'Đã cập nhật số lượng sản phẩm.'));
+        }
+
+        return redirect()->route('cart.index', [], 303)->with('success', 'Đã cập nhật giỏ hàng!');
     }
 
     /**
@@ -180,7 +234,15 @@ class CartController extends Controller
             session()->put('cart', $cart);
         }
 
-        return redirect()->route('cart.index')->with('success', 'Đã xóa sản phẩm khỏi giỏ hàng!');
+        if (empty($cart)) {
+            session()->forget('voucher');
+        }
+
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json($this->buildCartSummaryPayload($cart, null, 'Đã xóa sản phẩm khỏi giỏ hàng.'));
+        }
+
+        return redirect()->route('cart.index', [], 303)->with('success', 'Đã xóa sản phẩm khỏi giỏ hàng!');
     }
 
     /**

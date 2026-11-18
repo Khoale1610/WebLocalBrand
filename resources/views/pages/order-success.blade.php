@@ -1,219 +1,422 @@
 @extends('layouts.app')
 
-@section('title', 'Đặt Hàng Thành Công #' . $order->order_code . ' - WebLocalBrand')
+@section('title', 'Đặt Hàng Thành Công #' . $order->order_code . ' — OWEN STUDIO')
 
 @push('styles')
 <style>
-    .success-icon-box {
-        width: 80px;
-        height: 80px;
-        background-color: #dcfce7;
-        color: #16a34a;
-        border-radius: 50%;
-        display: flex;
+    /* OWEN STUDIO — Minimalist Square Order Success Design System */
+    .order-success-page {
+        font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rounded-none {
+        border-radius: 0px !important;
+    }
+    .tracking-wider {
+        letter-spacing: 0.08em !important;
+    }
+    .leading-snug {
+        line-height: 1.375 !important;
+    }
+    .leading-relaxed {
+        line-height: 1.625 !important;
+    }
+
+    /* Header Status Banner */
+    .os-header-box {
+        background-color: #FFFFFF;
+        border: 1px solid #E5E7EB;
+        border-radius: 0px;
+        padding: 32px 24px;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+    .os-icon-box {
+        width: 52px;
+        height: 52px;
+        background-color: #FFFFFF;
+        border: 1.5px solid #111111;
+        border-radius: 0px;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 2.5rem;
-        margin: 0 auto 1.5rem;
+        margin-bottom: 16px;
     }
-    .order-summary-card {
-        background-color: #f9fafb;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
+    .os-title {
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.375;
+        color: #111111;
+        margin-bottom: 8px;
     }
-    .vietqr-card {
-        background: #ffffff;
-        border: 2px dashed #dc2626;
-        border-radius: 16px;
+    @media (min-width: 768px) {
+        .os-title {
+            font-size: 24px;
+        }
+    }
+    .os-status-tag {
+        display: inline-block;
+        font-size: 11.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 4px 12px;
+        border-radius: 0px;
+        border: 1px solid #111111;
+        background-color: #111111;
+        color: #FFFFFF;
+        margin-bottom: 14px;
+    }
+    .os-status-tag-outline {
+        display: inline-block;
+        font-size: 11.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 4px 12px;
+        border-radius: 0px;
+        border: 1px solid #E5E7EB;
+        background-color: #FAFAFA;
+        color: #4B5563;
+    }
+    .os-order-code-wrap {
+        font-size: 14px;
+        color: #4B5563;
+        margin-bottom: 8px;
+    }
+    .os-order-code {
+        font-weight: 600;
+        color: #C83E3B;
+        letter-spacing: 0.04em;
     }
     .copy-btn {
         cursor: pointer;
-        padding: 0.15rem 0.5rem;
-        font-size: 0.75rem;
+        padding: 2px 8px;
+        font-size: 11.5px;
+        font-weight: 500;
+        color: #4B5563;
+        background-color: #FFFFFF;
+        border: 1px solid #E5E7EB;
+        border-radius: 0px !important;
+        transition: all 0.15s ease;
+    }
+    .copy-btn:hover {
+        border-color: #111111;
+        color: #111111;
+        background-color: #FAFAFA;
+    }
+    .os-desc {
+        font-size: 13.5px;
+        line-height: 1.625;
+        color: #6B7280;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    /* Section Cards */
+    .os-card {
+        background-color: #FFFFFF;
+        border: 1px solid #E5E7EB;
+        border-radius: 0px;
+        padding: 24px;
+    }
+    .os-section-title {
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #111111;
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #E5E7EB;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .os-info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 8px 0;
+        border-bottom: 1px solid #F3F4F6;
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+    .os-info-row:last-child {
+        border-bottom: none;
+    }
+    .os-info-label {
+        color: #6B7280;
+        flex-shrink: 0;
+    }
+    .os-info-value {
+        color: #111111;
+        font-weight: 500;
+        text-align: right;
+    }
+
+    /* VietQR Payment Box */
+    .vietqr-card {
+        background-color: #FFFFFF;
+        border: 1.5px solid #111111;
+        border-radius: 0px;
+        padding: 28px;
+        margin-bottom: 28px;
+    }
+    .os-qr-frame {
+        display: inline-block;
+        padding: 12px;
+        background-color: #FFFFFF;
+        border: 1px solid #E5E7EB;
+        border-radius: 0px;
+    }
+    .os-note-box {
+        background-color: #FAFAFA;
+        border: 1px solid #E5E7EB;
+        border-radius: 0px;
+        padding: 12px 14px;
+        font-size: 13px;
+        line-height: 1.55;
+        color: #4B5563;
+    }
+
+    /* Pricing & Currency */
+    .os-total-price {
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #C83E3B;
+        line-height: 1.2;
+    }
+    .os-currency {
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none !important;
+        margin-left: 1px;
+    }
+
+    /* CTA Buttons: 44px height, 13px font-semibold tracking-wider, square 0px */
+    .btn-os-primary {
+        height: 44px;
+        background-color: #111111;
+        color: #FFFFFF;
+        border: 1px solid #111111;
+        border-radius: 0px !important;
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    .btn-os-primary:hover {
+        background-color: #C83E3B;
+        border-color: #C83E3B;
+        color: #FFFFFF;
+    }
+    .btn-os-outline {
+        height: 44px;
+        background-color: #FFFFFF;
+        color: #111111;
+        border: 1px solid #111111;
+        border-radius: 0px !important;
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    .btn-os-outline:hover {
+        background-color: #111111;
+        color: #FFFFFF;
     }
 </style>
 @endpush
 
 @section('content')
-<div class="container py-4 py-lg-5">
-    <!-- Icon & Tiêu đề trạng thái đơn hàng -->
-    <div class="text-center mb-5">
-        @if($order->payment_method === 'vietqr' && $order->payment_status !== 'paid')
-            <div class="success-icon-box shadow-sm" style="background-color: #fef3c7; color: #d97706;">
-                <i class="fas fa-qrcode"></i>
-            </div>
-            <h2 class="fw-bold text-dark mb-2">Đơn Hàng Đã Tạo - Chờ Quét Mã VietQR</h2>
-            <div class="mb-3">
-                <span class="badge bg-warning text-dark px-3 py-2 fs-6">
-                    <i class="fas fa-clock me-1"></i>Trạng thái: Chưa thanh toán (Chờ quét mã QR)
-                </span>
-            </div>
-            <p class="text-muted fs-6 mb-1">
-                Mã đơn hàng: 
-                <strong class="text-danger fs-5" id="orderCodeText">{{ $order->order_code }}</strong>
-                <button class="btn btn-sm btn-outline-secondary copy-btn ms-1" onclick="copyToClipboard('{{ $order->order_code }}', this)">
-                    <i class="far fa-copy me-1"></i>Copy
-                </button>
-            </p>
-            <p class="text-muted small">
-                Vui lòng <strong>quét mã VietQR bên dưới</strong> để chuyển khoản thanh toán. Đơn hàng sẽ được đóng gói và giao đi ngay khi nhận được thanh toán!
-            </p>
-        @elseif($order->payment_status === 'paid')
-            <div class="success-icon-box shadow-sm">
-                <i class="fas fa-check"></i>
-            </div>
-            <h2 class="fw-bold text-dark mb-2">Thanh Toán Đơn Hàng Thành Công!</h2>
-            <div class="mb-2">
-                <span class="badge bg-success px-3 py-2 fs-6">
-                    <i class="fas fa-check-circle me-1"></i>Đã thanh toán qua {{ strtoupper($order->payment_method) }}
-                </span>
-            </div>
-            <div class="mb-2">
-                <div class="alert alert-success d-inline-flex align-items-center py-2 px-3 small my-2 shadow-sm">
-                    <i class="fas fa-envelope-circle-check text-success me-2 fs-6"></i>
-                    <span>Email xác nhận đơn hàng đã được gửi đến: <strong class="ms-1">{{ $order->customer_email }}</strong></span>
-                </div>
-            </div>
-            <p class="text-muted fs-6 mb-1">
-                Mã đơn hàng: <strong class="text-danger fs-5" id="orderCodeText">{{ $order->order_code }}</strong>
-                <button class="btn btn-sm btn-outline-secondary copy-btn ms-1" onclick="copyToClipboard('{{ $order->order_code }}', this)">
-                    <i class="far fa-copy me-1"></i>Copy
-                </button>
-            </p>
-            <p class="text-muted small">
-                Cảm ơn bạn! Đơn hàng của bạn đã hoàn tất thanh toán và đang được đóng gói.
-            </p>
-        @else
-            <div class="success-icon-box shadow-sm" style="background-color: #e0f2fe; color: #0284c7;">
-                <i class="fas fa-truck-fast"></i>
-            </div>
-            <h2 class="fw-bold text-dark mb-2">Đặt Hàng Thành Công (COD)</h2>
-            <div class="mb-2">
-                <span class="badge bg-primary px-3 py-2 fs-6">
-                    <i class="fas fa-money-bill-wave me-1"></i>Thanh toán tiền mặt khi nhận hàng
-                </span>
-            </div>
-            <div class="mb-2">
-                <div class="alert alert-info d-inline-flex align-items-center py-2 px-3 small my-2 shadow-sm">
-                    <i class="fas fa-envelope-circle-check text-primary me-2 fs-6"></i>
-                    <span>Email xác nhận đơn hàng đã được gửi đến: <strong class="ms-1">{{ $order->customer_email }}</strong></span>
-                </div>
-            </div>
-            <p class="text-muted fs-6 mb-1">
-                Mã đơn hàng: 
-                <strong class="text-danger fs-5" id="orderCodeText">{{ $order->order_code }}</strong>
-                <button class="btn btn-sm btn-outline-secondary copy-btn ms-1" onclick="copyToClipboard('{{ $order->order_code }}', this)">
-                    <i class="far fa-copy me-1"></i>Copy
-                </button>
-            </p>
-            <p class="text-muted small">
-                Đơn hàng đã được xác nhận. Bạn sẽ thanh toán tiền mặt cho shipper khi nhận và kiểm tra hàng.
-            </p>
-        @endif
-    </div>
-
+<div class="container py-4 py-lg-5 order-success-page max-w-[1200px] mx-auto">
     <!-- Thông báo Flash từ VNPAY / Hệ thống nếu có -->
     @if(session('success'))
-        <div class="alert alert-success alert-dismissible fade show text-center mb-4" role="alert">
-            <i class="fas fa-check-circle me-2"></i>{{ session('success') }}
+        <div class="alert alert-dark alert-dismissible fade show rounded-none border-dark text-center mb-4" style="font-size: 13.5px;" role="alert">
+            {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
     @if(session('warning'))
-        <div class="alert alert-warning alert-dismissible fade show text-center mb-4" role="alert">
-            <i class="fas fa-exclamation-triangle me-2"></i>{{ session('warning') }}
+        <div class="alert alert-secondary alert-dismissible fade show rounded-none text-center mb-4" style="font-size: 13.5px;" role="alert">
+            {{ session('warning') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
     @if(session('error'))
-        <div class="alert alert-danger alert-dismissible fade show text-center mb-4" role="alert">
-            <i class="fas fa-times-circle me-2"></i>{{ session('error') }}
+        <div class="alert alert-danger alert-dismissible fade show rounded-none text-center mb-4" style="font-size: 13.5px; border-color: #C83E3B; color: #C83E3B; background-color: #FFF5F5;" role="alert">
+            {{ session('error') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
 
-    <!-- KHỐI THANH TOÁN VIETQR (Nếu chọn chuyển khoản) -->
+    <!-- Khối Header Trạng thái Đơn hàng -->
+    <div class="os-header-box rounded-none">
+        @if($order->payment_method === 'vietqr' && $order->payment_status !== 'paid')
+            <div class="os-icon-box rounded-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </div>
+            <h1 class="os-title text-[22px] md:text-[24px] font-semibold leading-snug">Đơn hàng đã tạo — Chờ thanh toán VietQR</h1>
+            <div>
+                <span class="os-status-tag rounded-none" style="background-color: #C83E3B; border-color: #C83E3B;">Chờ quét mã QR thanh toán</span>
+            </div>
+            <div class="os-order-code-wrap">
+                Mã đơn hàng:
+                <span class="os-order-code ms-1" id="orderCodeText">{{ $order->order_code }}</span>
+                <button type="button" class="copy-btn rounded-none ms-2" onclick="copyToClipboard('{{ $order->order_code }}', this)">
+                    Sao chép
+                </button>
+            </div>
+            <p class="os-desc text-[13.5px] leading-relaxed text-gray-600">
+                Vui lòng quét mã VietQR bên dưới để hoàn tất chuyển khoản. Đơn hàng sẽ được xác nhận và đóng gói ngay sau khi hệ thống ghi nhận thanh toán.
+            </p>
+        @elseif($order->payment_status === 'paid')
+            <div class="os-icon-box rounded-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h1 class="os-title text-[22px] md:text-[24px] font-semibold leading-snug">Thanh toán đơn hàng thành công</h1>
+            <div>
+                <span class="os-status-tag rounded-none">Đã thanh toán qua {{ strtoupper($order->payment_method) }}</span>
+            </div>
+            <div class="os-order-code-wrap">
+                Mã đơn hàng:
+                <span class="os-order-code ms-1" id="orderCodeText">{{ $order->order_code }}</span>
+                <button type="button" class="copy-btn rounded-none ms-2" onclick="copyToClipboard('{{ $order->order_code }}', this)">
+                    Sao chép
+                </button>
+            </div>
+            <p class="os-desc text-[13.5px] leading-relaxed text-gray-600">
+                Cảm ơn bạn đã mua sắm tại OWEN STUDIO. Email xác nhận đơn hàng đã được gửi tới <strong class="text-dark fw-medium">{{ $order->customer_email }}</strong>.
+            </p>
+        @else
+            <div class="os-icon-box rounded-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h1 class="os-title text-[22px] md:text-[24px] font-semibold leading-snug">Đặt hàng thành công</h1>
+            <div>
+                <span class="os-status-tag rounded-none">Thanh toán khi nhận hàng (COD)</span>
+            </div>
+            <div class="os-order-code-wrap">
+                Mã đơn hàng:
+                <span class="os-order-code ms-1" id="orderCodeText">{{ $order->order_code }}</span>
+                <button type="button" class="copy-btn rounded-none ms-2" onclick="copyToClipboard('{{ $order->order_code }}', this)">
+                    Sao chép
+                </button>
+            </div>
+            <p class="os-desc text-[13.5px] leading-relaxed text-gray-600">
+                Đơn hàng đã được ghi nhận và gửi thông báo tới <strong class="text-dark fw-medium">{{ $order->customer_email }}</strong>. Quý khách vui lòng thanh toán tiền mặt cho nhân viên giao hàng khi nhận và kiểm tra sản phẩm.
+            </p>
+        @endif
+    </div>
+
+    <!-- KHỐI THANH TOÁN VIETQR (Nếu chọn chuyển khoản và chưa thanh toán) -->
     @if($order->payment_method === 'vietqr' && $order->payment_status !== 'paid')
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-10">
-                <div class="vietqr-card p-4 p-md-5 shadow-sm">
-                    <div class="text-center mb-4">
-                        <span class="badge bg-danger px-3 py-2 fs-6 mb-2">QUÉT MÃ VIETQR ĐỂ HOÀN TẤT THANH TOÁN</span>
-                        <p class="text-muted small mb-0">Mở ứng dụng Ngân hàng (hoặc Ví điện tử) của bạn và quét mã QR bên dưới để thanh toán tức thì.</p>
+        <div class="vietqr-card rounded-none">
+            <div class="os-section-title">
+                <span>Hướng dẫn chuyển khoản qua mã VietQR</span>
+                <span class="os-status-tag-outline rounded-none">Tự động điền thông tin</span>
+            </div>
+
+            <div class="row align-items-center g-4">
+                <!-- Cột hiển thị Mã QR -->
+                <div class="col-md-5 text-center">
+                    <div class="os-qr-frame rounded-none">
+                        <img src="{{ $qrUrl }}" alt="VietQR Payment" class="img-fluid rounded-none" style="max-width: 230px; height: auto;">
+                    </div>
+                    <div class="mt-2" style="font-size: 12.5px; color: #6B7280;">
+                        Mở ứng dụng Ngân hàng bất kỳ và quét mã QR
+                    </div>
+                </div>
+
+                <!-- Cột thông tin tài khoản chuyển khoản thủ công -->
+                <div class="col-md-7">
+                    <div class="mb-3" style="font-size: 14px; font-weight: 600; color: #111111;">
+                        Thông tin chuyển khoản thủ công
                     </div>
 
-                    <div class="row align-items-center g-4">
-                        <!-- Cột hiển thị Mã QR -->
-                        <div class="col-md-5 text-center border-end-md">
-                            <div class="p-2 border rounded-3 d-inline-block bg-white shadow-sm">
-                                <img src="{{ $qrUrl }}" alt="VietQR Payment" class="img-fluid rounded-2" style="max-width: 250px; height: auto;">
-                            </div>
-                            <div class="small text-muted mt-2">
-                                <i class="fas fa-camera me-1"></i>Quét QR bằng bất kỳ ứng dụng ngân hàng nào
-                            </div>
+                    <div class="os-info-row">
+                        <span class="os-info-label">Ngân hàng thụ hưởng</span>
+                        <span class="os-info-value">MB Bank (Ngân hàng Quân Đội)</span>
+                    </div>
+
+                    <div class="os-info-row">
+                        <span class="os-info-label">Số tài khoản</span>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-semibold text-dark">{{ $bankConfig['account_no'] ?? '0987654321' }}</span>
+                            <button type="button" class="copy-btn rounded-none" onclick="copyToClipboard('{{ $bankConfig['account_no'] ?? '0987654321' }}', this)">
+                                Sao chép
+                            </button>
                         </div>
+                    </div>
 
-                        <!-- Cột thông tin tài khoản chuyển khoản thủ công -->
-                        <div class="col-md-7 ps-md-4">
-                            <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">Hoặc chuyển khoản thủ công theo thông tin:</h6>
+                    <div class="os-info-row">
+                        <span class="os-info-label">Chủ tài khoản</span>
+                        <span class="os-info-value">{{ $bankConfig['account_name'] ?? 'LOCAL BRAND OFFICIAL' }}</span>
+                    </div>
 
-                            <div class="mb-2 d-flex justify-content-between align-items-center py-1 border-bottom">
-                                <span class="text-muted">Ngân hàng thụ hưởng:</span>
-                                <span class="fw-bold text-dark">MB Bank (Ngân hàng Quân Đội)</span>
-                            </div>
-
-                            <div class="mb-2 d-flex justify-content-between align-items-center py-1 border-bottom">
-                                <span class="text-muted">Số tài khoản:</span>
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="fw-bold text-danger fs-5">{{ $bankConfig['account_no'] ?? '0987654321' }}</span>
-                                    <button class="btn btn-outline-secondary copy-btn" onclick="copyToClipboard('{{ $bankConfig['account_no'] ?? '0987654321' }}', this)">
-                                        <i class="far fa-copy"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="mb-2 d-flex justify-content-between align-items-center py-1 border-bottom">
-                                <span class="text-muted">Tên chủ tài khoản:</span>
-                                <span class="fw-bold text-dark">{{ $bankConfig['account_name'] ?? 'LOCAL BRAND OFFICIAL' }}</span>
-                            </div>
-
-                            <div class="mb-2 d-flex justify-content-between align-items-center py-1 border-bottom">
-                                <span class="text-muted">Số tiền chuyển:</span>
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="fw-bold text-success fs-5">{{ number_format($order->total_amount, 0, ',', '.') }} ₫</span>
-                                    <button class="btn btn-outline-secondary copy-btn" onclick="copyToClipboard('{{ (int)$order->total_amount }}', this)">
-                                        <i class="far fa-copy"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="mb-3 d-flex justify-content-between align-items-center py-1 border-bottom">
-                                <span class="text-muted">Nội dung chuyển khoản:</span>
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="fw-bold text-primary fs-6">{{ $order->order_code }}</span>
-                                    <button class="btn btn-outline-secondary copy-btn" onclick="copyToClipboard('{{ $order->order_code }}', this)">
-                                        <i class="far fa-copy"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="alert alert-info py-2 px-3 small mb-3">
-                                <i class="fas fa-info-circle me-1"></i>
-                                <strong>Lưu ý:</strong> Vui lòng giữ nguyên <strong>nội dung chuyển khoản là {{ $order->order_code }}</strong> để đơn hàng được duyệt tự động nhanh chóng nhất.
-                            </div>
-
-                            <div class="d-grid gap-2">
-                                <form action="{{ route('checkout.vietqr.confirm', $order->order_code) }}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-success fw-bold py-2 w-100 shadow-sm" id="btnConfirmPaid">
-                                        <i class="fas fa-check-circle me-1"></i> Xác Nhận Đã Thanh Toán
-                                    </button>
-                                </form>
-                                <a href="{{ route('checkout.vietqr', $order->order_code) }}" class="btn btn-outline-danger btn-sm text-center">
-                                    <i class="fas fa-external-link-alt me-1"></i> Mở Màn Hình Quét Mã VietQR Chuyên Biệt
-                                </a>
-                            </div>
+                    <div class="os-info-row">
+                        <span class="os-info-label">Số tiền chuyển</span>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-semibold" style="color: #C83E3B; font-size: 15px;">{{ number_format($order->total_amount, 0, ',', '.') }}đ</span>
+                            <button type="button" class="copy-btn rounded-none" onclick="copyToClipboard('{{ (int)$order->total_amount }}', this)">
+                                Sao chép
+                            </button>
                         </div>
+                    </div>
+
+                    <div class="os-info-row mb-3">
+                        <span class="os-info-label">Nội dung chuyển khoản</span>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-semibold text-dark">{{ $order->order_code }}</span>
+                            <button type="button" class="copy-btn rounded-none" onclick="copyToClipboard('{{ $order->order_code }}', this)">
+                                Sao chép
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="os-note-box rounded-none mb-3">
+                        Lưu ý: Vui lòng giữ nguyên nội dung chuyển khoản <strong class="text-dark">{{ $order->order_code }}</strong> để hệ thống đối soát tự động.
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row gap-2">
+                        <form action="{{ route('checkout.vietqr.confirm', $order->order_code) }}" method="POST" class="flex-grow-1">
+                            @csrf
+                            <button type="submit" class="btn-os-primary h-[44px] text-[13px] font-semibold tracking-wider rounded-none w-100" id="btnConfirmPaid">
+                                XÁC NHẬN ĐÃ THANH TOÁN
+                            </button>
+                        </form>
+                        <a href="{{ route('checkout.vietqr', $order->order_code) }}" class="btn-os-outline h-[44px] text-[13px] font-semibold tracking-wider rounded-none">
+                            MÀN HÌNH QUÉT QR
+                        </a>
                     </div>
                 </div>
             </div>
@@ -221,66 +424,68 @@
     @endif
 
     <div class="row g-4">
-        <!-- Cột trái: Thông tin nhận hàng & Thanh toán -->
+        <!-- Cột trái: Thông tin giao nhận & Trạng thái thanh toán -->
         <div class="col-lg-6">
-            <div class="card border-0 shadow-sm rounded-3 p-4 h-100">
-                <h5 class="fw-bold text-dark mb-3 border-bottom pb-2">
-                    <i class="fas fa-truck text-danger me-2"></i>Thông Tin Giao Nhận
-                </h5>
-                <div class="mb-2">
-                    <span class="text-muted">Người nhận:</span>
-                    <span class="fw-bold text-dark ms-1">{{ $order->customer_name }}</span>
+            <div class="os-card rounded-none h-100">
+                <div class="os-section-title">
+                    <span>Thông tin giao nhận</span>
                 </div>
-                <div class="mb-2">
-                    <span class="text-muted">Số điện thoại:</span>
-                    <span class="fw-bold text-dark ms-1">{{ $order->customer_phone }}</span>
+
+                <div class="os-info-row">
+                    <span class="os-info-label">Người nhận</span>
+                    <span class="os-info-value">{{ $order->customer_name }}</span>
                 </div>
-                <div class="mb-2">
-                    <span class="text-muted">Email:</span>
-                    <span class="text-dark ms-1">{{ $order->customer_email }}</span>
+                <div class="os-info-row">
+                    <span class="os-info-label">Số điện thoại</span>
+                    <span class="os-info-value">{{ $order->customer_phone }}</span>
                 </div>
-                <div class="mb-2">
-                    <span class="text-muted">Địa chỉ nhận hàng:</span>
-                    <span class="text-dark ms-1">{{ $order->customer_address }}{{ $order->customer_district ? ', ' . $order->customer_district : '' }}{{ $order->customer_city ? ', ' . $order->customer_city : '' }}</span>
+                <div class="os-info-row">
+                    <span class="os-info-label">Email</span>
+                    <span class="os-info-value">{{ $order->customer_email }}</span>
+                </div>
+                <div class="os-info-row">
+                    <span class="os-info-label">Địa chỉ nhận hàng</span>
+                    <span class="os-info-value">{{ $order->customer_address }}{{ $order->customer_district ? ', ' . $order->customer_district : '' }}{{ $order->customer_city ? ', ' . $order->customer_city : '' }}</span>
                 </div>
                 @if($order->customer_notes)
-                    <div class="mb-3">
-                        <span class="text-muted">Ghi chú:</span>
-                        <span class="fst-italic text-dark ms-1">{{ $order->customer_notes }}</span>
+                    <div class="os-info-row">
+                        <span class="os-info-label">Ghi chú</span>
+                        <span class="os-info-value">{{ $order->customer_notes }}</span>
                     </div>
                 @endif
 
-                <h5 class="fw-bold text-dark mt-4 mb-3 border-bottom pb-2">
-                    <i class="fas fa-credit-card text-danger me-2"></i>Trạng Thái Thanh Toán
-                </h5>
-                <div class="mb-2">
-                    <span class="text-muted">Hình thức:</span>
-                    <span class="fw-bold ms-1">
+                <div class="os-section-title mt-4">
+                    <span>Trạng thái thanh toán & đơn hàng</span>
+                </div>
+
+                <div class="os-info-row">
+                    <span class="os-info-label">Phương thức thanh toán</span>
+                    <span class="os-info-value">
                         @if($order->payment_method === 'cod')
                             Thanh toán khi nhận hàng (COD)
                         @elseif($order->payment_method === 'vietqr')
-                            Chuyển khoản VietQR tự động
+                            Chuyển khoản qua mã VietQR
                         @elseif($order->payment_method === 'vnpay')
-                            Cổng thanh toán điện tử VNPAY Sandbox
+                            Cổng thanh toán VNPAY Sandbox
                         @else
                             {{ strtoupper($order->payment_method) }}
                         @endif
                     </span>
                 </div>
-                <div class="mb-2">
-                    <span class="text-muted">Trạng thái thanh toán:</span>
-                    <span class="ms-1">
+                <div class="os-info-row">
+                    <span class="os-info-label">Trạng thái thanh toán</span>
+                    <span class="os-info-value">
                         @if($order->payment_status === 'paid')
-                            <span class="badge bg-success"><i class="fas fa-check-circle me-1"></i>Đã thanh toán</span>
+                            <span class="os-status-tag rounded-none mb-0">Đã thanh toán</span>
                         @else
-                            <span class="badge bg-warning text-dark"><i class="fas fa-clock me-1"></i>Chờ thanh toán</span>
+                            <span class="os-status-tag-outline rounded-none">Chờ thanh toán</span>
                         @endif
                     </span>
                 </div>
-                <div class="mb-2">
-                    <span class="text-muted">Trạng thái đơn hàng:</span>
-                    <span class="ms-1">
-                        {!! $order->order_status_badge !!}
+                <div class="os-info-row">
+                    <span class="os-info-label">Trạng thái đơn hàng</span>
+                    <span class="os-info-value">
+                        <span class="os-status-tag-outline rounded-none">{{ $order->order_status_label }}</span>
                     </span>
                 </div>
             </div>
@@ -288,57 +493,62 @@
 
         <!-- Cột phải: Danh sách sản phẩm & Tổng tiền -->
         <div class="col-lg-6">
-            <div class="card border-0 shadow-sm order-summary-card p-4 h-100">
-                <h5 class="fw-bold text-dark mb-3 border-bottom pb-2">
-                    <i class="fas fa-box text-danger me-2"></i>Chi Tiết Sản Phẩm ({{ $order->items->count() }} món)
-                </h5>
+            <div class="os-card rounded-none h-100 d-flex flex-column">
+                <div class="os-section-title">
+                    <span>Chi tiết sản phẩm</span>
+                    <span style="font-size: 13px; font-weight: 400; color: #6B7280;">{{ $order->items->count() }} sản phẩm</span>
+                </div>
 
                 <div class="items-list mb-3">
                     @foreach($order->items as $item)
-                        <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                            <div>
-                                <h6 class="mb-0 fw-semibold text-dark">{{ $item->product_name }}</h6>
+                        <div class="d-flex justify-content-between align-items-start py-2 border-bottom" style="border-color: #F3F4F6 !important;">
+                            <div class="pe-3">
+                                <div style="font-size: 13.5px; font-weight: 600; color: #111111;">{{ $item->product_name }}</div>
                                 @if($item->variant_info)
-                                    <small class="text-muted d-block">{{ $item->variant_info }}</small>
+                                    <div style="font-size: 12.5px; color: #6B7280;">{{ $item->variant_info }}</div>
                                 @endif
-                                <small class="text-muted">SL: {{ $item->quantity }} &times; {{ number_format($item->price, 0, ',', '.') }} ₫</small>
+                                <div style="font-size: 12.5px; color: #6B7280;">SL: {{ $item->quantity }} &times; {{ number_format($item->price, 0, ',', '.') }}đ</div>
                             </div>
-                            <span class="fw-bold text-dark">{{ number_format($item->total_price, 0, ',', '.') }} ₫</span>
+                            <span style="font-size: 13.5px; font-weight: 600; color: #111111; white-space: nowrap;">
+                                {{ number_format($item->total_price, 0, ',', '.') }}đ
+                            </span>
                         </div>
                     @endforeach
                 </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="text-muted">Tạm tính:</span>
-                    <span class="fw-semibold">{{ number_format($order->total_amount - $order->shipping_fee + $order->discount_amount, 0, ',', '.') }} ₫</span>
+                <div class="pt-1">
+                    <div class="d-flex justify-content-between mb-2" style="font-size: 13.5px; color: #4B5563;">
+                        <span>Tạm tính</span>
+                        <span class="fw-medium text-dark">{{ number_format($order->total_amount - $order->shipping_fee + $order->discount_amount, 0, ',', '.') }}đ</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2" style="font-size: 13.5px; color: #4B5563;">
+                        <span>Phí vận chuyển</span>
+                        <span class="fw-medium text-dark">
+                            {{ $order->shipping_fee == 0 ? 'Miễn phí' : number_format($order->shipping_fee, 0, ',', '.') . 'đ' }}
+                        </span>
+                    </div>
+                    @if($order->discount_amount > 0)
+                        <div class="d-flex justify-content-between mb-2" style="font-size: 13.5px; color: #C83E3B;">
+                            <span>Giảm giá voucher</span>
+                            <span class="fw-semibold">-{{ number_format($order->discount_amount, 0, ',', '.') }}đ</span>
+                        </div>
+                    @endif
                 </div>
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="text-muted">Phí vận chuyển:</span>
-                    <span class="fw-semibold {{ $order->shipping_fee == 0 ? 'text-success' : 'text-dark' }}">
-                        {{ $order->shipping_fee == 0 ? 'Miễn phí' : number_format($order->shipping_fee, 0, ',', '.') . ' ₫' }}
+
+                <div class="d-flex justify-content-between align-items-baseline pt-3 mt-2 mb-4" style="border-top: 1px solid #E5E7EB;">
+                    <span style="font-size: 14px; font-weight: 600; color: #111111;">Tổng cộng</span>
+                    <span class="os-total-price text-[20px] font-semibold text-[#C83E3B]">
+                        {{ number_format($order->total_amount, 0, ',', '.') }}<span class="os-currency text-[18px]">đ</span>
                     </span>
                 </div>
-                @if($order->discount_amount > 0)
-                    <div class="d-flex justify-content-between mb-2">
-                        <span class="text-muted">Giảm giá voucher:</span>
-                        <span class="fw-semibold text-danger">-{{ number_format($order->discount_amount, 0, ',', '.') }} ₫</span>
-                    </div>
-                @endif
 
-                <hr class="my-3">
-
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <span class="fw-bold fs-6">Tổng cộng:</span>
-                    <span class="fs-4 fw-bold text-danger">{{ number_format($order->total_amount, 0, ',', '.') }} ₫</span>
-                </div>
-
-                <div class="d-flex flex-wrap gap-2 mt-auto">
-                    <a href="{{ url('/') }}" class="btn btn-dark flex-grow-1 py-2 fw-semibold">
-                        <i class="fas fa-arrow-left me-1"></i> Tiếp Tục Mua Sắm
+                <div class="d-flex flex-column flex-sm-row gap-2 mt-auto">
+                    <a href="{{ url('/') }}" class="btn-os-primary h-[44px] text-[13px] font-semibold tracking-wider rounded-none flex-grow-1">
+                        TIẾP TỤC MUA SẮM
                     </a>
                     @auth
-                        <a href="{{ route('account.orders') }}" class="btn btn-outline-dark py-2 fw-semibold">
-                            Xem Lịch Sử Đơn
+                        <a href="{{ route('account.orders') }}" class="btn-os-outline h-[44px] text-[13px] font-semibold tracking-wider rounded-none">
+                            XEM LỊCH SỬ ĐƠN HÀNG
                         </a>
                     @endauth
                 </div>
@@ -352,21 +562,18 @@
 <script>
     function copyToClipboard(text, btn) {
         navigator.clipboard.writeText(text).then(function() {
-            const originalHtml = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check text-success"></i> Đã chép';
+            const originalText = btn.textContent;
+            btn.textContent = 'Đã chép';
+            btn.style.borderColor = '#111111';
+            btn.style.color = '#111111';
             setTimeout(() => {
-                btn.innerHTML = originalHtml;
-            }, 2000);
+                btn.textContent = originalText;
+                btn.style.borderColor = '';
+                btn.style.color = '';
+            }, 1800);
         }).catch(function(err) {
             console.error('Không thể chép vào bộ nhớ đệm: ', err);
         });
-    }
-
-    function notifyTransferSent() {
-        const btn = document.getElementById('btnConfirmPaid');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-check me-1"></i> Đã Gửi Thông Báo Chuyển Khoản';
-        document.getElementById('transferSentAlert').classList.remove('d-none');
     }
 </script>
 @endpush

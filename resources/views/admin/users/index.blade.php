@@ -135,7 +135,7 @@
                             <!-- Tổng chi tiêu -->
                             <td>
                                 <span class="fw-bold {{ ($user->orders_sum_total_amount ?? 0) > 0 ? 'text-danger' : 'text-muted' }}">
-                                    {{ number_format($user->orders_sum_total_amount ?? 0, 0, ',', '.') }} ₫
+                                    {{ number_format($user->orders_sum_total_amount ?? 0, 0, ',', '.') }}đ
                                 </span>
                             </td>
 

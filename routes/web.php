@@ -37,7 +37,7 @@ Route::prefix('cart')->name('cart.')->group(function () {
     Route::get('/', [CartController::class, 'index'])->name('index');
     Route::post('/add', [CartController::class, 'add'])->name('add');
     Route::post('/update', [CartController::class, 'update'])->name('update');
-    Route::delete('/remove/{key}', [CartController::class, 'remove'])->name('remove');
+    Route::match(['get', 'post', 'delete'], '/remove/{key}', [CartController::class, 'remove'])->name('remove');
     Route::post('/clear', [CartController::class, 'clear'])->name('clear');
     Route::post('/voucher/apply', [CartController::class, 'applyVoucher'])->name('voucher.apply');
     Route::post('/voucher/remove', [CartController::class, 'removeVoucher'])->name('voucher.remove');

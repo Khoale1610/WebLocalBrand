@@ -135,7 +135,7 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.18em;
-        color: #d32f2f;
+        color: #C83E3B;
         margin-bottom: 4px;
         display: block;
     }
@@ -272,7 +272,7 @@
         color: #fff;
     }
     .lb-badge-red {
-        background-color: #d32f2f;
+        background-color: #C83E3B;
         color: #fff;
     }
     .lb-quick-view {
@@ -514,13 +514,13 @@
                             <span class="lb-badge lb-badge-red">-20%</span>
                         </div>
                         <a href="{{ route('products.show', $prod->id) }}">
-                            <img src="{{ Str::startsWith($prod->image, ['http://', 'https://']) ? $prod->image : asset('storage/' . $prod->image) }}"
+                            <img src="{{ $prod->image_url }}"
                                  class="lb-product-img"
                                  alt="{{ $prod->name }}"
                                  onerror="this.onerror=null; this.src='https://via.placeholder.com/400x520?text=OWEN+STUDIO';">
                         </a>
                         <a href="{{ route('products.show', $prod->id) }}" class="lb-quick-view">
-                            TÙY CHỌN BIẾN THỂ &rarr;
+                            MUA NGAY
                         </a>
                     </div>
 
@@ -530,8 +530,8 @@
                             {{ $prod->name }}
                         </a>
                         <div class="d-flex align-items-center">
-                            <span class="lb-product-price">{{ number_format($prod->price, 0, ',', '.') }}₫</span>
-                            <span class="lb-product-price-old">{{ number_format($prod->price * 1.25, 0, ',', '.') }}₫</span>
+                            <span class="lb-product-price">{{ number_format($prod->price, 0, ',', '.') }}đ</span>
+                            <span class="lb-product-price-old">{{ number_format($prod->price * 1.25, 0, ',', '.') }}đ</span>
                         </div>
                     </div>
                 </div>
@@ -604,7 +604,7 @@
                             <span class="lb-badge lb-badge-dark">NEW DROP</span>
                         </div>
                         <a href="{{ route('products.show', $prod->id) }}">
-                            <img src="{{ Str::startsWith($prod->image, ['http://', 'https://']) ? $prod->image : asset('storage/' . $prod->image) }}"
+                            <img src="{{ $prod->image_url }}"
                                  class="lb-product-img"
                                  alt="{{ $prod->name }}"
                                  onerror="this.onerror=null; this.src='https://via.placeholder.com/400x520?text=OWEN+STUDIO';">
@@ -620,7 +620,7 @@
                             {{ $prod->name }}
                         </a>
                         <div class="d-flex align-items-center">
-                            <span class="lb-product-price">{{ number_format($prod->price, 0, ',', '.') }}₫</span>
+                            <span class="lb-product-price">{{ number_format($prod->price, 0, ',', '.') }}đ</span>
                         </div>
                     </div>
                 </div>

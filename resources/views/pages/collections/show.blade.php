@@ -170,19 +170,19 @@
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="price" value="under_300" id="price1" {{ request('price') == 'under_300' ? 'checked' : '' }} onchange="this.form.submit()">
-                            <label class="form-check-label" for="price1">Dưới 300.000₫</label>
+                            <label class="form-check-label" for="price1">Dưới 300.000đ</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="price" value="300_500" id="price2" {{ request('price') == '300_500' ? 'checked' : '' }} onchange="this.form.submit()">
-                            <label class="form-check-label" for="price2">300.000₫ – 500.000₫</label>
+                            <label class="form-check-label" for="price2">300.000đ – 500.000đ</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="price" value="500_1000" id="price3" {{ request('price') == '500_1000' ? 'checked' : '' }} onchange="this.form.submit()">
-                            <label class="form-check-label" for="price3">500.000₫ – 1.000.000₫</label>
+                            <label class="form-check-label" for="price3">500.000đ – 1.000.000đ</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="price" value="over_1000" id="price4" {{ request('price') == 'over_1000' ? 'checked' : '' }} onchange="this.form.submit()">
-                            <label class="form-check-label" for="price4">Trên 1.000.000₫</label>
+                            <label class="form-check-label" for="price4">Trên 1.000.000đ</label>
                         </div>
                     </div>
 
@@ -241,13 +241,13 @@
                                         <span class="lb-badge lb-badge-red">-20%</span>
                                     </div>
                                     <a href="{{ route('products.show', $product->id) }}">
-                                        <img src="{{ Str::startsWith($product->image, ['http://', 'https://']) ? $product->image : asset('storage/' . $product->image) }}"
+                                        <img src="{{ $product->image_url }}"
                                              class="lb-product-img"
                                              alt="{{ $product->name }}"
                                              onerror="this.onerror=null; this.src='https://via.placeholder.com/400x520?text=OWEN+STUDIO';">
                                     </a>
                                     <a href="{{ route('products.show', $product->id) }}" class="lb-quick-view">
-                                        TÙY CHỌN BIẾN THỂ &rarr;
+                                        MUA NGAY
                                     </a>
                                 </div>
 
@@ -257,8 +257,8 @@
                                         {{ $product->name }}
                                     </a>
                                     <div class="d-flex align-items-center">
-                                        <span class="lb-product-price">{{ number_format($product->price, 0, ',', '.') }}₫</span>
-                                        <span class="lb-product-price-old">{{ number_format($product->price * 1.25, 0, ',', '.') }}₫</span>
+                                        <span class="lb-product-price" style="color: #C83E3B;">{{ number_format($product->price, 0, ',', '.') }}đ</span>
+                                        <span class="lb-product-price-old">{{ number_format($product->price * 1.25, 0, ',', '.') }}đ</span>
                                     </div>
                                 </div>
                             </div>
