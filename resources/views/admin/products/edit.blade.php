@@ -61,7 +61,7 @@
                                 <label class="form-label fw-semibold">Giá bán gốc (VNĐ) <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="number" name="price" class="form-control" value="{{ old('price', (int)$product->price) }}" min="0" step="1000" required>
-                                    <span class="input-group-text bg-light text-muted">₫</span>
+                                    <span class="input-group-text bg-light text-muted">đ</span>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                             <th>Màu sắc</th>
                                             <th style="min-width: 170px;">Ảnh biến thể</th>
                                             <th style="min-width: 150px;">Mã SKU</th>
-                                            <th style="min-width: 120px;">Giá riêng (₫)</th>
+                                            <th style="min-width: 120px;">Giá riêng (đ)</th>
                                             <th style="min-width: 90px;">Tồn kho</th>
                                             <th class="text-end" style="width: 60px;">Xóa</th>
                                         </tr>
@@ -270,8 +270,8 @@
 
                     <div class="row g-3 mb-3">
                         <div class="col-6">
-                            <label class="form-label fw-semibold">Giá riêng (₫)</label>
-                            <input type="number" name="price" class="form-control" placeholder="Dùng giá gốc ({{ number_format($product->price, 0, ',', '.') }}₫)">
+                            <label class="form-label fw-semibold">Giá riêng (đ)</label>
+                            <input type="number" name="price" class="form-control" placeholder="Dùng giá gốc ({{ number_format($product->price, 0, ',', '.') }}đ)">
                         </div>
                         <div class="col-6">
                             <label class="form-label fw-semibold">Tồn kho <span class="text-danger">*</span></label>

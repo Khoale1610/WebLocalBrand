@@ -182,9 +182,9 @@
 
                             <!-- Tổng tiền -->
                             <td>
-                                <div class="fw-bold text-dark fs-6">{{ number_format($order->total_amount, 0, ',', '.') }} ₫</div>
+                                <div class="fw-bold text-dark fs-6">{{ number_format($order->total_amount, 0, ',', '.') }}đ</div>
                                 @if($order->shipping_fee > 0)
-                                    <small class="text-muted">(Ship: {{ number_format($order->shipping_fee, 0, ',', '.') }}₫)</small>
+                                    <small class="text-muted">(Ship: {{ number_format($order->shipping_fee, 0, ',', '.') }}đ)</small>
                                 @else
                                     <small class="text-success"><i class="fa-solid fa-truck-fast me-1"></i>Freeship</small>
                                 @endif

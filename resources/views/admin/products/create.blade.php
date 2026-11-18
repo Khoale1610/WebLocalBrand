@@ -59,7 +59,7 @@
                                 <label class="form-label fw-semibold">Giá bán gốc (VNĐ) <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="number" name="price" id="product_price" class="form-control" placeholder="450000" value="{{ old('price') }}" min="0" step="1000" required>
-                                    <span class="input-group-text bg-light text-muted">₫</span>
+                                    <span class="input-group-text bg-light text-muted">đ</span>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                                             <th>Size</th>
                                             <th>Màu sắc</th>
                                             <th style="min-width: 180px;">Mã SKU <span class="text-danger">*</span></th>
-                                            <th style="min-width: 140px;">Giá riêng (₫)</th>
+                                            <th style="min-width: 140px;">Giá riêng (đ)</th>
                                             <th style="min-width: 110px;">Tồn kho <span class="text-danger">*</span></th>
                                             <th class="text-center" style="width: 50px;">Xóa</th>
                                         </tr>

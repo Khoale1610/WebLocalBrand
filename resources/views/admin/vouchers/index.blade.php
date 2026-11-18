@@ -108,7 +108,7 @@
                             <!-- Min Order -->
                             <td>
                                 @if($voucher->min_order_amount > 0)
-                                    <span>{{ number_format($voucher->min_order_amount, 0, ',', '.') }} ₫</span>
+                                    <span>{{ number_format($voucher->min_order_amount, 0, ',', '.') }}đ</span>
                                 @else
                                     <span class="text-muted small">Không giới hạn</span>
                                 @endif
@@ -238,16 +238,16 @@
                         <div class="col-md-4">
                             <label class="form-label fw-semibold">Hình thức giảm <span class="text-danger">*</span></label>
                             <select name="type" id="create_type" class="form-select" required onchange="toggleDiscountFields('create')">
-                                <option value="fixed">Giảm số tiền cố định (₫)</option>
+                                <option value="fixed">Giảm số tiền cố định (đ)</option>
                                 <option value="percent">Giảm theo tỷ lệ phần trăm (%)</option>
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <label class="form-label fw-semibold" id="create_value_label">Mức giảm (VNĐ) <span class="text-danger">*</span></label>
+                            <label class="form-label fw-semibold" id="create_value_label">Mức giảm (đ) <span class="text-danger">*</span></label>
                             <input type="number" name="value" id="create_value" class="form-control" placeholder="50000" min="1" required>
                         </div>
                         <div class="col-md-4" id="create_max_discount_wrapper" style="display: none;">
-                            <label class="form-label fw-semibold">Giảm tối đa (₫)</label>
+                            <label class="form-label fw-semibold">Giảm tối đa (đ)</label>
                             <input type="number" name="max_discount" class="form-control" placeholder="100000" min="0">
                             <div class="form-text small">Chặn mức giảm trần khi dùng %.</div>
                         </div>
@@ -255,7 +255,7 @@
 
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold">Giá trị đơn hàng tối thiểu (₫)</label>
+                            <label class="form-label fw-semibold">Giá trị đơn hàng tối thiểu (đ)</label>
                             <input type="number" name="min_order_amount" class="form-control" value="0" min="0" step="1000">
                             <div class="form-text small">Để 0 nếu áp dụng cho mọi giá trị đơn.</div>
                         </div>
@@ -320,7 +320,7 @@
                         <div class="col-md-4">
                             <label class="form-label fw-semibold">Hình thức giảm <span class="text-danger">*</span></label>
                             <select name="type" id="edit_type" class="form-select" required onchange="toggleDiscountFields('edit')">
-                                <option value="fixed">Giảm số tiền cố định (₫)</option>
+                                <option value="fixed">Giảm số tiền cố định (đ)</option>
                                 <option value="percent">Giảm theo tỷ lệ phần trăm (%)</option>
                             </select>
                         </div>
@@ -329,14 +329,14 @@
                             <input type="number" name="value" id="edit_value" class="form-control" min="1" required>
                         </div>
                         <div class="col-md-4" id="edit_max_discount_wrapper" style="display: none;">
-                            <label class="form-label fw-semibold">Giảm tối đa (₫)</label>
+                            <label class="form-label fw-semibold">Giảm tối đa (đ)</label>
                             <input type="number" name="max_discount" id="edit_max_discount" class="form-control" min="0">
                         </div>
                     </div>
 
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold">Đơn hàng tối thiểu (₫)</label>
+                            <label class="form-label fw-semibold">Đơn hàng tối thiểu (đ)</label>
                             <input type="number" name="min_order_amount" id="edit_min_order" class="form-control" min="0">
                         </div>
                         <div class="col-md-6">
