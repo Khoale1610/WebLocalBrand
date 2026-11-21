@@ -47,10 +47,10 @@
 
             <!-- Các nút gợi ý nhanh -->
             <div class="chatbot-quick-chips d-flex flex-wrap gap-1 mb-3" id="quickChips">
-                <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Bảng chọn size chuẩn?')">📏 Bảng size</button>
-                <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Chính sách đổi trả hàng?')">🔄 Đổi trả 30 ngày</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Tư vấn áo rẻ dưới 300k')">👕 Áo dưới 300k</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Cao 1m72 nặng 65kg mặc size gì?')">📏 Tư vấn size</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Có mã giảm giá nào không?')">🎟️ Mã giảm giá</button>
                 <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Chính sách phí ship và freeship?')">🚚 Phí ship</button>
-                <button type="button" class="btn btn-outline-secondary btn-sm chip-btn" onclick="sendQuickMessage('Có mẫu áo polo nào đẹp không?')">👕 Áo Polo</button>
             </div>
 
             <!-- Typing Indicator (Đang gõ) -->
