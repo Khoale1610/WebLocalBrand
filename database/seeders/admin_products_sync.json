@@ -1,0 +1,2730 @@
+[
+    {
+        "slug": "ao-so-mi-nam-dai-tay-bamboo",
+        "category_id": 1,
+        "name": "Áo Sơ Mi Nam Dài Tay Bamboo Kháng Khuẩn",
+        "price": 499000,
+        "is_featured": true,
+        "image": "https://lados.vn/wp-content/uploads/2024/11/3-den-ld8160-jpg.webp",
+        "stock": 339,
+        "description": "Chất liệu sợi tre tự nhiên mềm mại, kháng khuẩn tự nhiên, thoáng mát ngày hè. Thiết kế regular fit tôn dáng lịch lãm cho quý ông công sở.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "ASM-BAMBOO-M-TRANG",
+                "price": 499000,
+                "stock": 47,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "ASM-BAMBOO-M-DEN",
+                "price": 499000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "ASM-BAMBOO-M-XANH-NAVY",
+                "price": 499000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "ASM-BAMBOO-L-TRANG",
+                "price": 499000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "ASM-BAMBOO-L-DEN",
+                "price": 499000,
+                "stock": 25,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "ASM-BAMBOO-L-XANH-NAVY",
+                "price": 499000,
+                "stock": 47,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "ASM-BAMBOO-XL-TRANG",
+                "price": 499000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "ASM-BAMBOO-XL-DEN",
+                "price": 499000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "ASM-BAMBOO-XL-XANH-NAVY",
+                "price": 499000,
+                "stock": 24,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-so-mi-nam-ngan-tay-ke-nano",
+        "category_id": 1,
+        "name": "Áo Sơ Mi Nam Ngắn Tay Họa Tiết Kẻ Nano",
+        "price": 450000,
+        "is_featured": true,
+        "image": "https://buggy.yodycdn.com/images/product/306f4b94a9079b10f8cdd8121d64fc7a.webp",
+        "stock": 432,
+        "description": "Công nghệ xử lý Nano chống nhăn vượt trội, giữ dáng áo thẳng thớm suốt ngày dài hoạt động. Họa tiết kẻ sọc thanh lịch.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Trắng",
+                "sku": "ASM-NANO-S-TRANG",
+                "price": 450000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xám Ghi",
+                "sku": "ASM-NANO-S-XAM-GHI",
+                "price": 450000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "ASM-NANO-M-TRANG",
+                "price": 450000,
+                "stock": 44,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "ASM-NANO-M-XAM-GHI",
+                "price": 450000,
+                "stock": 29,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "ASM-NANO-L-TRANG",
+                "price": 450000,
+                "stock": 29,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "ASM-NANO-L-XAM-GHI",
+                "price": 450000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "ASM-NANO-XL-TRANG",
+                "price": 450000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "ASM-NANO-XL-XAM-GHI",
+                "price": 450000,
+                "stock": 29,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xanh Nhạt",
+                "sku": "ASM-NANO-S-XANH-NHAT",
+                "price": 450000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Nhạt",
+                "sku": "ASM-NANO-M-XANH-NHAT",
+                "price": 450000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Nhạt",
+                "sku": "ASM-NANO-L-XANH-NHAT",
+                "price": 450000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Nhạt",
+                "sku": "ASM-NANO-XL-XANH-NHAT",
+                "price": 450000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-polo-nam-bo-co-co-dien",
+        "category_id": 2,
+        "name": "Áo Polo Nam Bo Cổ Cổ Điển Regular Fit",
+        "price": 350000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&auto=format&fit=crop",
+        "stock": 556,
+        "description": "Vải cá sấu cotton pique co giãn 4 chiều mềm mại, phom ôm nhẹ tôn vóc dáng khỏe khoắn, lịch sự.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "APL-CLASSIC-M-TRANG",
+                "price": 350000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "APL-CLASSIC-M-DEN",
+                "price": 350000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "APL-CLASSIC-M-XANH-NAVY",
+                "price": 350000,
+                "stock": 22,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "APL-CLASSIC-M-BE-SUA",
+                "price": 350000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "APL-CLASSIC-L-TRANG",
+                "price": 350000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "APL-CLASSIC-L-DEN",
+                "price": 350000,
+                "stock": 44,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "APL-CLASSIC-L-XANH-NAVY",
+                "price": 350000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "APL-CLASSIC-L-BE-SUA",
+                "price": 350000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "APL-CLASSIC-XL-TRANG",
+                "price": 350000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "APL-CLASSIC-XL-DEN",
+                "price": 350000,
+                "stock": 39,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "APL-CLASSIC-XL-XANH-NAVY",
+                "price": 350000,
+                "stock": 36,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "APL-CLASSIC-XL-BE-SUA",
+                "price": 350000,
+                "stock": 29,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Trắng",
+                "sku": "APL-CLASSIC-XXL-TRANG",
+                "price": 350000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Đen",
+                "sku": "APL-CLASSIC-XXL-DEN",
+                "price": 350000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Xanh Navy",
+                "sku": "APL-CLASSIC-XXL-XANH-NAVY",
+                "price": 350000,
+                "stock": 44,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Be Sữa",
+                "sku": "APL-CLASSIC-XXL-BE-SUA",
+                "price": 350000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-polo-nam-quick-dry",
+        "category_id": 2,
+        "name": "Áo Polo Nam Quick-Dry Thể Thao",
+        "price": 380000,
+        "is_featured": true,
+        "image": "https://cdn.hstatic.net/products/200000039280/6305907d-f2f3-46d8-b78c-e98a8dcb78e1_8144e7c236ae42f58498613171cf8162_b6b1c6aef6614b488e719b9b8b3ea85e.png",
+        "stock": 285,
+        "description": "Công nghệ thoát ẩm tức thì giúp cơ thể luôn khô ráo dễ chịu trong các hoạt động thể thao ngoài trời hoặc chơi golf.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Đen",
+                "sku": "APL-QDRY-S-DEN",
+                "price": 380000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xám Ghi",
+                "sku": "APL-QDRY-S-XAM-GHI",
+                "price": 380000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "APL-QDRY-M-DEN",
+                "price": 380000,
+                "stock": 36,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "APL-QDRY-M-XAM-GHI",
+                "price": 380000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "APL-QDRY-L-DEN",
+                "price": 380000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "APL-QDRY-L-XAM-GHI",
+                "price": 380000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xanh Navy",
+                "sku": "APL-QDRY-S-XANH-NAVY",
+                "price": 380000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "APL-QDRY-M-XANH-NAVY",
+                "price": 380000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "APL-QDRY-L-XANH-NAVY",
+                "price": 380000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-thun-nam-tron-cotton-compact",
+        "category_id": 3,
+        "name": "Áo Thun Nam Trơn Cotton Compact Premium",
+        "price": 250000,
+        "is_featured": true,
+        "image": "https://mcdn.coolmate.me/uploads/September2025/combo-3-ao-thun-nam-cotton-compact-phien-ban-premium-mau-1-5.jpg",
+        "stock": 564,
+        "description": "Sợi cotton compact cao cấp hạn chế tối đa xù lông, bề mặt đanh mịn màng, cổ bo dệt co giãn tốt.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Trắng",
+                "sku": "TSH-COMPACT-S-TRANG",
+                "price": 250000,
+                "stock": 47,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-trang-3D-new.jpg"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Đen",
+                "sku": "TSH-COMPACT-S-DEN",
+                "price": 250000,
+                "stock": 24,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-den-3D.jpg"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-COMPACT-S-XAM-GHI",
+                "price": 250000,
+                "stock": 27,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-xam-3D.jpg"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Be Sữa",
+                "sku": "TSH-COMPACT-S-BE-SUA",
+                "price": 250000,
+                "stock": 41,
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGqKFzIjVMWh_Yre2mN5xD-kVcv9sip-Og0ZVLbhSH9A&s"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "TSH-COMPACT-M-TRANG",
+                "price": 250000,
+                "stock": 39,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-trang-3D-new.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "TSH-COMPACT-M-DEN",
+                "price": 250000,
+                "stock": 20,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-den-3D.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-COMPACT-M-XAM-GHI",
+                "price": 250000,
+                "stock": 50,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-xam-3D.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "TSH-COMPACT-M-BE-SUA",
+                "price": 250000,
+                "stock": 28,
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGqKFzIjVMWh_Yre2mN5xD-kVcv9sip-Og0ZVLbhSH9A&s"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "TSH-COMPACT-L-TRANG",
+                "price": 250000,
+                "stock": 39,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-trang-3D-new.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "TSH-COMPACT-L-DEN",
+                "price": 250000,
+                "stock": 30,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-den-3D.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-COMPACT-L-XAM-GHI",
+                "price": 250000,
+                "stock": 41,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-xam-3D.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "TSH-COMPACT-L-BE-SUA",
+                "price": 250000,
+                "stock": 21,
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGqKFzIjVMWh_Yre2mN5xD-kVcv9sip-Og0ZVLbhSH9A&s"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "TSH-COMPACT-XL-TRANG",
+                "price": 250000,
+                "stock": 47,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-trang-3D-new.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "TSH-COMPACT-XL-DEN",
+                "price": 250000,
+                "stock": 36,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-den-3D.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-COMPACT-XL-XAM-GHI",
+                "price": 250000,
+                "stock": 31,
+                "image": "https://mcdn.coolmate.me/uploads/2026/08/26/ao-thun-nam-cotton-compact-xam-3D.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "TSH-COMPACT-XL-BE-SUA",
+                "price": 250000,
+                "stock": 43,
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGqKFzIjVMWh_Yre2mN5xD-kVcv9sip-Og0ZVLbhSH9A&s"
+            }
+        ]
+    },
+    {
+        "slug": "quan-tay-nam-slimfit-co-gian",
+        "category_id": 6,
+        "name": "Quần Tây Nam Dáng Slimfit Co Giãn Không Nhăn",
+        "price": 550000,
+        "is_featured": true,
+        "image": "https://yame.vn/cdn/shop/files/qu-n-tay-non-iron-19-den-1174881694.jpg?v=1780841637&width=533",
+        "stock": 308,
+        "description": "Thiết kế cạp quần thông minh co giãn nhẹ, đường may tỉ mỉ theo tiêu chuẩn may đo cao cấp.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "QTA-SLIM-M-DEN",
+                "price": 550000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "QTA-SLIM-M-XANH-NAVY",
+                "price": 550000,
+                "stock": 20,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-SLIM-M-XAM-GHI",
+                "price": 550000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "QTA-SLIM-L-DEN",
+                "price": 550000,
+                "stock": 26,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "QTA-SLIM-L-XANH-NAVY",
+                "price": 550000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-SLIM-L-XAM-GHI",
+                "price": 550000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "QTA-SLIM-XL-DEN",
+                "price": 550000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "QTA-SLIM-XL-XANH-NAVY",
+                "price": 550000,
+                "stock": 30,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-SLIM-XL-XAM-GHI",
+                "price": 550000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "quan-kaki-nam-tui-cheo",
+        "category_id": 7,
+        "name": "Quần Kaki Nam Túi Chéo Trẻ Trung",
+        "price": 480000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&auto=format&fit=crop",
+        "stock": 299,
+        "description": "Quần khaki dáng đứng trẻ trung, phối cùng áo sơ mi hoặc thun polo cực kỳ phong cách và năng động.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "QKH-TCHEO-M-BE-SUA",
+                "price": 480000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "QKH-TCHEO-M-XAM-GHI",
+                "price": 480000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "QKH-TCHEO-M-DEN",
+                "price": 480000,
+                "stock": 20,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "QKH-TCHEO-L-BE-SUA",
+                "price": 480000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "QKH-TCHEO-L-XAM-GHI",
+                "price": 480000,
+                "stock": 39,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "QKH-TCHEO-L-DEN",
+                "price": 480000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "QKH-TCHEO-XL-BE-SUA",
+                "price": 480000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "QKH-TCHEO-XL-XAM-GHI",
+                "price": 480000,
+                "stock": 22,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "QKH-TCHEO-XL-DEN",
+                "price": 480000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "that-lung-nam-da-bo-that",
+        "category_id": 10,
+        "name": "Thắt Lưng Nam Da Bò Thật Khóa Tự Động",
+        "price": 390000,
+        "is_featured": true,
+        "image": "https://navy.vn/wp-content/uploads/2025/11/118-Nau.jpg",
+        "stock": 99,
+        "description": "Chất liệu da bò tự nhiên 100% bền đẹp, mặt khóa kim loại phủ sơn tĩnh điện chống rỉ sét, khóa răng cưa tiện dụng.",
+        "variants": [
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "TL-DABO-L-DEN",
+                "price": 390000,
+                "stock": 31,
+                "image": "https://navy.vn/wp-content/uploads/2025/11/118-Nau.jpg"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "TL-DABO-FreeSize-DEN",
+                "price": 390000,
+                "stock": 29,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Nâu Bò",
+                "sku": "TL-DABO-FreeSize-NAU-BO",
+                "price": 390000,
+                "stock": 39,
+                "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-so-mi-co-tau-vai-linen",
+        "category_id": 1,
+        "name": "Áo Sơ Mi Cổ Tàu Vải Linen Tự Nhiên",
+        "price": 420000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop",
+        "stock": 323,
+        "description": "Chất vải đũi linen tự nhiên thấm hút mồ hôi tối đa, phong cách phóng khoáng rất thích hợp cho những chuyến du lịch, dạo phố.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "ASM-LINEN-M-TRANG",
+                "price": 420000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "ASM-LINEN-M-BE-SUA",
+                "price": 420000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Rêu Đậm",
+                "sku": "ASM-LINEN-M-REU-DAM",
+                "price": 420000,
+                "stock": 26,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "ASM-LINEN-L-TRANG",
+                "price": 420000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "ASM-LINEN-L-BE-SUA",
+                "price": 420000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Rêu Đậm",
+                "sku": "ASM-LINEN-L-REU-DAM",
+                "price": 420000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "ASM-LINEN-XL-TRANG",
+                "price": 420000,
+                "stock": 36,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "ASM-LINEN-XL-BE-SUA",
+                "price": 420000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Rêu Đậm",
+                "sku": "ASM-LINEN-XL-REU-DAM",
+                "price": 420000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-polo-det-kim-retro-vintage",
+        "category_id": 2,
+        "name": "Áo Polo Dệt Kim Phối Màu Retro Vintage",
+        "price": 450000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop",
+        "stock": 320,
+        "description": "Chất len dệt kim mỏng nhẹ mang âm hưởng cổ điển châu Âu, phối màu sọc tinh tế tạo điểm nhấn nổi bật.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "APL-RETRO-M-BE-SUA",
+                "price": 450000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Nâu Bò",
+                "sku": "APL-RETRO-M-NAU-BO",
+                "price": 450000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "APL-RETRO-M-DEN",
+                "price": 450000,
+                "stock": 25,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "APL-RETRO-L-BE-SUA",
+                "price": 450000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Nâu Bò",
+                "sku": "APL-RETRO-L-NAU-BO",
+                "price": 450000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "APL-RETRO-L-DEN",
+                "price": 450000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "APL-RETRO-XL-BE-SUA",
+                "price": 450000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Nâu Bò",
+                "sku": "APL-RETRO-XL-NAU-BO",
+                "price": 450000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "APL-RETRO-XL-DEN",
+                "price": 450000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-thun-form-rong-graphic",
+        "category_id": 3,
+        "name": "Áo Thun Form Rộng Graphic Local Brand",
+        "price": 290000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop",
+        "stock": 344,
+        "description": "Form oversize cá tính mang phong cách đường phố đặc trưng của giới trẻ, hình in công nghệ lụa sắc nét.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "TSH-GRAPHIC-M-DEN",
+                "price": 290000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "TSH-GRAPHIC-M-TRANG",
+                "price": 290000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Rêu Đậm",
+                "sku": "TSH-GRAPHIC-M-REU-DAM",
+                "price": 290000,
+                "stock": 42,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "TSH-GRAPHIC-L-DEN",
+                "price": 290000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "TSH-GRAPHIC-L-TRANG",
+                "price": 290000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Rêu Đậm",
+                "sku": "TSH-GRAPHIC-L-REU-DAM",
+                "price": 290000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "TSH-GRAPHIC-XL-DEN",
+                "price": 290000,
+                "stock": 22,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "TSH-GRAPHIC-XL-TRANG",
+                "price": 290000,
+                "stock": 20,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Rêu Đậm",
+                "sku": "TSH-GRAPHIC-XL-REU-DAM",
+                "price": 290000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-thun-nam-co-tim-modal",
+        "category_id": 3,
+        "name": "Áo Thun Nam Cổ Tim Co Giãn Modal",
+        "price": 260000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop",
+        "stock": 449,
+        "description": "Chất liệu Modal sợi gỗ sồi êm dịu, mềm như lụa, thích hợp mặc lót trong sơ mi hoặc mặc nhà năng động.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Trắng",
+                "sku": "TSH-MODAL-S-TRANG",
+                "price": 260000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Đen",
+                "sku": "TSH-MODAL-S-DEN",
+                "price": 260000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-MODAL-S-XAM-GHI",
+                "price": 260000,
+                "stock": 47,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Trắng",
+                "sku": "TSH-MODAL-M-TRANG",
+                "price": 260000,
+                "stock": 44,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "TSH-MODAL-M-DEN",
+                "price": 260000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-MODAL-M-XAM-GHI",
+                "price": 260000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Trắng",
+                "sku": "TSH-MODAL-L-TRANG",
+                "price": 260000,
+                "stock": 25,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "TSH-MODAL-L-DEN",
+                "price": 260000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-MODAL-L-XAM-GHI",
+                "price": 260000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Trắng",
+                "sku": "TSH-MODAL-XL-TRANG",
+                "price": 260000,
+                "stock": 39,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "TSH-MODAL-XL-DEN",
+                "price": 260000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "TSH-MODAL-XL-XAM-GHI",
+                "price": 260000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-khoac-bomber-varsity-tay-da",
+        "category_id": 4,
+        "name": "Áo Khoác Bomber Varsity Phối Tay Da",
+        "price": 650000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop",
+        "stock": 330,
+        "description": "Áo khoác bomber thời thượng, thân dạ lì cao cấp kết hợp tay da mềm, thêu logo nổi tỉ mỉ trước ngực.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "AK-VARSITY-M-DEN",
+                "price": 650000,
+                "stock": 25,
+                "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-9c2ac4db-22a5-49b4-8a53-61c671e1844d.jpg?v=1746175354670"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "AK-VARSITY-M-XANH-NAVY",
+                "price": 650000,
+                "stock": 25,
+                "image": "https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2024/01/ao-khoac-mlb-jersey-naglan-varsity-new-york-yankees-3ajpv1641-50nyd-phoi-mau-xanh-navy-65a88953195e0-18012024091339.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Rêu Đậm",
+                "sku": "AK-VARSITY-M-REU-DAM",
+                "price": 650000,
+                "stock": 39,
+                "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/287/440/products/ao-varsity-jacket-local-brand-dep-9.jpg?v=1666957980230"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "AK-VARSITY-L-DEN",
+                "price": 650000,
+                "stock": 40,
+                "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-9c2ac4db-22a5-49b4-8a53-61c671e1844d.jpg?v=1746175354670"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "AK-VARSITY-L-XANH-NAVY",
+                "price": 650000,
+                "stock": 38,
+                "image": "https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2024/01/ao-khoac-mlb-jersey-naglan-varsity-new-york-yankees-3ajpv1641-50nyd-phoi-mau-xanh-navy-65a88953195e0-18012024091339.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Rêu Đậm",
+                "sku": "AK-VARSITY-L-REU-DAM",
+                "price": 650000,
+                "stock": 44,
+                "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/287/440/products/ao-varsity-jacket-local-brand-dep-9.jpg?v=1666957980230"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "AK-VARSITY-XL-DEN",
+                "price": 650000,
+                "stock": 49,
+                "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-9c2ac4db-22a5-49b4-8a53-61c671e1844d.jpg?v=1746175354670"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "AK-VARSITY-XL-XANH-NAVY",
+                "price": 650000,
+                "stock": 34,
+                "image": "https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2024/01/ao-khoac-mlb-jersey-naglan-varsity-new-york-yankees-3ajpv1641-50nyd-phoi-mau-xanh-navy-65a88953195e0-18012024091339.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Rêu Đậm",
+                "sku": "AK-VARSITY-XL-REU-DAM",
+                "price": 650000,
+                "stock": 36,
+                "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/287/440/products/ao-varsity-jacket-local-brand-dep-9.jpg?v=1666957980230"
+            }
+        ]
+    },
+    {
+        "slug": "ao-hoodie-ni-bong-streetwear",
+        "category_id": 4,
+        "name": "Áo Hoodie Nỉ Bông Form Rộng Streetwear",
+        "price": 490000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop",
+        "stock": 363,
+        "description": "Nỉ chân cua cào bông ấm áp, mũ trùm 2 lớp đứng phom dày dặn, túi kangaroo tiện dụng phía trước.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "AK-HOODIE-M-XAM-GHI",
+                "price": 490000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "AK-HOODIE-M-DEN",
+                "price": 490000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "AK-HOODIE-M-BE-SUA",
+                "price": 490000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "AK-HOODIE-L-XAM-GHI",
+                "price": 490000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "AK-HOODIE-L-DEN",
+                "price": 490000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "AK-HOODIE-L-BE-SUA",
+                "price": 490000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "AK-HOODIE-XL-XAM-GHI",
+                "price": 490000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "AK-HOODIE-XL-DEN",
+                "price": 490000,
+                "stock": 36,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "AK-HOODIE-XL-BE-SUA",
+                "price": 490000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-khoac-gio-2-lop-chong-nuoc",
+        "category_id": 4,
+        "name": "Áo Khoác Gió 2 Lớp Chống Thấm Nước",
+        "price": 420000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800&auto=format&fit=crop",
+        "stock": 448,
+        "description": "Lớp ngoài chống bám nước trượt mưa, lớp trong lót lưới thoáng khí, kèm túi khóa kéo an toàn.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Đen",
+                "sku": "AK-GIO-S-DEN",
+                "price": 420000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xanh Navy",
+                "sku": "AK-GIO-S-XANH-NAVY",
+                "price": 420000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xám Ghi",
+                "sku": "AK-GIO-S-XAM-GHI",
+                "price": 420000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "AK-GIO-M-DEN",
+                "price": 420000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "AK-GIO-M-XANH-NAVY",
+                "price": 420000,
+                "stock": 39,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "AK-GIO-M-XAM-GHI",
+                "price": 420000,
+                "stock": 41,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "AK-GIO-L-DEN",
+                "price": 420000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "AK-GIO-L-XANH-NAVY",
+                "price": 420000,
+                "stock": 40,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "AK-GIO-L-XAM-GHI",
+                "price": 420000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "AK-GIO-XL-DEN",
+                "price": 420000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "AK-GIO-XL-XANH-NAVY",
+                "price": 420000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "AK-GIO-XL-XAM-GHI",
+                "price": 420000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-blazer-nam-dang-rong-han-quoc",
+        "category_id": 5,
+        "name": "Áo Blazer Nam Dáng Rộng Phong Cách Hàn Quốc",
+        "price": 790000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop",
+        "stock": 300,
+        "description": "Thiết kế vai đệm nhẹ tạo phom đứng đắn, xẻ tà sau thoải mái khi ngồi, dễ dàng phối cùng áo thun hoặc sơ mi.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "BLZ-KOREA-M-DEN",
+                "price": 790000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "BLZ-KOREA-M-XAM-GHI",
+                "price": 790000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "BLZ-KOREA-M-BE-SUA",
+                "price": 790000,
+                "stock": 22,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "BLZ-KOREA-L-DEN",
+                "price": 790000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "BLZ-KOREA-L-XAM-GHI",
+                "price": 790000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "BLZ-KOREA-L-BE-SUA",
+                "price": 790000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "BLZ-KOREA-XL-DEN",
+                "price": 790000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "BLZ-KOREA-XL-XAM-GHI",
+                "price": 790000,
+                "stock": 31,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "BLZ-KOREA-XL-BE-SUA",
+                "price": 790000,
+                "stock": 30,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-vest-nam-cong-so-2-khuy",
+        "category_id": 5,
+        "name": "Áo Vest Nam Công Sở 2 Khuy Cao Cấp",
+        "price": 890000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&auto=format&fit=crop",
+        "stock": 204,
+        "description": "Chuẩn may đo Bespoke sắc sảo từng đường kim mũi chỉ, ve áo chữ K lịch lãm, lót lụa mềm mượt sang trọng.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "VST-SUIT-M-DEN",
+                "price": 890000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "VST-SUIT-M-XANH-NAVY",
+                "price": 890000,
+                "stock": 40,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "VST-SUIT-L-DEN",
+                "price": 890000,
+                "stock": 40,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "VST-SUIT-L-XANH-NAVY",
+                "price": 890000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "VST-SUIT-XL-DEN",
+                "price": 890000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "VST-SUIT-XL-XANH-NAVY",
+                "price": 890000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "ao-blazer-ke-caro-retro",
+        "category_id": 5,
+        "name": "Áo Blazer Kẻ Caro Retro Lịch Lãm",
+        "price": 820000,
+        "is_featured": false,
+        "image": "https://static.massimodutti.net/assets/public/bfee/4904/ecb84c95ab10/04797154833d/06057768700-o6/06057768700-o6.jpg?ts=1788863440308&f=auto&w=4000",
+        "stock": 223,
+        "description": "Họa tiết kẻ sọc ô nhã nhặn phong cách học viện Anh quốc, chất liệu len pha bền màu không bám bụi.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "BLZ-CARO-M-XAM-GHI",
+                "price": 820000,
+                "stock": 29,
+                "image": "https://pos.nvncdn.com/a36e05-151378/ps/20241219_FtQS9f8xSj.jpeg?v=1734602056"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Nâu Bò",
+                "sku": "BLZ-CARO-M-NAU-BO",
+                "price": 820000,
+                "stock": 30,
+                "image": "https://cdn.hstatic.net/products/200000469039/1_ec518104cc124ac592f5487852f7736c_63e790501f1e4ab8bb9e2089f93b9f8b_master.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "BLZ-CARO-L-XAM-GHI",
+                "price": 820000,
+                "stock": 48,
+                "image": "https://pos.nvncdn.com/a36e05-151378/ps/20241219_FtQS9f8xSj.jpeg?v=1734602056"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Nâu Bò",
+                "sku": "BLZ-CARO-L-NAU-BO",
+                "price": 820000,
+                "stock": 40,
+                "image": "https://cdn.hstatic.net/products/200000469039/1_ec518104cc124ac592f5487852f7736c_63e790501f1e4ab8bb9e2089f93b9f8b_master.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "BLZ-CARO-XL-XAM-GHI",
+                "price": 820000,
+                "stock": 47,
+                "image": "https://pos.nvncdn.com/a36e05-151378/ps/20241219_FtQS9f8xSj.jpeg?v=1734602056"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Nâu Bò",
+                "sku": "BLZ-CARO-XL-NAU-BO",
+                "price": 820000,
+                "stock": 29,
+                "image": "https://cdn.hstatic.net/products/200000469039/1_ec518104cc124ac592f5487852f7736c_63e790501f1e4ab8bb9e2089f93b9f8b_master.jpg"
+            }
+        ]
+    },
+    {
+        "slug": "quan-tay-xep-ly-cap-cao",
+        "category_id": 6,
+        "name": "Quần Tây Xếp Ly Cạp Cao Phong Cách Cổ Điển",
+        "price": 580000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop",
+        "stock": 333,
+        "description": "Chi tiết xếp 2 ly trước tinh tế giúp che khuyết điểm đùi, cạp tăng đơ chỉnh kích thước bụng tiện lợi.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "QTA-PLEATS-M-BE-SUA",
+                "price": 580000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "QTA-PLEATS-M-DEN",
+                "price": 580000,
+                "stock": 33,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-PLEATS-M-XAM-GHI",
+                "price": 580000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "QTA-PLEATS-L-BE-SUA",
+                "price": 580000,
+                "stock": 28,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "QTA-PLEATS-L-DEN",
+                "price": 580000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-PLEATS-L-XAM-GHI",
+                "price": 580000,
+                "stock": 48,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "QTA-PLEATS-XL-BE-SUA",
+                "price": 580000,
+                "stock": 32,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "QTA-PLEATS-XL-DEN",
+                "price": 580000,
+                "stock": 25,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-PLEATS-XL-XAM-GHI",
+                "price": 580000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "quan-au-dang-suong-ong-rong",
+        "category_id": 6,
+        "name": "Quần Âu Dáng Suông Ống Rộng Tối Giản",
+        "price": 520000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&auto=format&fit=crop",
+        "stock": 327,
+        "description": "Phom dáng suông thời thượng phong cách Scandinavian, vải có độ rũ mềm tự nhiên, thoải mái vận động.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "QTA-WIDE-M-DEN",
+                "price": 520000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-WIDE-M-XAM-GHI",
+                "price": 520000,
+                "stock": 26,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "QTA-WIDE-M-XANH-NAVY",
+                "price": 520000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "QTA-WIDE-L-DEN",
+                "price": 520000,
+                "stock": 24,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-WIDE-L-XAM-GHI",
+                "price": 520000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "QTA-WIDE-L-XANH-NAVY",
+                "price": 520000,
+                "stock": 28,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "QTA-WIDE-XL-DEN",
+                "price": 520000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "QTA-WIDE-XL-XAM-GHI",
+                "price": 520000,
+                "stock": 42,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "QTA-WIDE-XL-XANH-NAVY",
+                "price": 520000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "quan-kaki-nam-regular-day-dan",
+        "category_id": 7,
+        "name": "Quần Kaki Nam Dáng Regular Dày Dặn",
+        "price": 490000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800&auto=format&fit=crop",
+        "stock": 393,
+        "description": "Chất kaki cotton chéo sợi dày dặn, giữ màu cực tốt sau nhiều lần giặt, đường may đinh tán gia cố chắc chắn.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-REG-M-REU-DAM",
+                "price": 490000,
+                "stock": 21,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "QKH-REG-M-BE-SUA",
+                "price": 490000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "QKH-REG-M-DEN",
+                "price": 490000,
+                "stock": 39,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-REG-L-REU-DAM",
+                "price": 490000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "QKH-REG-L-BE-SUA",
+                "price": 490000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "QKH-REG-L-DEN",
+                "price": 490000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-REG-XL-REU-DAM",
+                "price": 490000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "QKH-REG-XL-BE-SUA",
+                "price": 490000,
+                "stock": 28,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "QKH-REG-XL-DEN",
+                "price": 490000,
+                "stock": 40,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-REG-XXL-REU-DAM",
+                "price": 490000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Be Sữa",
+                "sku": "QKH-REG-XXL-BE-SUA",
+                "price": 490000,
+                "stock": 22,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Đen",
+                "sku": "QKH-REG-XXL-DEN",
+                "price": 490000,
+                "stock": 25,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "quan-kaki-tui-hop-cargo-pants",
+        "category_id": 7,
+        "name": "Quần Kaki Túi Hộp Cargo Pants Năng Động",
+        "price": 520000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop",
+        "stock": 285,
+        "description": "Thiết kế túi hộp bên đùi hầm hố chuẩn phong cách Streetwear, gấu quần có dây rút tùy chỉnh ống túm.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "QKH-CARGO-M-DEN",
+                "price": 520000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-CARGO-M-REU-DAM",
+                "price": 520000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "QKH-CARGO-M-BE-SUA",
+                "price": 520000,
+                "stock": 32,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "QKH-CARGO-L-DEN",
+                "price": 520000,
+                "stock": 42,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-CARGO-L-REU-DAM",
+                "price": 520000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "QKH-CARGO-L-BE-SUA",
+                "price": 520000,
+                "stock": 30,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "QKH-CARGO-XL-DEN",
+                "price": 520000,
+                "stock": 24,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Rêu Đậm",
+                "sku": "QKH-CARGO-XL-REU-DAM",
+                "price": 520000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "QKH-CARGO-XL-BE-SUA",
+                "price": 520000,
+                "stock": 27,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "quan-jeans-nam-slimfit-co-gian",
+        "category_id": 8,
+        "name": "Quần Jeans Nam Slimfit Co Giãn Wash Nhẹ",
+        "price": 590000,
+        "is_featured": true,
+        "image": "https://yame.vn/cdn/shop/files/qu-n-jean-no-style-m100-xanh-d-m-1174882675.jpg?v=1780840367",
+        "stock": 453,
+        "description": "Vải denim dệt kèm spandex co giãn tốt, kỹ thuật wash hiện đại tạo hiệu ứng bạc màu tự nhiên, tôn dáng chân dài.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-SLIM-S-XANH-NAVY",
+                "price": 590000,
+                "stock": 40,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-d-ng-1174882579.jpg?v=1780840501&width=1946"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Đen",
+                "sku": "JNS-SLIM-S-DEN",
+                "price": 590000,
+                "stock": 45,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-no-style-m100-xanh-d-m-1174882677.jpg?v=1780840364&width=1946"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-SLIM-S-XANH-NHAT",
+                "price": 590000,
+                "stock": 42,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-SLIM-M-XANH-NAVY",
+                "price": 590000,
+                "stock": 33,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-d-ng-1174882579.jpg?v=1780840501&width=1946"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "JNS-SLIM-M-DEN",
+                "price": 590000,
+                "stock": 48,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-no-style-m100-xanh-d-m-1174882677.jpg?v=1780840364&width=1946"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-SLIM-M-XANH-NHAT",
+                "price": 590000,
+                "stock": 48,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-SLIM-L-XANH-NAVY",
+                "price": 590000,
+                "stock": 31,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-d-ng-1174882579.jpg?v=1780840501&width=1946"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "JNS-SLIM-L-DEN",
+                "price": 590000,
+                "stock": 32,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-no-style-m100-xanh-d-m-1174882677.jpg?v=1780840364&width=1946"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-SLIM-L-XANH-NHAT",
+                "price": 590000,
+                "stock": 30,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-SLIM-XL-XANH-NAVY",
+                "price": 590000,
+                "stock": 30,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-d-ng-1174882579.jpg?v=1780840501&width=1946"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "JNS-SLIM-XL-DEN",
+                "price": 590000,
+                "stock": 44,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-no-style-m100-xanh-d-m-1174882677.jpg?v=1780840364&width=1946"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-SLIM-XL-XANH-NHAT",
+                "price": 590000,
+                "stock": 30,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            }
+        ]
+    },
+    {
+        "slug": "quan-jeans-nam-ong-dung-basic",
+        "category_id": 8,
+        "name": "Quần Jeans Nam Ống Đứng Suông Basic",
+        "price": 550000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&auto=format&fit=crop",
+        "stock": 425,
+        "description": "Form suông cổ điển không kén người mặc, khóa kéo đồng mạ cao cấp chống rỉ sét, độ bền lên đến nhiều năm.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-BASIC-M-XANH-NAVY",
+                "price": 550000,
+                "stock": 27,
+                "image": "https://lados.vn/wp-content/uploads/2025/06/1-101-LD4188-600x600.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "JNS-BASIC-M-DEN",
+                "price": 550000,
+                "stock": 29,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "JNS-BASIC-M-XAM-GHI",
+                "price": 550000,
+                "stock": 36,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-BASIC-L-XANH-NAVY",
+                "price": 550000,
+                "stock": 35,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "JNS-BASIC-L-DEN",
+                "price": 550000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "JNS-BASIC-L-XAM-GHI",
+                "price": 550000,
+                "stock": 23,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-BASIC-XL-XANH-NAVY",
+                "price": 550000,
+                "stock": 45,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "JNS-BASIC-XL-DEN",
+                "price": 550000,
+                "stock": 46,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "JNS-BASIC-XL-XAM-GHI",
+                "price": 550000,
+                "stock": 30,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Xanh Navy",
+                "sku": "JNS-BASIC-XXL-XANH-NAVY",
+                "price": 550000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Đen",
+                "sku": "JNS-BASIC-XXL-DEN",
+                "price": 550000,
+                "stock": 49,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "XXL",
+                "color_name": "Xám Ghi",
+                "sku": "JNS-BASIC-XXL-XAM-GHI",
+                "price": 550000,
+                "stock": 37,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "quan-jeans-nam-rach-goi",
+        "category_id": 8,
+        "name": "Quần Jeans Nam Rách Gối Cá Tính Streetwear",
+        "price": 620000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=800&auto=format&fit=crop",
+        "stock": 203,
+        "description": "Điểm nhấn rách xước gối thủ công tạo phong cách bụi bặm, phá cách cho những buổi dạo phố cuối tuần.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "JNS-DISTRESS-M-DEN",
+                "price": 620000,
+                "stock": 30,
+                "image": "https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2024/09/quan-jean-nam-dolce-gabbana-d-g-distressed-denim-pants-black-g644ld-mau-den-size-44-66f4cfb3eae56-26092024100627.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-DISTRESS-M-XANH-NHAT",
+                "price": 620000,
+                "stock": 20,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "JNS-DISTRESS-L-DEN",
+                "price": 620000,
+                "stock": 31,
+                "image": "https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2024/09/quan-jean-nam-dolce-gabbana-d-g-distressed-denim-pants-black-g644ld-mau-den-size-44-66f4cfb3eae56-26092024100627.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-DISTRESS-L-XANH-NHAT",
+                "price": 620000,
+                "stock": 36,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "JNS-DISTRESS-XL-DEN",
+                "price": 620000,
+                "stock": 36,
+                "image": "https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2024/09/quan-jean-nam-dolce-gabbana-d-g-distressed-denim-pants-black-g644ld-mau-den-size-44-66f4cfb3eae56-26092024100627.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Nhạt",
+                "sku": "JNS-DISTRESS-XL-XANH-NHAT",
+                "price": 620000,
+                "stock": 50,
+                "image": "https://yame.vn/cdn/shop/files/qu-n-jean-seventy-seven-51-xanh-tr-ng-1174882555.jpg?v=1780840535&width=1946"
+            }
+        ]
+    },
+    {
+        "slug": "quan-short-kaki-nam-co-gian",
+        "category_id": 9,
+        "name": "Quần Short Kaki Nam Co Giãn Thoáng Mát",
+        "price": 320000,
+        "is_featured": true,
+        "image": "https://lados.vn/wp-content/uploads/2024/07/quan-short-kaki-nam-dung-form-ld4134.jpg",
+        "stock": 295,
+        "description": "Độ dài ngang đầu gối tiêu chuẩn, lưng cạp có chun ẩn phía sau giúp thoải mái tối đa khi ngồi hay vận động.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Be Sữa",
+                "sku": "SHT-KAKI-M-BE-SUA",
+                "price": 320000,
+                "stock": 38,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/5-KEM-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-KAKI-M-XANH-NAVY",
+                "price": 320000,
+                "stock": 28,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/4-XAM-CHI-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "SHT-KAKI-M-DEN",
+                "price": 320000,
+                "stock": 39,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/2-DEN-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Be Sữa",
+                "sku": "SHT-KAKI-L-BE-SUA",
+                "price": 320000,
+                "stock": 35,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/5-KEM-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-KAKI-L-XANH-NAVY",
+                "price": 320000,
+                "stock": 32,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/4-XAM-CHI-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "SHT-KAKI-L-DEN",
+                "price": 320000,
+                "stock": 46,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/2-DEN-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Be Sữa",
+                "sku": "SHT-KAKI-XL-BE-SUA",
+                "price": 320000,
+                "stock": 22,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/5-KEM-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-KAKI-XL-XANH-NAVY",
+                "price": 320000,
+                "stock": 35,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/4-XAM-CHI-LD4134-800x800.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "SHT-KAKI-XL-DEN",
+                "price": 320000,
+                "stock": 20,
+                "image": "https://lados.vn/wp-content/uploads/2024/07/2-DEN-LD4134-800x800.jpg"
+            }
+        ]
+    },
+    {
+        "slug": "quan-short-gio-the-thao",
+        "category_id": 9,
+        "name": "Quần Short Gió Thể Thao Nhanh Khô",
+        "price": 280000,
+        "is_featured": false,
+        "image": "https://i.ebayimg.com/images/g/ECwAAeSwwilqEfnI/s-l1600.webp",
+        "stock": 415,
+        "description": "Trọng lượng siêu nhẹ, tích hợp túi kéo khóa sau để đựng chìa khóa hay điện thoại khi chạy bộ, tập gym.",
+        "variants": [
+            {
+                "size_name": "S",
+                "color_name": "Đen",
+                "sku": "SHT-SPORT-S-DEN",
+                "price": 280000,
+                "stock": 38,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-11-500x500.jpg"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xám Ghi",
+                "sku": "SHT-SPORT-S-XAM-GHI",
+                "price": 280000,
+                "stock": 50,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-9-new.jpg"
+            },
+            {
+                "size_name": "S",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-SPORT-S-XANH-NAVY",
+                "price": 280000,
+                "stock": 34,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-10-new.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "SHT-SPORT-M-DEN",
+                "price": 280000,
+                "stock": 40,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-11-500x500.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xám Ghi",
+                "sku": "SHT-SPORT-M-XAM-GHI",
+                "price": 280000,
+                "stock": 21,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-9-new.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-SPORT-M-XANH-NAVY",
+                "price": 280000,
+                "stock": 33,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-10-new.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "SHT-SPORT-L-DEN",
+                "price": 280000,
+                "stock": 49,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-11-500x500.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xám Ghi",
+                "sku": "SHT-SPORT-L-XAM-GHI",
+                "price": 280000,
+                "stock": 21,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-9-new.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-SPORT-L-XANH-NAVY",
+                "price": 280000,
+                "stock": 50,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-10-new.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "SHT-SPORT-XL-DEN",
+                "price": 280000,
+                "stock": 23,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-11-500x500.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xám Ghi",
+                "sku": "SHT-SPORT-XL-XAM-GHI",
+                "price": 280000,
+                "stock": 34,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-9-new.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Navy",
+                "sku": "SHT-SPORT-XL-XANH-NAVY",
+                "price": 280000,
+                "stock": 22,
+                "image": "https://www.chapi.vn/img/product/2024/9/9/quan-short-the-thao-nam-nhanh-kho-bhg-10-new.jpg"
+            }
+        ]
+    },
+    {
+        "slug": "quan-short-jean-nam-vintage",
+        "category_id": 9,
+        "name": "Quần Short Jean Nam Rách Lai Vintage",
+        "price": 350000,
+        "is_featured": false,
+        "image": "https://sieuthijean.vn/images/thumbs/2018/10/quan-sot-jean-nam-den-589-slide-products-5bb2dfb6cbe39.jpg",
+        "stock": 205,
+        "description": "Gấu quần cắt lai sờn phong cách retro, chất jean mềm đã qua xử lý giặt làm mềm không gây ráp da.",
+        "variants": [
+            {
+                "size_name": "M",
+                "color_name": "Xanh Nhạt",
+                "sku": "SHT-JEAN-M-XANH-NHAT",
+                "price": 350000,
+                "stock": 29,
+                "image": "https://lados.vn/wp-content/uploads/2024/12/3-XANH-LD4141-800x800.jpg"
+            },
+            {
+                "size_name": "M",
+                "color_name": "Đen",
+                "sku": "SHT-JEAN-M-DEN",
+                "price": 350000,
+                "stock": 44,
+                "image": "https://lados.vn/wp-content/uploads/2025/06/1-DEN-LD4189-800x800.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Xanh Nhạt",
+                "sku": "SHT-JEAN-L-XANH-NHAT",
+                "price": 350000,
+                "stock": 25,
+                "image": "https://lados.vn/wp-content/uploads/2024/12/3-XANH-LD4141-800x800.jpg"
+            },
+            {
+                "size_name": "L",
+                "color_name": "Đen",
+                "sku": "SHT-JEAN-L-DEN",
+                "price": 350000,
+                "stock": 22,
+                "image": "https://lados.vn/wp-content/uploads/2025/06/1-DEN-LD4189-800x800.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Xanh Nhạt",
+                "sku": "SHT-JEAN-XL-XANH-NHAT",
+                "price": 350000,
+                "stock": 40,
+                "image": "https://lados.vn/wp-content/uploads/2024/12/3-XANH-LD4141-800x800.jpg"
+            },
+            {
+                "size_name": "XL",
+                "color_name": "Đen",
+                "sku": "SHT-JEAN-XL-DEN",
+                "price": 350000,
+                "stock": 45,
+                "image": "https://lados.vn/wp-content/uploads/2025/06/1-DEN-LD4189-800x800.jpg"
+            }
+        ]
+    },
+    {
+        "slug": "that-lung-nam-da-sap-khoa-kim",
+        "category_id": 10,
+        "name": "Thắt Lưng Nam Da Sáp Khóa Kim Vintage",
+        "price": 420000,
+        "is_featured": false,
+        "image": "https://yame.vn/cdn/shop/files/Y2010261Nau361_b7cc2328-52e3-4906-8ad6-a80c7ac3fcde.jpg?v=1786075136",
+        "stock": 50,
+        "description": "Da sáp nguyên tấm dày 3.8mm, càng dùng càng bóng đẹp theo thời gian, phù hợp hoàn hảo với quần jeans và kaki.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Nâu Bò",
+                "sku": "TL-VINTAGE-FreeSize-NAU-BO",
+                "price": 420000,
+                "stock": 24,
+                "image": "https://yame.vn/cdn/shop/files/Y2010261Nau36Thumb_2f70b8fe-0613-4486-88b1-23d223391b39.jpg?v=1786075136&width=1946"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "TL-VINTAGE-FreeSize-DEN",
+                "price": 420000,
+                "stock": 26,
+                "image": "https://yame.vn/cdn/shop/files/Y2010261Den99Thumb.jpg?v=1786071166&width=1946"
+            }
+        ]
+    },
+    {
+        "slug": "that-lung-ban-nho-quan-tay",
+        "category_id": 10,
+        "name": "Thắt Lưng Bản Nhỏ Phối Quần Tây Công Sở",
+        "price": 360000,
+        "is_featured": false,
+        "image": "https://navy.vn/wp-content/uploads/2025/11/118-Nau.jpg",
+        "stock": 24,
+        "description": "Bản rộng 3.2cm chuẩn mực khi diện cùng quần tây âu, mặt khóa xoay 2 mặt tiện lợi đổi phong cách.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "TL-OFFICE-FreeSize-DEN",
+                "price": 360000,
+                "stock": 24,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "vi-nam-da-bo-mini-cardholder",
+        "category_id": 11,
+        "name": "Ví Nam Da Bò Dáng Đứng Mini Cardholder",
+        "price": 290000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&auto=format&fit=crop",
+        "stock": 81,
+        "description": "Thiết kế siêu mỏng nhẹ vừa vặn túi quần trước, tích hợp ngăn chứa thẻ thông minh và kẹp tiền kim loại.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "VI-CARD-FreeSize-DEN",
+                "price": 290000,
+                "stock": 38,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Nâu Bò",
+                "sku": "VI-CARD-FreeSize-NAU-BO",
+                "price": 290000,
+                "stock": 43,
+                "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "vi-dai-cam-tay-nam-clutch",
+        "category_id": 11,
+        "name": "Ví Dài Cầm Tay Nam Clutch Da Cao Cấp",
+        "price": 590000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop",
+        "stock": 86,
+        "description": "Clutch cầm tay lịch lãm đựng vừa điện thoại, sổ tay và nhiều ngăn thẻ, khóa kéo êm ái chống kẹt.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "VI-CLUTCH-FreeSize-DEN",
+                "price": 590000,
+                "stock": 36,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Nâu Bò",
+                "sku": "VI-CLUTCH-FreeSize-NAU-BO",
+                "price": 590000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "bo-combo-ca-vat-lua-kep-ma-bac",
+        "category_id": 11,
+        "name": "Bộ Combo Cà Vạt Lụa & Kẹp Mạ Bạc",
+        "price": 320000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop",
+        "stock": 59,
+        "description": "Hộp quà tặng sang trọng gồm cà vạt lụa dệt hoa văn chìm tinh xảo, khăn cài áo vest và kẹp mạ bạc đính kèm.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Xanh Navy",
+                "sku": "CV-GIFTSET-FreeSize-XANH-NAVY",
+                "price": 320000,
+                "stock": 34,
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "CV-GIFTSET-FreeSize-DEN",
+                "price": 320000,
+                "stock": 25,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "set-5-doi-tat-co-ngan-cotton",
+        "category_id": 12,
+        "name": "Set 5 Đôi Tất Cổ Ngắn Cotton Kháng Khuẩn",
+        "price": 150000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=800&auto=format&fit=crop",
+        "stock": 96,
+        "description": "Sợi cotton chải kỹ thấm hút vượt trội, công nghệ nano bạc khử mùi chân hiệu quả, viền gót silicon chống tụt.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Trắng",
+                "sku": "TAT-SHORT-FreeSize-TRANG",
+                "price": 150000,
+                "stock": 50,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "TAT-SHORT-FreeSize-DEN",
+                "price": 150000,
+                "stock": 22,
+                "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Xám Ghi",
+                "sku": "TAT-SHORT-FreeSize-XAM-GHI",
+                "price": 150000,
+                "stock": 24,
+                "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        "slug": "set-5-doi-tat-co-cao-vintage",
+        "category_id": 12,
+        "name": "Set 5 Đôi Tất Cổ Cao Dệt Gân Vintage",
+        "price": 180000,
+        "is_featured": false,
+        "image": "https://images.unsplash.com/photo-1582966772680-860e372bb558?w=800&auto=format&fit=crop",
+        "stock": 109,
+        "description": "Tất cao cổ dệt sọc gân phong cách Hàn Quốc, phối cùng sneaker hoặc giày tây công sở cực kỳ cuốn hút.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Trắng",
+                "sku": "TAT-HIGH-FreeSize-TRANG",
+                "price": 180000,
+                "stock": 31,
+                "image": "https://www.chapi.vn/img/product/2023/3/2/tat-nam-thoang-khi-mua-he-toe-18-500x500.jpg"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "TAT-HIGH-FreeSize-DEN",
+                "price": 180000,
+                "stock": 30,
+                "image": "https://www.chapi.vn/img/product/2023/3/2/tat-nam-thoang-khi-mua-he-toe-20-new.jpg"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Be Sữa",
+                "sku": "TAT-HIGH-FreeSize-BE-SUA",
+                "price": 180000,
+                "stock": 48,
+                "image": "https://www.chapi.vn/img/product/2023/3/2/tat-nam-thoang-khi-mua-he-toe-19-new.jpg"
+            }
+        ]
+    },
+    {
+        "slug": "non-luoi-trai-kaki",
+        "category_id": 12,
+        "name": "Nón Lưỡi Trai Kaki",
+        "price": 220000,
+        "is_featured": true,
+        "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&auto=format&fit=crop",
+        "stock": 116,
+        "description": "Form nón cứng cáp ôm đầu, chất vải kaki 100% cotton dày dặn, khóa gài kim loại điều chỉnh vòng đầu dễ dàng.",
+        "variants": [
+            {
+                "size_name": "FreeSize",
+                "color_name": "Đen",
+                "sku": "NON-CAP-FreeSize-DEN",
+                "price": 220000,
+                "stock": 27,
+                "image": "https://zerdio.com.vn/wp-content/uploads/2021/03/M22-510x510.jpg"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Trắng",
+                "sku": "NON-CAP-FreeSize-TRANG",
+                "price": 220000,
+                "stock": 46,
+                "image": "https://cdn.dafc.com.vn/catalog/product/dafc/1199700_000_67bd379f60ae7.jpg"
+            },
+            {
+                "size_name": "FreeSize",
+                "color_name": "Be Sữa",
+                "sku": "NON-CAP-FreeSize-BE-SUA",
+                "price": 220000,
+                "stock": 43,
+                "image": "https://www.chapi.vn/img/product/2022/5/15/mu-luoi-trai-theu-classic-27-500x500.jpg"
+            }
+        ]
+    }
+]
