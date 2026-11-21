@@ -31,7 +31,15 @@
                         </div>
                         <div class="col-md-6">
                             <label for="email" class="form-label fw-medium" style="font-size: 14px; color: #1F2937;">Địa chỉ Email <span style="color: #C83E3B;">*</span></label>
-                            <input type="email" class="form-control acc-input" id="email" name="email" value="{{ old('email') }}" required placeholder="Ví dụ: email@example.com">
+                            <input type="email"
+                                   class="form-control acc-input @error('email') is-invalid @enderror"
+                                   id="email"
+                                   name="email"
+                                   value="{{ old('email') }}"
+                                   required
+                                   pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                   title="Vui lòng nhập đúng định dạng email có tên miền (ví dụ: ten@gmail.com)"
+                                   placeholder="Ví dụ: email@gmail.com">
                         </div>
                     </div>
 
