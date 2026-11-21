@@ -872,6 +872,12 @@ class SampleDataSeeder extends Seeder
 
         // 6. Lưu vào Cơ Sở Dữ Liệu và Tạo các Biến thể
         foreach ($productsData as $pData) {
+            // Ảnh đại diện: dùng ảnh riêng của màu đầu tiên nếu đã có trong public/images/products
+            $mainLocal = 'images/products/' . $pData['slug'] . '-' . Str::slug($pData['colors'][0] ?? '') . '.jpg';
+            if (file_exists(public_path($mainLocal))) {
+                $pData['image'] = $mainLocal;
+            }
+
             $product = Product::updateOrCreate(
                 ['slug' => $pData['slug']],
                 [
@@ -898,7 +904,11 @@ class SampleDataSeeder extends Seeder
                     if (!$sizeModel || !$colorModel) continue;
 
                     $sku = $pData['sku_prefix'] . '-' . $sizeName . '-' . strtoupper(Str::slug($colorName));
-                    $varImage = $categoryColorGallery[$catId][$colorName] ?? $pData['image'];
+                    // Ưu tiên ảnh riêng theo sản phẩm + màu: public/images/products/{slug}-{mau}.jpg
+                    $localImage = 'images/products/' . $pData['slug'] . '-' . Str::slug($colorName) . '.jpg';
+                    $varImage = file_exists(public_path($localImage))
+                        ? $localImage
+                        : ($categoryColorGallery[$catId][$colorName] ?? $pData['image']);
 
                     ProductVariant::updateOrCreate(
                         [
