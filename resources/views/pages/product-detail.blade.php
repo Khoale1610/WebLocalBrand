@@ -499,6 +499,12 @@
                 ]);
             }
         }
+
+        // Chỉ hiển thị bảng quy đổi kích cỡ đối với các sản phẩm Áo
+        $isShirtCategory = $product->category && (
+            in_array((int) $product->category_id, [1, 2, 3, 4, 5], true) ||
+            \Illuminate\Support\Str::contains(mb_strtolower($product->category->name), ['áo', 'shirt', 'polo', 'khoác', 'vest', 'blazer', 'hoodie', 'sweater'])
+        );
     @endphp
 
     <div class="row g-4 g-lg-5 grid-cols-12 align-items-start">
@@ -599,9 +605,11 @@
                                 <label class="pd-option-label text-[14px] font-medium text-gray-800 mb-0">
                                     Kích cỡ: <span id="selectedSizeText" class="pd-option-value ms-1">{{ $firstVariant && $firstVariant->size ? $firstVariant->size->name : '' }}</span>
                                 </label>
-                                <a href="#sizeGuideModal" data-bs-toggle="modal" class="text-muted text-decoration-underline" style="font-size: 13px;">
-                                    Bảng quy đổi kích cỡ
-                                </a>
+                                @if($isShirtCategory)
+                                    <a href="#sizeGuideModal" data-bs-toggle="modal" class="text-muted text-decoration-underline" style="font-size: 13px;">
+                                        Bảng quy đổi kích cỡ
+                                    </a>
+                                @endif
                             </div>
                             <div class="d-flex flex-wrap gap-2" id="sizeOptionsGroup">
                                 @foreach($sizes as $size)
@@ -704,11 +712,13 @@
                             THÔNG SỐ & MÔ TẢ SẢN PHẨM
                         </button>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link rounded-none" id="size-tab" data-bs-toggle="tab" data-bs-target="#size-pane" type="button" role="tab">
-                            BẢNG QUY ĐỔI KÍCH CỠ
-                        </button>
-                    </li>
+                    @if($isShirtCategory)
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-none" id="size-tab" data-bs-toggle="tab" data-bs-target="#size-pane" type="button" role="tab">
+                                BẢNG QUY ĐỔI KÍCH CỠ
+                            </button>
+                        </li>
+                    @endif
                     <li class="nav-item" role="presentation">
                         <button class="nav-link rounded-none" id="policy-tab" data-bs-toggle="tab" data-bs-target="#policy-pane" type="button" role="tab">
                             CHÍNH SÁCH ĐỔI TRẢ & BẢO HÀNH
@@ -739,29 +749,31 @@
                         </ul>
                     </div>
 
-                    <!-- Tab 2: Bảng Size -->
-                    <div class="tab-pane fade" id="size-pane" role="tabpanel">
-                        <h6 class="fw-semibold mb-3" style="font-size: 14px; color: #111111;">Bảng thông số kích cỡ tiêu chuẩn (Nam)</h6>
-                        <div class="table-responsive" style="max-width: 640px;">
-                            <table class="table table-bordered text-center align-middle mb-0" style="font-size: 13.5px;">
-                                <thead style="background-color: #111111; color: #FFFFFF;">
-                                    <tr>
-                                        <th>Size</th>
-                                        <th>Chiều cao (cm)</th>
-                                        <th>Cân nặng (kg)</th>
-                                        <th>Rộng vai (cm)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td><strong>S</strong></td><td>160 - 166</td><td>52 - 58</td><td>42</td></tr>
-                                    <tr><td><strong>M</strong></td><td>167 - 172</td><td>59 - 66</td><td>44</td></tr>
-                                    <tr><td><strong>L</strong></td><td>173 - 178</td><td>67 - 74</td><td>46</td></tr>
-                                    <tr><td><strong>XL</strong></td><td>179 - 184</td><td>75 - 82</td><td>48</td></tr>
-                                    <tr><td><strong>XXL</strong></td><td>185 - 190</td><td>83 - 90</td><td>50</td></tr>
-                                </tbody>
-                            </table>
+                    @if($isShirtCategory)
+                        <!-- Tab 2: Bảng Size -->
+                        <div class="tab-pane fade" id="size-pane" role="tabpanel">
+                            <h6 class="fw-semibold mb-3" style="font-size: 14px; color: #111111;">Bảng thông số kích cỡ tiêu chuẩn (Áo Nam)</h6>
+                            <div class="table-responsive" style="max-width: 640px;">
+                                <table class="table table-bordered text-center align-middle mb-0" style="font-size: 13.5px;">
+                                    <thead style="background-color: #111111; color: #FFFFFF;">
+                                        <tr>
+                                            <th>Size</th>
+                                            <th>Chiều cao (cm)</th>
+                                            <th>Cân nặng (kg)</th>
+                                            <th>Rộng vai (cm)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><strong>S</strong></td><td>160 - 166</td><td>52 - 58</td><td>42</td></tr>
+                                        <tr><td><strong>M</strong></td><td>167 - 172</td><td>59 - 66</td><td>44</td></tr>
+                                        <tr><td><strong>L</strong></td><td>173 - 178</td><td>67 - 74</td><td>46</td></tr>
+                                        <tr><td><strong>XL</strong></td><td>179 - 184</td><td>75 - 82</td><td>48</td></tr>
+                                        <tr><td><strong>XXL</strong></td><td>185 - 190</td><td>83 - 90</td><td>50</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
+                    @endif
 
                     <!-- Tab 3: Chính sách -->
                     <div class="tab-pane fade" id="policy-pane" role="tabpanel">
@@ -830,12 +842,13 @@
     @endif
 </div>
 
+@if($isShirtCategory)
 <!-- Modal Bảng Size (Vuông góc 0px) -->
 <div class="modal fade" id="sizeGuideModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content rounded-none border-dark">
             <div class="modal-header rounded-none border-bottom">
-                <h5 class="modal-title fw-semibold" style="font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 16px;">Bảng hướng dẫn chọn kích cỡ</h5>
+                <h5 class="modal-title fw-semibold" style="font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 16px;">Bảng hướng dẫn chọn kích cỡ áo</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center p-4">
@@ -855,6 +868,7 @@
         </div>
     </div>
 </div>
+@endif
 @endsection
 
 @push('scripts')
