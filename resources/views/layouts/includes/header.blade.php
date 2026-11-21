@@ -12,7 +12,26 @@
                 OWEN<span class="text-danger">.</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+            <!-- Mobile Quick Icons (Giỏ hàng + Tài khoản luôn hiện trên mobile) -->
+            <div class="d-flex d-lg-none align-items-center gap-3 ms-auto me-2">
+                <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5" title="Giỏ hàng">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-0" style="background-color: #C83E3B; font-size: 10px !important; padding: 3px 5px;">
+                        {{ array_sum(array_column(session('cart', []), 'quantity')) }}
+                    </span>
+                </a>
+                @guest
+                    <a href="{{ route('login') }}" class="text-dark fs-5" title="Đăng nhập">
+                        <i class="far fa-user"></i>
+                    </a>
+                @else
+                    <a href="{{ route('account.index') }}" class="text-dark fs-5" title="Tài khoản">
+                        <i class="far fa-user"></i>
+                    </a>
+                @endguest
+            </div>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-label="Mở menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -82,12 +101,12 @@
                 </ul>
 
                 <!-- Thanh Tìm Kiếm & Chức Năng Người Dùng -->
-                <div class="d-flex align-items-center gap-3">
-                    <div class="position-relative" id="headerSearchWrapper">
+                <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3 mt-3 mt-lg-0 pb-2 pb-lg-0">
+                    <div class="position-relative flex-grow-1" id="headerSearchWrapper">
                         <form class="d-flex" action="{{ route('products.search') }}" method="GET" id="headerSearchForm" autocomplete="off">
                             <div class="input-group">
-                                <input class="form-control form-control-sm rounded-0 border-secondary-subtle shadow-none" type="search" placeholder="Tìm sản phẩm..." name="query" id="headerSearchInput" value="{{ request('query') }}" style="height: 36px; font-size: 13px;">
-                                <button class="btn btn-outline-dark btn-sm rounded-0 px-3" type="submit" style="height: 36px;"><i class="fas fa-search"></i></button>
+                                <input class="form-control form-control-sm rounded-0 border-secondary-subtle shadow-none" type="search" placeholder="Tìm sản phẩm..." name="query" id="headerSearchInput" value="{{ request('query') }}" style="height: 38px; font-size: 13.5px;">
+                                <button class="btn btn-outline-dark btn-sm rounded-0 px-3" type="submit" style="height: 38px;"><i class="fas fa-search"></i></button>
                             </div>
                         </form>
                         <!-- Khung dropdown hiển thị kết quả gợi ý tức thì -->
@@ -96,16 +115,16 @@
                     </div>
 
 
-                    <!-- Icon Giỏ Hàng -->
-                    <a href="{{ route('cart.index') }}" class="text-dark position-relative fs-5 ms-2" title="Giỏ hàng">
+                    <!-- Icon Giỏ Hàng (Desktop) -->
+                    <a href="{{ route('cart.index') }}" class="d-none d-lg-inline-block text-dark position-relative fs-5 ms-2" title="Giỏ hàng">
                         <i class="fas fa-shopping-bag"></i>
                         <span id="cartCountBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-0" style="background-color: #C83E3B; font-size: 10px !important; padding: 3px 5px;">
                             {{ array_sum(array_column(session('cart', []), 'quantity')) }}
                         </span>
                     </a>
 
-                    <!-- Icon Tài Khoản (Dropdown Vuông góc 0px) -->
-                    <div class="dropdown ms-2">
+                    <!-- Icon Tài Khoản (Desktop Dropdown Vuông góc 0px) -->
+                    <div class="dropdown ms-2 d-none d-lg-block">
                         <a href="#" class="text-dark fs-5" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Tài khoản">
                             <i class="far fa-user"></i>
                         </a>

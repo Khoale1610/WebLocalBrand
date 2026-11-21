@@ -525,6 +525,149 @@
             color: #C83E3B;
             background-color: #FFF5F5;
         }
+
+        /* =========================================================
+           RESPONSIVE MOBILE & TABLET SYSTEM
+           ========================================================= */
+        html, body {
+            overflow-x: hidden;
+        }
+        @media (max-width: 991.98px) {
+            .navbar .megamenu {
+                padding: 16px;
+                max-height: 60vh;
+                overflow-y: auto;
+                box-shadow: none;
+                border-top: 1px solid #e5e7eb;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            .nav-link {
+                padding: 0.55rem 0.25rem !important;
+            }
+        }
+        @media (max-width: 767.98px) {
+            html {
+                font-size: 15.5px;
+            }
+            .top-bar {
+                font-size: 0.78rem;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .sticky-top:not(header) {
+                position: static !important;
+            }
+            /* Hero Banners gọn gàng trên mobile */
+            .lb-hero-slide,
+            .lb-col-hero,
+            .lb-show-hero,
+            .lb-sale-hero {
+                height: auto !important;
+                min-height: 390px !important;
+                padding-top: 48px !important;
+                padding-bottom: 48px !important;
+            }
+            .lb-hero-overlay,
+            .lb-col-hero-overlay,
+            .lb-show-hero-overlay {
+                position: relative !important;
+                background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.82) 100%) !important;
+                padding: 36px 0 !important;
+            }
+            .lb-hero-img,
+            .lb-col-hero-img,
+            .lb-show-hero-bg {
+                position: absolute !important;
+                inset: 0 !important;
+            }
+            .lb-hero-title,
+            .lb-col-hero-title,
+            .lb-show-title,
+            .lb-sale-title {
+                font-size: 2rem !important;
+                line-height: 1.15 !important;
+            }
+            .lb-hero-desc {
+                font-size: 0.96rem !important;
+                margin-bottom: 20px !important;
+            }
+            .btn-lb-primary,
+            .btn-lb-outline-light {
+                padding: 11px 20px !important;
+                font-size: 0.82rem !important;
+            }
+            /* Bento & Lookbook */
+            .lb-bento-card {
+                height: 250px !important;
+            }
+            .lb-bento-card.lb-bento-sm {
+                height: 195px !important;
+            }
+            .lb-bento-content {
+                padding: 18px !important;
+            }
+            .lb-lookbook-media {
+                min-height: 250px !important;
+            }
+            .lb-section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                margin-bottom: 24px;
+            }
+            .lb-section-title {
+                font-size: 1.5rem !important;
+            }
+            /* Product Cards */
+            .lb-product-name {
+                font-size: 0.92rem !important;
+            }
+            .lb-product-price {
+                font-size: 0.96rem !important;
+            }
+            .lb-product-price-old {
+                font-size: 0.8rem !important;
+            }
+            .lb-quick-view {
+                transform: translateY(0) !important;
+                font-size: 0.72rem !important;
+                padding: 7px 8px !important;
+                left: 6px !important;
+                right: 6px !important;
+                bottom: 6px !important;
+            }
+            /* Pagination wrap trên màn hình nhỏ */
+            .pagination {
+                flex-wrap: wrap !important;
+                row-gap: 6px;
+            }
+            .pagination .page-link {
+                min-width: 34px;
+                height: 34px;
+                padding: 0 10px !important;
+                font-size: 13px !important;
+            }
+            /* Tabs chi tiết sản phẩm cuộn ngang không bị vỡ */
+            .pd-nav-tabs {
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+            .pd-nav-tabs .nav-link {
+                white-space: nowrap !important;
+                font-size: 12.5px !important;
+                padding: 12px 14px !important;
+            }
+            /* Gallery chi tiết sản phẩm xếp dọc gọn trên mobile */
+            .pd-gallery-container {
+                flex-direction: column !important;
+            }
+            .pd-thumbs-column {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                width: 100% !important;
+            }
+        }
     </style>
     @stack('styles')
 </head>

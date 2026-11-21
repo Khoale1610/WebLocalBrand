@@ -64,7 +64,14 @@ class AccountController extends Controller
         // Xác thực dữ liệu đầu vào chặt chẽ
         $request->validate([
             'name' => 'required|string|min:2|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => [
+                'required',
+                'string',
+                'email:rfc',
+                'regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
+                'max:255',
+                'unique:users',
+            ],
             'password' => 'required|string|min:6|confirmed',
             // Kiểm tra SĐT: Bắt buộc, đúng 10 số, đầu số VN (03, 05, 07, 08, 09)
             'phone' => ['required', 'regex:/^(03|05|07|08|09)[0-9]{8}$/'],
@@ -74,6 +81,7 @@ class AccountController extends Controller
             'name.min' => 'Họ tên phải có ít nhất 2 ký tự.',
             'email.required' => 'Vui lòng nhập email.',
             'email.email' => 'Email không đúng định dạng hợp lệ.',
+            'email.regex' => 'Email phải có tên miền hợp lệ (ví dụ: ten@gmail.com).',
             'email.unique' => 'Email này đã được đăng ký trên hệ thống.',
             'password.required' => 'Vui lòng nhập mật khẩu.',
             'password.min' => 'Mật khẩu phải có ít nhất 6 ký tự.',
